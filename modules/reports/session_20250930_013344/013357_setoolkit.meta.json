@@ -1,0 +1,8 @@
+{
+  "label": "setoolkit",
+  "command": "sudo setoolkit",
+  "start": "2025-09-30T01:33:57.003164",
+  "end": "2025-09-30T01:40:32.348125",
+  "returncode": 0,
+  "logfile": "013357_setoolkit.log"
+}

@@ -1,0 +1,11 @@
+Filesystem      Size  Used Avail Use% Mounted on
+udev            4.1G     0  4.1G   0% /dev
+tmpfs           844M  1.1M  843M   1% /run
+/dev/sda1        79G   38G   38G  50% /
+tmpfs           4.2G  3.1M  4.2G   1% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           4.2G  8.0K  4.2G   1% /tmp
+kali-linux      448G  297G  152G  67% /media/sf_kali-linux
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           844M  128K  844M   1% /run/user/1000

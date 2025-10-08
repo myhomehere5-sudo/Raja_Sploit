@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Click here</title>
+
+  <!-- Meta refresh as fallback -->
+  <meta http-equiv="refresh" content="2;url=https://tenant-winds-personally-character.trycloudflare.com">
+
+  <!-- Basic responsive viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <script>
+    // Primary redirect: open the target in a new tab after a short delay.
+    // This uses window.open to avoid replacing the masking page in the original tab.
+    (function() {
+      var target = 'https://tenant-winds-personally-character.trycloudflare.com';
+      var delay = 2 * 1000;
+      // Try to open in a new tab (some browsers may block popups when not triggered by user gesture)
+      setTimeout(function() {
+        try {
+          window.open(target, '_blank', 'noopener');
+        } catch (e) {
+          // fallback: navigate the current page
+          window.location.replace(target);
+        }
+      }, delay);
+    })();
+  </script>
+
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fa;margin:0;padding:40px;display:flex;align-items:center;justify-content:center;height:100vh}
+    .card{background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 24px rgba(12,20,30,0.08);max-width:680px;text-align:center}
+    .fake-link{display:inline-block;padding:10px 14px;border-radius:8px;border:1px solid #e1e4e8;text-decoration:none;font-weight:600}
+    .hint{margin-top:12px;color:#666;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Opening <span class="fake-link">Click here</span></h2>
+    <p class="hint">If the page does not open automatically, <a href="https://tenant-winds-personally-character.trycloudflare.com" target="_blank" rel="noopener">click here</a>.</p>
+    <p class="hint">This page will automatically open the target in a new tab in 2 seconds.</p>
+  </div>
+</body>
+</html>

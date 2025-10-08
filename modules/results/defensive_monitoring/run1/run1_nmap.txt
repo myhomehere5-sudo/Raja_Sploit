@@ -1,0 +1,40 @@
+# Nmap 7.95 scan initiated Tue Sep 30 11:06:04 2025 as: /usr/lib/nmap/nmap --privileged -sV -T4 -oN results/defensive_monitoring/run1/run1_nmap.txt 10.239.252.0/24
+Nmap scan report for 10.239.252.119
+Host is up (0.061s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+53/tcp open  domain  dnsmasq 2.51
+MAC Address: 2E:B4:69:6B:DD:A0 (Unknown)
+
+Nmap scan report for 10.239.252.152
+Host is up (0.00023s latency).
+All 1000 scanned ports on 10.239.252.152 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: D8:B3:2F:28:03:B3 (Cloud Network Technology Singapore PTE.)
+
+Nmap scan report for 10.239.252.202
+Host is up (0.00049s latency).
+Not shown: 988 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         ProFTPD 1.3.1
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
+25/tcp   open  smtp        Postfix smtpd
+53/tcp   open  domain      ISC BIND 9.4.2
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.10 with Suhosin-Patch)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3)
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+MAC Address: 08:00:27:0A:E1:B0 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Service Info: Host:  metasploitable.localdomain; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.239.252.221
+Host is up (0.0000080s latency).
+All 1000 scanned ports on 10.239.252.221 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 30 11:06:40 2025 -- 256 IP addresses (4 hosts up) scanned in 35.63 seconds

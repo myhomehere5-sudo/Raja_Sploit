@@ -1,0 +1,200 @@
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: SysV service '/etc/init.d/ptunnel' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: Please update package to include a native systemd unit file.
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: SysV service '/etc/init.d/dns2tcp' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: Please update package to include a native systemd unit file.
+Oct 02 03:54:35 kali systemd-sysv-generator[6772]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:35 kali systemd[1]: /usr/lib/systemd/system/king-phisher.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/king-phisher.pid → /run/king-phisher.pid; please update the unit file accordingly.
+Oct 02 03:54:35 kali systemd[1]: sshd-unix-local.socket: Unit configuration changed while unit was running, and no socket file descriptors are open. Unit not functional until restarted.
+Oct 02 03:54:35 kali systemd[1]: Reloading finished in 427 ms.
+Oct 02 03:54:35 kali systemd[1]: Reload requested from client PID 6788 ('systemctl') (unit session-2.scope)...
+Oct 02 03:54:35 kali systemd[1]: Reloading...
+Oct 02 03:54:36 kali systemd-sslh-generator: Configuration directory '/etc/sslh/' does not exist! No units generated.
+Oct 02 03:54:36 kali (sd-exec-[6838]: /usr/lib/systemd/system-generators/openvpn-generator failed with exit status 1.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: SysV service '/etc/init.d/inetsim' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: Please update package to include a native systemd unit file.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: SysV service '/etc/init.d/stunnel4' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: Please update package to include a native systemd unit file.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: SysV service '/etc/init.d/ptunnel' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: Please update package to include a native systemd unit file.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: SysV service '/etc/init.d/dns2tcp' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: Please update package to include a native systemd unit file.
+Oct 02 03:54:36 kali systemd-sysv-generator[6860]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:54:36 kali systemd[1]: /usr/lib/systemd/system/king-phisher.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/king-phisher.pid → /run/king-phisher.pid; please update the unit file accordingly.
+Oct 02 03:54:36 kali systemd[1]: sshd-unix-local.socket: Unit configuration changed while unit was running, and no socket file descriptors are open. Unit not functional until restarted.
+Oct 02 03:54:36 kali systemd[1]: Reloading finished in 478 ms.
+Oct 02 03:54:48 kali systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 02 03:54:59 kali dbus-daemon[625]: [system] Reloaded configuration
+Oct 02 03:55:01 kali CRON[6892]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 03:55:01 kali CRON[6894]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 03:55:01 kali CRON[6892]: pam_unix(cron:session): session closed for user root
+Oct 02 03:55:22 kali adduser[7013]: The user `saned' is already a member of `scanner'.
+Oct 02 03:55:22 kali systemd[1]: Reload requested from client PID 7018 ('systemctl') (unit session-2.scope)...
+Oct 02 03:55:22 kali systemd[1]: Reloading...
+Oct 02 03:55:23 kali systemd-sslh-generator: Configuration directory '/etc/sslh/' does not exist! No units generated.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: SysV service '/etc/init.d/inetsim' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: SysV service '/etc/init.d/stunnel4' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: SysV service '/etc/init.d/ptunnel' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: SysV service '/etc/init.d/dns2tcp' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7089]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali (sd-exec-[7067]: /usr/lib/systemd/system-generators/openvpn-generator failed with exit status 1.
+Oct 02 03:55:23 kali systemd[1]: /usr/lib/systemd/system/king-phisher.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/king-phisher.pid → /run/king-phisher.pid; please update the unit file accordingly.
+Oct 02 03:55:23 kali systemd[1]: sshd-unix-local.socket: Unit configuration changed while unit was running, and no socket file descriptors are open. Unit not functional until restarted.
+Oct 02 03:55:23 kali systemd[1]: Reloading finished in 400 ms.
+Oct 02 03:55:23 kali systemd[1]: Reload requested from client PID 7105 ('systemctl') (unit session-2.scope)...
+Oct 02 03:55:23 kali systemd[1]: Reloading...
+Oct 02 03:55:23 kali systemd-sslh-generator: Configuration directory '/etc/sslh/' does not exist! No units generated.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: SysV service '/etc/init.d/inetsim' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: SysV service '/etc/init.d/stunnel4' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: SysV service '/etc/init.d/ptunnel' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: SysV service '/etc/init.d/dns2tcp' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: Please update package to include a native systemd unit file.
+Oct 02 03:55:23 kali systemd-sysv-generator[7175]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:23 kali (sd-exec-[7154]: /usr/lib/systemd/system-generators/openvpn-generator failed with exit status 1.
+Oct 02 03:55:24 kali systemd[1]: /usr/lib/systemd/system/king-phisher.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/king-phisher.pid → /run/king-phisher.pid; please update the unit file accordingly.
+Oct 02 03:55:24 kali systemd[1]: sshd-unix-local.socket: Unit configuration changed while unit was running, and no socket file descriptors are open. Unit not functional until restarted.
+Oct 02 03:55:24 kali systemd[1]: Reloading finished in 443 ms.
+Oct 02 03:55:25 kali systemd[1]: Reload requested from client PID 7192 ('systemctl') (unit session-2.scope)...
+Oct 02 03:55:25 kali systemd[1]: Reloading...
+Oct 02 03:55:25 kali systemd-sslh-generator: Configuration directory '/etc/sslh/' does not exist! No units generated.
+Oct 02 03:55:25 kali (sd-exec-[7241]: /usr/lib/systemd/system-generators/openvpn-generator failed with exit status 1.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: SysV service '/etc/init.d/inetsim' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: Please update package to include a native systemd unit file.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: SysV service '/etc/init.d/stunnel4' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: Please update package to include a native systemd unit file.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: SysV service '/etc/init.d/ptunnel' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: Please update package to include a native systemd unit file.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: SysV service '/etc/init.d/dns2tcp' lacks a native systemd unit file, automatically generating a unit file for compatibility.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: Please update package to include a native systemd unit file.
+Oct 02 03:55:25 kali systemd-sysv-generator[7263]: ! This compatibility logic is deprecated, expect removal soon. !
+Oct 02 03:55:25 kali systemd[1]: /usr/lib/systemd/system/king-phisher.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/king-phisher.pid → /run/king-phisher.pid; please update the unit file accordingly.
+Oct 02 03:55:25 kali systemd[1]: sshd-unix-local.socket: Unit configuration changed while unit was running, and no socket file descriptors are open. Unit not functional until restarted.
+Oct 02 03:55:25 kali systemd[1]: Reloading finished in 401 ms.
+Oct 02 03:55:25 kali systemd[1]: Stopping colord.service - Manage, Install and Generate Color Profiles...
+Oct 02 03:55:25 kali systemd[1]: colord.service: Deactivated successfully.
+Oct 02 03:55:25 kali systemd[1]: Stopped colord.service - Manage, Install and Generate Color Profiles.
+Oct 02 03:55:25 kali systemd[1]: colord.service: Consumed 1.884s CPU time, 30M memory peak.
+Oct 02 03:55:25 kali systemd[1]: Starting colord.service - Manage, Install and Generate Color Profiles...
+Oct 02 03:55:26 kali colord[7279]: failed to get edid data: EDID length is too small
+Oct 02 03:55:26 kali systemd[1]: Started colord.service - Manage, Install and Generate Color Profiles.
+Oct 02 03:55:27 kali dbus-daemon[625]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.87' (uid=115 pid=7297 comm="/usr/libexec/colord-sane")
+Oct 02 03:55:27 kali dbus-daemon[625]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Oct 02 03:55:27 kali dbus-daemon[625]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.88' (uid=115 pid=7297 comm="/usr/libexec/colord-sane")
+Oct 02 03:55:27 kali dbus-daemon[625]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Oct 02 03:56:23 kali sudo[1974]: pam_unix(sudo:session): session closed for user root
+Oct 02 03:57:31 kali sudo[13060]:     kali : TTY=pts/1 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 03:57:31 kali sudo[13060]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 03:57:35 kali sudo[13060]: pam_unix(sudo:session): session closed for user root
+Oct 02 03:57:39 kali systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
+Oct 02 03:57:39 kali systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+Oct 02 03:57:39 kali systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
+Oct 02 03:57:45 kali sudo[13098]:     kali : TTY=pts/1 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
+Oct 02 03:57:45 kali sudo[13098]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 03:57:46 kali sudo[13098]: pam_unix(sudo:session): session closed for user root
+Oct 02 03:59:12 kali sudo[13173]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install tcpdump net-tools -y
+Oct 02 03:59:12 kali sudo[13173]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 03:59:13 kali sudo[13173]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:00:01 kali sudo[13189]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install sleuthkit -y
+Oct 02 04:00:01 kali sudo[13189]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:00:02 kali sudo[13189]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:00:46 kali sudo[13203]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install yara -y
+Oct 02 04:00:46 kali sudo[13203]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:01:01 kali sudo[13203]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:01:33 kali sudo[13298]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install python3-pip
+Oct 02 04:01:33 kali sudo[13298]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:01:34 kali sudo[13298]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:01:45 kali sudo[13309]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install clamav clamav-freshclam -y
+Oct 02 04:01:45 kali sudo[13309]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:01:46 kali sudo[13309]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:01:46 kali sudo[13316]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/freshclam
+Oct 02 04:01:46 kali sudo[13316]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:02:11 kali sudo[13316]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:03:14 kali sudo[13413]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install python3-pip
+Oct 02 04:03:14 kali sudo[13413]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:03:15 kali sudo[13413]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:03:36 kali sudo[13431]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install foremost scalpel -y
+Oct 02 04:03:36 kali sudo[13431]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:03:44 kali sudo[13431]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:04:22 kali sudo[13514]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install python3-pip -y
+Oct 02 04:04:22 kali sudo[13514]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:04:23 kali sudo[13514]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:04:34 kali sudo[13528]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 04:04:34 kali sudo[13528]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:04:37 kali sudo[13528]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:04:37 kali sudo[13560]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/freshclam
+Oct 02 04:04:37 kali sudo[13560]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:04:38 kali sudo[13560]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:05:01 kali CRON[13571]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 04:05:01 kali CRON[13573]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 04:05:01 kali CRON[13571]: pam_unix(cron:session): session closed for user root
+Oct 02 04:06:35 kali sudo[13588]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/python3 -m pip install --upgrade pip setuptools wheel
+Oct 02 04:06:35 kali sudo[13588]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:06:37 kali sudo[13588]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:06:53 kali sudo[13594]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/python3 -m pip install avml volatility3 matplotlib jinja2 reportlab yara-python
+Oct 02 04:06:53 kali sudo[13594]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:06:53 kali sudo[13594]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:08:57 kali sudo[13675]:     kali : TTY=pts/2 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/apt install -y cmake gcc g++ libcapstone-dev python3-dev
+Oct 02 04:08:57 kali sudo[13675]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:09:00 kali systemd[1]: Starting phpsessionclean.service - Clean php session files...
+Oct 02 04:09:01 kali systemd[1]: phpsessionclean.service: Deactivated successfully.
+Oct 02 04:09:01 kali systemd[1]: Finished phpsessionclean.service - Clean php session files.
+Oct 02 04:09:01 kali CRON[13734]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 04:09:01 kali CRON[13736]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+Oct 02 04:09:01 kali CRON[13734]: pam_unix(cron:session): session closed for user root
+Oct 02 04:13:28 kali sudo[13675]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:15:01 kali CRON[13884]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 04:15:01 kali CRON[13886]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 04:15:01 kali CRON[13884]: pam_unix(cron:session): session closed for user root
+Oct 02 04:17:01 kali CRON[13918]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 04:17:01 kali CRON[13920]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Oct 02 04:17:01 kali CRON[13918]: pam_unix(cron:session): session closed for user root
+Oct 02 04:18:01 kali sudo[13962]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 04:18:01 kali sudo[13962]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:18:04 kali sudo[13962]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:18:04 kali sudo[13994]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt install -y pipx
+Oct 02 04:18:04 kali sudo[13994]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:18:05 kali sudo[13994]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:19:04 kali sudo[14052]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 04:19:04 kali sudo[14052]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:19:07 kali sudo[14052]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:19:07 kali sudo[14084]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt install -y pipx
+Oct 02 04:19:07 kali sudo[14084]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:19:08 kali sudo[14084]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:20:26 kali sudo[14159]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 04:20:26 kali sudo[14159]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:20:29 kali sudo[14159]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:20:29 kali sudo[14191]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt install -y build-essential python3-dev libcapstone-dev git
+Oct 02 04:20:29 kali sudo[14191]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:20:30 kali sudo[14191]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:23:10 kali dbus-daemon[1220]: [session uid=1000 pid=1220 pidfd=5] Activating via systemd: service name='org.xfce.Xfconf' unit='xfconfd.service' requested by ':1.38' (uid=1000 pid=1517 comm="/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-noti")
+Oct 02 04:23:10 kali systemd[1197]: Starting xfconfd.service - Xfce configuration service...
+Oct 02 04:23:10 kali dbus-daemon[1220]: [session uid=1000 pid=1220 pidfd=5] Successfully activated service 'org.xfce.Xfconf'
+Oct 02 04:23:10 kali systemd[1197]: Started xfconfd.service - Xfce configuration service.
+Oct 02 04:23:44 kali sudo[14314]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt update
+Oct 02 04:23:44 kali sudo[14314]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:23:48 kali sudo[14314]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:23:48 kali sudo[14346]:     kali : TTY=pts/2 ; PWD=/home/kali ; USER=root ; COMMAND=/usr/bin/apt install -y build-essential python3-dev libcapstone-dev
+Oct 02 04:23:48 kali sudo[14346]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 04:23:49 kali sudo[14346]: pam_unix(sudo:session): session closed for user root
+Oct 02 04:25:01 kali CRON[14412]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 04:25:01 kali CRON[14414]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 04:25:01 kali CRON[14412]: pam_unix(cron:session): session closed for user root

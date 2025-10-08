@@ -1,0 +1,200 @@
+Sep 30 10:10:09 kali kernel: usb 1-2: Product: USB Tablet
+Sep 30 10:10:09 kali kernel: usb 1-2: Manufacturer: VirtualBox
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8588] device (eth0): carrier: link connected
+Sep 30 10:10:09 kali kernel: e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8606] device (eth0): ip:dhcp4: restarting
+Sep 30 10:10:09 kali xfce4-screensaver-dialog[4448]: gkr-pam: unlocked login keyring
+Sep 30 10:10:09 kali xfce4-screensaver-dialog[4571]: pam_unix(xfce4-screensaver:account): setuid failed: Operation not permitted
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8953] dhcp4 (eth0): canceled DHCP transaction
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8954] dhcp4 (eth0): activation: beginning transaction (timeout in 45 seconds)
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8955] dhcp4 (eth0): state changed no lease
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.8959] dhcp4 (eth0): activation: beginning transaction (timeout in 45 seconds)
+Sep 30 10:10:09 kali NetworkManager[682]: <info>  [1759241409.9626] dhcp4 (eth0): state changed new lease, address=10.239.252.221, acd pending
+Sep 30 10:10:10 kali kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-2/1-2:1.0/0003:80EE:0021.0002/input/input9
+Sep 30 10:10:10 kali kernel: hid-generic 0003:80EE:0021.0002: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-2/input0
+Sep 30 10:10:10 kali mtp-probe[4572]: checking bus 1, device 5: "/sys/devices/pci0000:00/0000:00:06.0/usb1/1-2"
+Sep 30 10:10:10 kali mtp-probe[4572]: bus: 1, device: 5 was not an MTP device
+Sep 30 10:10:10 kali NetworkManager[682]: <info>  [1759241410.1709] dhcp4 (eth0): state changed new lease, address=10.239.252.221
+Sep 30 10:10:10 kali NetworkManager[682]: <info>  [1759241410.1762] policy: set 'Wired connection 1' (eth0) as default for IPv4 routing and DNS
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.126' (uid=115 pid=4573 comm="/usr/libexec/colord-sane")
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.6' (uid=0 pid=682 comm="/usr/sbin/NetworkManager --no-daemon")
+Sep 30 10:10:10 kali systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.127' (uid=115 pid=4573 comm="/usr/libexec/colord-sane")
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 30 10:10:10 kali dbus-daemon[594]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Sep 30 10:10:10 kali systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+Sep 30 10:10:10 kali mtp-probe[4592]: checking bus 1, device 5: "/sys/devices/pci0000:00/0000:00:06.0/usb1/1-2"
+Sep 30 10:10:10 kali mtp-probe[4592]: bus: 1, device: 5 was not an MTP device
+Sep 30 10:10:10 kali kernel: usbcore: registered new interface driver uvcvideo
+Sep 30 10:10:10 kali mtp-probe[4606]: checking bus 1, device 4: "/sys/devices/pci0000:00/0000:00:06.0/usb1/1-1"
+Sep 30 10:10:10 kali mtp-probe[4606]: bus: 1, device: 4 was not an MTP device
+Sep 30 10:10:11 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.130' (uid=115 pid=4605 comm="/usr/libexec/colord-sane")
+Sep 30 10:10:11 kali dbus-daemon[594]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 30 10:10:11 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.131' (uid=115 pid=4605 comm="/usr/libexec/colord-sane")
+Sep 30 10:10:11 kali dbus-daemon[594]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 30 10:10:13 kali systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Sep 30 10:10:20 kali systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Sep 30 10:14:48 kali sudo[4865]:     kali : TTY=pts/1 ; PWD=/home/kali/Rajasploit/modules ; USER=root ; COMMAND=/usr/bin/timeout 60 tcpdump -w results/defensive_monitoring/run1/run1_network.pcap
+Sep 30 10:14:48 kali sudo[4865]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Sep 30 10:14:48 kali kernel: 14:10:18.780063 timesync vgsvcTimeSyncWorker: Radical guest time change: 19 379 655 711 000ns (GuestNow=1 759 241 418 780 015 0
+Sep 30 10:14:48 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Sep 30 10:15:01 kali CRON[4872]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Sep 30 10:15:01 kali CRON[4874]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 30 10:15:01 kali CRON[4872]: pam_unix(cron:session): session closed for user root
+Sep 30 10:15:48 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Sep 30 10:15:48 kali sudo[4865]: pam_unix(sudo:session): session closed for user root
+Sep 30 10:17:01 kali CRON[4960]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Sep 30 10:17:01 kali CRON[4962]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Sep 30 10:17:01 kali CRON[4960]: pam_unix(cron:session): session closed for user root
+Sep 30 10:21:48 kali kernel: hrtimer: interrupt took 2266888 ns
+Sep 30 10:25:01 kali CRON[5439]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Sep 30 10:25:01 kali CRON[5441]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 30 10:25:01 kali CRON[5439]: pam_unix(cron:session): session closed for user root
+Sep 30 10:31:29 kali dbus-daemon[594]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.132' (uid=1000 pid=5550 comm="/usr/lib/firefox-esr/firefox-esr")
+Sep 30 10:31:29 kali systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+Sep 30 10:31:29 kali systemd[1]: Started systemd-timedated.service - Time & Date Service.
+Sep 30 10:31:29 kali dbus-daemon[594]: [system] Successfully activated service 'org.freedesktop.timedate1'
+Sep 30 10:31:30 kali rtkit-daemon[995]: Supervising 0 threads of 0 processes of 0 users.
+Sep 30 10:31:30 kali rtkit-daemon[995]: Supervising 0 threads of 0 processes of 0 users.
+Sep 30 10:31:30 kali rtkit-daemon[995]: Supervising 0 threads of 0 processes of 0 users.
+Sep 30 10:31:30 kali rtkit-daemon[995]: Supervising 0 threads of 0 processes of 0 users.
+Sep 30 10:31:30 kali rtkit-daemon[995]: Successfully made thread 5682 of process 5550 owned by '1000' RT at priority 10.
+Sep 30 10:31:30 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:30 kali systemd[1]: Started pcscd.service - PC/SC Smart Card Daemon.
+Sep 30 10:31:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:33 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:33 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:33 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:33 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:43 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:43 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:52 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:53 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:54 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:54 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:54 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:54 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:31:59 kali systemd[1]: systemd-timedated.service: Deactivated successfully.
+Sep 30 10:32:04 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:04 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:04 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:04 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:05 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:05 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:05 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:05 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:06 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali systemd[1230]: Started speech-dispatcher.service - Common interface to speech synthesizers.
+Sep 30 10:32:07 kali speech-dispatcher[6457]: [Tue Sep 30 10:32:07 2025 : 604887] speechd: Speech Dispatcher 0.12.1 starting
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:07 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:34 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:35 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:35 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:37 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:58 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:58 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:58 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:58 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:32:59 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:00 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:00 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:00 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:00 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:01 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:01 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:02 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:02 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:10 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:10 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:11 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:12 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:12 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:12 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:12 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:13 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:13 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:13 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:13 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:14 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:14 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:15 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:15 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:15 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:15 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:31 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:33:36 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:35:01 kali CRON[7629]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Sep 30 10:35:01 kali CRON[7631]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Sep 30 10:35:01 kali CRON[7629]: pam_unix(cron:session): session closed for user root
+Sep 30 10:35:30 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:35:30 kali rtkit-daemon[995]: Supervising 1 threads of 1 processes of 1 users.
+Sep 30 10:39:01 kali CRON[7852]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Sep 30 10:39:01 kali CRON[7854]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+Sep 30 10:39:01 kali CRON[7852]: pam_unix(cron:session): session closed for user root
+Sep 30 10:39:03 kali systemd[1]: Starting phpsessionclean.service - Clean php session files...
+Sep 30 10:39:03 kali systemd[1]: phpsessionclean.service: Deactivated successfully.
+Sep 30 10:39:03 kali systemd[1]: Finished phpsessionclean.service - Clean php session files.
+Sep 30 10:41:04 kali NetworkManager[682]: <info>  [1759243264.9800] policy: set 'Wired connection 1' (eth0) as default for IPv6 routing and DNS
+Sep 30 10:41:05 kali kernel: IPv6: eth0: IPv6 duplicate address 2402:3a80:1e05:2216:f77f:a2ed:f589:c41a used by 2e:b4:69:6b:dd:a0 detected!
+Sep 30 10:41:07 kali kernel: IPv6: eth0: IPv6 duplicate address 2402:3a80:1e05:2216:f77f:a2ed:f589:c41a used by 2e:b4:69:6b:dd:a0 detected!
+Sep 30 10:41:07 kali NetworkManager[682]: <info>  [1759243267.7478] device (eth0): Conflict detected for IPv6 address: 2402:3a80:1e05:2216:f77f:a2ed:f589:c41a
+Sep 30 10:41:08 kali kernel: IPv6: eth0: IPv6 duplicate address 2402:3a80:1e05:2216:f77f:a2ed:f589:c41a used by 2e:b4:69:6b:dd:a0 detected!
+Sep 30 10:41:13 kali NetworkManager[682]: <info>  [1759243273.9518] device (eth0): Conflict detected for IPv6 address: 2402:3a80:1e05:2216:f77f:a2ed:f589:c41a

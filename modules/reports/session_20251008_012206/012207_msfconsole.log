@@ -1,0 +1,217 @@
+Script started on 2025-10-08 01:22:07-04:00 [COMMAND="bash -ic msfconsole" TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="235" LINES="61"]
+Metasploit tip: You can use help to view all available commands
+[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting The Metasploit Framework console.../[*] Starting tHe Metasploit Framework console...-[*] Starting thE Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting the metasploit Framework console.../[*] Starting the MEtasploit Framework console...-[*] Starting the MeTasploit Framework console...\[*] Starting the MetAsploit Framework console...|[*] Starting the MetaSploit Framework console.../[*] Starting the MetasPloit Framework console...-[*] Starting the MetaspLoit Framework console...\[*] Starting the MetasplOit Framework console...|[*] Starting the MetasploIt Framework console.../[*] Starting the MetasploiT Framework console...-[*] Starting the Metasploit Framework console...\[*] Starting the Metasploit framework console...|[*] Starting the Metasploit FRamework console.../[*] Starting the Metasploit FrAmework console...-[*] Starting the Metasploit FraMework console...\[*] Starting the Metasploit FramEwork console...|[*] Starting the Metasploit FrameWork console.../^[[C[*] Starting the Metasploit FramewOrk console...-[*] Starting the Metasploit FramewoRk console...\[*] Starting the Metasploit FrameworK console...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework Console...-[*] Starting the Metasploit Framework cOnsole...\[*] Starting the Metasploit Framework coNsole...|[*] Starting the Metasploit Framework conSole.../                                                  
+[0m[36m[0m
+[35m     .~+P``````-o+:.                                      -o+:.[0m
+[35m.+oooyysyyssyyssyddh++os-`````                        ```````````````          `[0m
+[35m+++++++++++++++++++++++sydhyoyso/:.````...`...-///::+ohhyosyyosyy/+om++:ooo///o[0m
+[35m++++///////~~~~///////++++++++++++++++ooyysoyysosso+++++++++++++++++++///oossosy[0m
+[35m--.`                 .-.-...-////+++++++++++++++////////~~//////++++++++++++///[0m
+[35m                                `...............`              `...-/////...`[0m
+[0m
+[0m
+[37m                                  .::::::::::-.                     .::::::-[0m
+[37m                                .hmMMMMMMMMMMNddds\...//M\\.../hddddmMMMMMMNo[0m
+[37m                                 :Nm-/NMMMMMMMMMMMMM[34m$$[37mNMMMMm[34m&&[37mMMMMMMMMMMMMMMy[0m
+[37m                                 .sm/`-yMMMMMMMMMMMM[34m$$[37mMMMMMN[34m&&[37mMMMMMMMMMMMMMh`[0m
+[37m                                  -Nd`  :MMMMMMMMMMM[34m$$[37mMMMMMN[34m&&[37mMMMMMMMMMMMMh`[0m
+[37m                                   -Nh` .yMMMMMMMMMM[34m$$[37mMMMMMN[34m&&[37mMMMMMMMMMMMm/[0m
+[37m    `oo/``-hd:  ``                 .sNd  :MMMMMMMMMM[34m$$[37mMMMMMN[34m&&[37mMMMMMMMMMMm/[0m
+[37m      .yNmMMh[2;31m//[37m+syysso-``````       -mh` :MMMMMMMMMM[34m$$[37mMMMMMN[34m&&[37mMMMMMMMMMMd[0m
+[37m    .shMMMMN[2;31m//[37mdmNMMMMMMMMMMMMs`     `:```-o++++oooo+:/ooooo+:+o+++oooo++/[0m
+[37m    `///omh[2;31m//[37mdMMMMMMMMMMMMMMMN/[2;31m:::::/+ooso--/ydh//+s+/ossssso:--syN///os:[0m
+[37m          /MMMMMMMMMMMMMMMMMMd.     [2;31m`/++-.-yy/[37m...[2;31mosydh/-+oo:-`o//[37m...[2;31moyodh+[0m
+[37m          -hMMmssddd+:dMMmNMMh.     [2;31m`.-=mmk.[37m//^^^\\[2;31m.^^`:++:^^o:[37m//^^^\\[2;31m`::[0m
+[37m          .sMMmo.    -dMd--:mN/`           [37m||--X--||[0m          [2;31m[37m||--X--||[0m
+[37m........../yddy/:...+hmo-...hdd:............[37m\\=v=//[0m............[2;31m[37m\\=v=//[0m.........
+[32m================================================================================[0m
+[32m=====================[37m+--------------------------------+[32m=========================[0m
+[32m=====================[37m| Session one died of dysentery. |[32m=========================[0m
+[32m=====================[37m+--------------------------------+[32m=========================[0m
+[32m================================================================================[0m
+[0m
+[0m                     [32mPress ENTER to size up the situation[0m
+[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Date: April 25, 1848 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%% Weather: It's always cool in the lab %%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%%% Health: Overweight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%% Caffeine: 12975 mg %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacked: All the things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[37m%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%[0m
+[0m
+[0m                        [37mPress SPACE BAR to continue[0m
+[0m
+[0m
+
+       =[ [33mmetasploit v6.4.84-dev[0m                                ]
++ -- --=[ 2,547 exploits - 1,309 auxiliary - 1,680 payloads     ]
++ -- --=[ 431 post - 49 encoders - 13 nops - 9 evasion          ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+The Metasploit Framework is a Rapid7 Open Source Project
+
+[?1034h[4mmsf[0m [0m> [K[4mmsf[0m [0m> search  OpenSSH 7.6p1 
+[0m[1m[31m[-][0m No results from search
+[4mmsf[0m [0m> search ssh
+[0m
+Matching Modules
+================
+
+   #    Name                                                               Disclosure Date  Rank       Check  Description
+   -    ----                                                               ---------------  ----       -----  -----------
+   0    exploit/linux/http/acronis_cyber_infra_cve_2023_45249              2024-07-24       [32mexcellent[0m  Yes    Acronis Cyber Infrastructure default password remote code execution
+   1      \_ target: Unix/Linux Command                                    .                .          .      .
+   2      \_ target: Interactive [45mSSH[0m                                       .                .          .      .
+   3    exploit/linux/http/alienvault_exec                                 2017-01-31       [32mexcellent[0m  Yes    AlienVault OSSIM/USM Remote Code Execution
+   4    auxiliary/scanner/[45mssh[0m/apache_karaf_command_execution               2016-02-09       normal     No     Apache Karaf Default Credentials Command Execution
+   5    auxiliary/scanner/[45mssh[0m/karaf_login                                  .                normal     No     Apache Karaf Login Utility
+   6    exploit/apple_ios/[45mssh[0m/cydia_default_[45mssh[0m                            2007-07-02       [32mexcellent[0m  No     Apple iOS Default [45mSSH[0m Password Vulnerability
+   7    exploit/unix/[45mssh[0m/arista_tacplus_shell                              2020-02-02       [32mgreat[0m      Yes    Arista restricted shell escape (with privesc)
+   8    exploit/unix/[45mssh[0m/array_vxag_vapv_privkey_privesc                   2014-02-03       [32mexcellent[0m  No     Array Networks vAPV and vxAG Private Key Privilege Escalation Code Execution
+   9    exploit/linux/[45mssh[0m/ceragon_fibeair_known_privkey                    2015-04-01       [32mexcellent[0m  No     Ceragon FibeAir IP-10 [45mSSH[0m Private Key Exposure
+   10   auxiliary/scanner/[45mssh[0m/cerberus_sftp_enumusers                      2014-05-27       normal     No     Cerberus FTP Server SFTP Username Enumeration
+   11   auxiliary/dos/cisco/cisco_7937g_dos                                2020-06-02       normal     No     Cisco 7937G Denial-of-Service Attack
+   12   auxiliary/admin/http/cisco_7937g_[45mssh[0m_privesc                       2020-06-02       normal     No     Cisco 7937G [45mSSH[0m Privilege Escalation
+   13   exploit/linux/http/cisco_asax_sfr_rce                              2022-06-22       [32mexcellent[0m  Yes    Cisco ASA-X with FirePOWER Services Authenticated Command Injection
+   14     \_ target: Shell Dropper                                         .                .          .      .
+   15     \_ target: Linux Dropper                                         .                .          .      .
+   16   auxiliary/scanner/http/cisco_firepower_login                       .                normal     No     Cisco Firepower Management Console 6.0 Login
+   17   exploit/linux/[45mssh[0m/cisco_ucs_scpuser                                2019-08-21       [32mexcellent[0m  No     Cisco UCS Director default scpuser password
+   18   auxiliary/scanner/[45mssh[0m/eaton_xpert_backdoor                         2018-07-18       normal     No     Eaton Xpert Meter [45mSSH[0m Private Key Exposure Scanner
+   19   exploit/linux/[45mssh[0m/[45mssh[0m_erlangotp_rce                                2025-04-16       [32mexcellent[0m  Yes    Erlang OTP Pre-Auth RCE Scanner and Exploit
+   20     \_ target: Linux Command                                         .                .          .      .
+   21     \_ target: Unix Command                                          .                .          .      .
+   22   exploit/linux/[45mssh[0m/exagrid_known_privkey                            2016-04-07       [32mexcellent[0m  No     ExaGrid Known [45mSSH[0m Key and Default Password
+   23   exploit/linux/[45mssh[0m/f5_bigip_known_privkey                           2012-06-11       [32mexcellent[0m  No     F5 BIG-IP [45mSSH[0m Private Key Exposure
+   24   exploit/linux/http/fortinet_authentication_bypass_cve_2022_40684   2022-10-10       [32mexcellent[0m  Yes    Fortinet FortiOS, FortiProxy, and FortiSwitchManager authentication bypass.
+   25   auxiliary/scanner/[45mssh[0m/fortinet_backdoor                            2016-01-09       normal     No     Fortinet [45mSSH[0m Backdoor Scanner
+   26   post/windows/manage/forward_pageant                                .                normal     No     Forward [45mSSH[0m Agent Requests To Remote Pageant
+   27   exploit/windows/[45mssh[0m/freeftpd_key_exchange                          2006-05-12       average    No     FreeFTPd 1.0.10 Key Exchange Algorithm String Buffer Overflow
+   28     \_ target: Windows 2000 SP0-SP4 English                          .                .          .      .
+   29     \_ target: Windows 2000 SP0-SP4 German                           .                .          .      .
+   30     \_ target: Windows XP SP0-SP1 English                            .                .          .      .
+   31     \_ target: Windows XP SP2 English                                .                .          .      .
+   32   exploit/windows/[45mssh[0m/free[45mssh[0md_key_exchange                          2006-05-12       average    No     Free[45mSSH[0md 1.0.9 Key Exchange Algorithm String Buffer Overflow
+   33     \_ target: Windows 2000 Pro SP4 English                          .                .          .      .
+   34     \_ target: Windows XP Pro SP0 English                            .                .          .      .
+   35     \_ target: Windows XP Pro SP1 English                            .                .          .      .
+   36   exploit/windows/[45mssh[0m/free[45mssh[0md_authbypass                            2010-08-11       [32mexcellent[0m  Yes    Free[45mssh[0md Authentication Bypass
+   37     \_ target: PowerShell                                            .                .          .      .
+   38     \_ target: CmdStager upload                                      .                .          .      .
+   39   auxiliary/scanner/http/gitlab_user_enum                            2014-11-21       normal     No     GitLab User Enumeration
+   40   exploit/multi/http/gitlab_shell_exec                               2013-11-04       [32mexcellent[0m  Yes    Gitlab-shell Code Execution
+   41     \_ target: Linux                                                 .                .          .      .
+   42     \_ target: Linux (x64)                                           .                .          .      .
+   43     \_ target: Unix (CMD)                                            .                .          .      .
+   44     \_ target: Python                                                .                .          .      .
+   45   exploit/linux/[45mssh[0m/ibm_drm_a3user                                   2020-04-21       [32mexcellent[0m  No     IBM Data Risk Manager a3user Default Password
+   46   post/windows/manage/install_[45mssh[0m                                    .                normal     No     Install Open[45mSSH[0m for Windows
+   47   payload/generic/[45mssh[0m/interact                                       .                normal     No     Interact with Established [45mSSH[0m Connection
+   48   post/multi/gather/jenkins_gather                                   .                normal     No     Jenkins Credential Collector
+   49   auxiliary/scanner/[45mssh[0m/juniper_backdoor                             2015-12-20       normal     No     Juniper [45mSSH[0m Backdoor Scanner
+   50   exploit/freebsd/http/junos_phprc_auto_prepend_file                 2023-08-17       [32mexcellent[0m  Yes    Junos OS PHPRC Environment Variable Manipulation RCE
+   51     \_ target: PHP In-Memory                                         .                .          .      .
+   52     \_ target: Interactive [45mSSH[0m with jail break                       .                .          .      .
+   53   auxiliary/scanner/[45mssh[0m/detect_kippo                                 .                normal     No     Kippo [45mSSH[0m Honeypot Detector
+   54   post/linux/gather/enum_network                                     .                normal     No     Linux Gather Network Information
+   55   exploit/linux/local/ptrace_traceme_pkexec_helper                   2019-07-04       [32mexcellent[0m  Yes    Linux Polkit pkexec helper PTRACE_TRACEME local root exploit
+   56   exploit/linux/[45mssh[0m/loadbalancerorg_enterprise_known_privkey         2014-03-17       [32mexcellent[0m  No     Loadbalancer.org Enterprise VA [45mSSH[0m Private Key Exposure
+   57   exploit/multi/http/git_submodule_command_exec                      2017-08-10       [32mexcellent[0m  No     Malicious Git HTTP Server For CVE-2017-1000117
+   58   exploit/linux/[45mssh[0m/mercurial_[45mssh[0m_exec                               2017-04-18       [32mexcellent[0m  No     Mercurial Custom hg-[45mssh[0m Wrapper Remote Code Exec
+   59   exploit/linux/[45mssh[0m/microfocus_obr_shrboadmin                        2020-09-21       [32mexcellent[0m  No     Micro Focus Operations Bridge Reporter shrboadmin default password
+   60   post/multi/gather/[45mssh[0m_creds                                        .                normal     No     Multi Gather Open[45mSSH[0m PKI Credentials Collection
+   61   payload/php/unix/cmd/reverse_[45mssh[0m                                   .                normal     No     OS Command Exec, Unix Command Shell, Reverse TCP [45mSSH[0m
+   62   exploit/solaris/[45mssh[0m/pam_username_bof                               2020-10-20       normal     Yes    Oracle Solaris Sun[45mSSH[0m PAM parse_user_name() Buffer Overflow
+   63     \_ target: Sun[45mSSH[0m 1.1.5 / Solaris 10u11 1/13 (x86) / VMware      .                .          .      .
+   64     \_ target: Sun[45mSSH[0m 1.1.5 / Solaris 10u11 1/13 (x86) / VirtualBox  .                .          .      .
+   65   auxiliary/gather/prometheus_api_gather                             2016-07-01       normal     No     Prometheus API Information Gather
+   66   exploit/windows/[45mssh[0m/putty_msg_debug                                2002-12-16       normal     No     PuTTY Buffer Overflow
+   67     \_ target: Windows 2000 SP4 English                              .                .          .      .
+   68     \_ target: Windows XP SP2 English                                .                .          .      .
+   69     \_ target: Windows 2003 SP1 English                              .                .          .      .
+   70   post/windows/gather/enum_putty_saved_sessions                      .                normal     No     PuTTY Saved Sessions Enumeration Module
+   71   auxiliary/gather/qnap_lfi                                          2019-11-25       normal     Yes    QNAP QTS and Photo Station Local File Inclusion
+   72   exploit/linux/[45mssh[0m/quantum_dxi_known_privkey                        2014-03-17       [32mexcellent[0m  No     Quantum DXi V1000 [45mSSH[0m Private Key Exposure
+   73   exploit/linux/[45mssh[0m/quantum_vmpro_backdoor                           2014-03-17       [32mexcellent[0m  No     Quantum vmPRO Backdoor Command
+   74   auxiliary/fuzzers/[45mssh[0m/[45mssh[0m_version_15                               .                normal     No     [45mSSH[0m 1.5 Version Fuzzer
+   75   auxiliary/fuzzers/[45mssh[0m/[45mssh[0m_version_2                                .                normal     No     [45mSSH[0m 2.0 Version Fuzzer
+   76   auxiliary/fuzzers/[45mssh[0m/[45mssh[0m_kexinit_corrupt                          .                normal     No     [45mSSH[0m Key Exchange Init Corruption
+   77   post/linux/manage/[45mssh[0mkey_persistence                               .                [32mexcellent[0m  No     [45mSSH[0m Key Persistence
+   78   post/windows/manage/[45mssh[0mkey_persistence                             .                good       No     [45mSSH[0m Key Persistence
+   79   auxiliary/scanner/[45mssh[0m/[45mssh[0m_login                                    .                normal     No     [45mSSH[0m Login Check Scanner
+   80   auxiliary/scanner/[45mssh[0m/[45mssh[0m_identify_pubkeys                         .                normal     No     [45mSSH[0m Public Key Acceptance Scanner
+   81   auxiliary/scanner/[45mssh[0m/[45mssh[0m_login_pubkey                             .                normal     No     [45mSSH[0m Public Key Login Scanner
+   82   exploit/multi/[45mssh[0m/[45mssh[0mexec                                          1999-01-01       manual     No     [45mSSH[0m User Code Execution
+   83     \_ target: Linux Command                                         .                .          .      .
+   84     \_ target: Linux x86                                             .                .          .      .
+   85     \_ target: Linux x64                                             .                .          .      .
+   86     \_ target: Linux armle                                           .                .          .      .
+   87     \_ target: Linux mipsle                                          .                .          .      .
+   88     \_ target: Linux mipsbe                                          .                .          .      .
+   89     \_ target: Linux aarch64                                         .                .          .      .
+   90     \_ target: OSX x86                                               .                .          .      .
+   91     \_ target: OSX x64                                               .                .          .      .
+   92     \_ target: BSD x86                                               .                .          .      .
+   93     \_ target: BSD x64                                               .                .          .      .
+   94     \_ target: Python                                                .                .          .      .
+   95     \_ target: Unix Cmd                                              .                .          .      .
+   96     \_ target: Interactive [45mSSH[0m                                       .                .          .      .
+   97   auxiliary/scanner/[45mssh[0m/[45mssh[0m_enumusers                                .                normal     No     [45mSSH[0m Username Enumeration
+   98     \_ action: Malformed Packet                                      .                .          .      Use a malformed packet
+   99     \_ action: Timing Attack                                         .                .          .      Use a timing attack
+   100  auxiliary/fuzzers/[45mssh[0m/[45mssh[0m_version_corrupt                          .                normal     No     [45mSSH[0m Version Corruption
+   101  auxiliary/scanner/[45mssh[0m/[45mssh[0m_version                                  .                normal     No     [45mSSH[0m Version Scanner
+   102  post/multi/gather/saltstack_salt                                   .                normal     No     SaltStack Salt Information Gatherer
+   103  exploit/unix/http/schneider_electric_net55xx_encoder               2019-01-25       [32mexcellent[0m  Yes    Schneider Electric Pelco Endura NET55XX Encoder
+   104  exploit/windows/[45mssh[0m/securecrt_[45mssh[0m1                                 2002-07-23       average    No     SecureCRT [45mSSH[0m1 Buffer Overflow
+   105  exploit/linux/[45mssh[0m/solarwinds_lem_exec                              2017-03-17       [32mexcellent[0m  No     SolarWinds LEM Default [45mSSH[0m Password Remote Code Execution
+   106  exploit/linux/http/sourcegraph_gitserver_[45mssh[0mcmd                    2022-02-18       [32mexcellent[0m  Yes    Sourcegraph gitserver [45mssh[0mCommand RCE
+   107    \_ target: Automatic                                             .                .          .      .
+   108    \_ target: Unix Command                                          .                .          .      .
+   109    \_ target: Linux Dropper                                         .                .          .      .
+   110  exploit/linux/[45mssh[0m/symantec_smg_[45mssh[0m                                 2012-08-27       [32mexcellent[0m  No     Symantec Messaging Gateway 9.5 Default [45mSSH[0m Password Vulnerability
+   111  exploit/linux/http/symantec_messaging_gateway_exec                 2017-04-26       [32mexcellent[0m  No     Symantec Messaging Gateway Remote Code Execution
+   112  exploit/windows/[45mssh[0m/sysax_[45mssh[0m_username                             2012-02-27       normal     Yes    Sysax 5.53 [45mSSH[0m Username Buffer Overflow
+   113    \_ target: Sysax 5.53 on Win XP SP3 / Win2k3 SP0                 .                .          .      .
+   114    \_ target: Sysax 5.53 on Win2K3 SP1/SP2                          .                .          .      .
+   115  auxiliary/dos/windows/[45mssh[0m/sysax_[45mssh[0md_kexchange                     2013-03-17       normal     No     Sysax Multi-Server 6.10 [45mSSH[0mD Key Exchange Denial of Service
+   116  exploit/unix/[45mssh[0m/tectia_passwd_changereq                           2012-12-01       [32mexcellent[0m  Yes    Tectia [45mSSH[0m USERAUTH Change Request Password Reset Vulnerability
+   117  auxiliary/scanner/[45mssh[0m/[45mssh[0m_enum_git_keys                            .                normal     No     Test [45mSSH[0m Github Access
+   118  exploit/linux/http/ubiquiti_airos_file_upload                      2016-02-13       [32mexcellent[0m  No     Ubiquiti airOS Arbitrary File Upload
+   119  payload/cmd/unix/reverse_[45mssh[0m                                       .                normal     No     Unix Command Shell, Reverse TCP [45mSSH[0m
+   120  payload/cmd/unix/bind_aws_instance_connect                         .                normal     No     Unix [45mSSH[0m Shell, Bind Instance Connect (via AWS API)
+   121  exploit/linux/[45mssh[0m/vmware_vrni_known_privkey                        2023-08-29       [32mexcellent[0m  No     VMWare Aria Operations for Networks (vRealize Network Insight) [45mSSH[0m Private Key Exposure
+   122    \_ target: 6.0_platform                                          .                .          .      .
+   123    \_ target: 6.0_proxy                                             .                .          .      .
+   124    \_ target: 6.1_platform                                          .                .          .      .
+   125    \_ target: 6.1_proxy                                             .                .          .      .
+   126    \_ target: 6.2_collector                                         .                .          .      .
+   127    \_ target: 6.2_platform                                          .                .          .      .
+   128    \_ target: 6.3_collector                                         .                .          .      .
+   129    \_ target: 6.3_platform                                          .                .          .      .
+   130    \_ target: 6.4_collector                                         .                .          .      .
+   131    \_ target: 6.4_platform                                          .                .          .      .
+   132    \_ target: 6.5_collector                                         .                .          .      .
+   133    \_ target: 6.5_platform                                          .                .          .      .
+   134    \_ target: 6.6_collector                                         .                .          .      .
+   135    \_ target: 6.6_platform                                          .                .          .      .
+   136    \_ target: 6.7_collector                                         .                .          .      .
+   137    \_ target: 6.7_platform                                          .                .          .      .
+   138    \_ target: 6.8_collector                                         .                .          .      .
+   139    \_ target: 6.8_platform                                          .                .          .      .
+   140    \_ target: 6.9_collector                                         .                .          .      .
+   141    \_ target: 6.9_platform                                          .                .          .      .
+   142    \_ target: 6.10_collector                                        .                .          .      .
+   143    \_ target: 6.10_platform                                         .                .          .      .
+   144    \_ target: All                                                   .                .          .      .
+   145  exploit/linux/[45mssh[0m/vmware_vdp_known_privkey                         2016-12-20       [32mexcellent[0m  No     VMware VDP Known [45mSSH[0m Key
+   146  exploit/multi/http/vmware_vcenter_uploadova_rce                    2021-02-23       manual     Yes    VMware vCenter Server Unauthenticated OVA File Upload RCE
+   147    \_ target: VMware vCenter Server <= 6.7 Update 1b (Linux)        .                .          .      .
+   148    \_ target: VMware vCenter Server <= 6.7 Update 3j (Windows)      .                .          .      .
+   149  exploit/linux/[45mssh[0m/vyos_restricted_shell_privesc                    2018-11-05       [32mgreat[0m      Yes    VyOS restricted-shell Escape and Privilege Escalation
+   150  post/windows/gather/credentials/whatsupgold_credential_dump        2022-11-22       manual     No     WhatsUp Gold Credentials Dump
+   151    \_ action: Decrypt                                               .                .          .      Decrypt WhatsUp Gold database export CSV file
+   152    \_ action: Dump                                                  .                .          .      Export WhatsUp Gold database and perform decryption
+   153    \_ action: Export                                                .                .          .      Export WhatsUp Gold database without decryption
+   154  post/windows/gather/credentials/mremote

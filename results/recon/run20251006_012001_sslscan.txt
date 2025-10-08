@@ -1,0 +1,4 @@
+[31mERROR: Could not open a connection to host 10.239.252.30 (10.239.252.30) on port 443 (connect: Connection refused).[0m
+Version: [32m2.1.5[0m
+OpenSSL 3.5.3 16 Sep 2025
+[0m

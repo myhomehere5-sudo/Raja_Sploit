@@ -1,0 +1,2 @@
+[2025-09-30T14:23:34.132318Z] Fernet decryption error: Fernet key must be 32 url-safe base64-encoded bytes.
+[2025-09-30T14:23:47.252561Z] Base64 decode performed

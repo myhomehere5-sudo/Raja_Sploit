@@ -1,0 +1,300 @@
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:48 kali gvfsd-trash[1783]: GFileInfo created without standard::name
+Oct 08 00:38:48 kali gvfsd-trash[1783]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 08 00:38:50 kali systemd[1]: Stopping user@111.service - User Manager for UID 111...
+Oct 08 00:38:50 kali systemd[954]: Activating special unit exit.target...
+Oct 08 00:38:50 kali systemd[954]: Stopped target default.target - Main User Target.
+Oct 08 00:38:50 kali systemd[954]: Stopped target sound.target - Sound Card.
+Oct 08 00:38:50 kali systemd[954]: Stopping at-spi-dbus-bus.service - Accessibility services bus...
+Oct 08 00:38:50 kali systemd[954]: Stopping filter-chain.service - PipeWire filter chain daemon...
+Oct 08 00:38:50 kali systemd[954]: Stopping gvfs-daemon.service - Virtual filesystem service...
+Oct 08 00:38:50 kali systemd[954]: Stopping pipewire-pulse.service - PipeWire PulseAudio...
+Oct 08 00:38:50 kali systemd[954]: Stopped filter-chain.service - PipeWire filter chain daemon.
+Oct 08 00:38:50 kali systemd[954]: Stopped at-spi-dbus-bus.service - Accessibility services bus.
+Oct 08 00:38:50 kali systemd[954]: Stopped pipewire-pulse.service - PipeWire PulseAudio.
+Oct 08 00:38:50 kali systemd[954]: Stopping wireplumber.service - Multimedia Service Session Manager...
+Oct 08 00:38:50 kali systemd[1]: run-user-111-gvfs.mount: Deactivated successfully.
+Oct 08 00:38:50 kali systemd[954]: Stopped gvfs-daemon.service - Virtual filesystem service.
+Oct 08 00:38:50 kali systemd[954]: Stopped wireplumber.service - Multimedia Service Session Manager.
+Oct 08 00:38:50 kali systemd[954]: Stopping dbus.service - D-Bus User Message Bus...
+Oct 08 00:38:50 kali systemd[954]: Stopping pipewire.service - PipeWire Multimedia Service...
+Oct 08 00:38:50 kali systemd[954]: Stopped dbus.service - D-Bus User Message Bus.
+Oct 08 00:38:50 kali systemd[954]: Stopped pipewire.service - PipeWire Multimedia Service.
+Oct 08 00:38:50 kali systemd[954]: Removed slice session.slice - User Core Session Slice.
+Oct 08 00:38:50 kali systemd[954]: session.slice: Consumed 1.110s CPU time, 52.7M memory peak.
+Oct 08 00:38:50 kali systemd[954]: Stopped target basic.target - Basic System.
+Oct 08 00:38:50 kali systemd[954]: Stopped target paths.target - Paths.
+Oct 08 00:38:50 kali systemd[954]: Stopped target sockets.target - Sockets.
+Oct 08 00:38:50 kali systemd[954]: Stopped target timers.target - Timers.
+Oct 08 00:38:50 kali systemd[954]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 08 00:38:50 kali systemd[954]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+Oct 08 00:38:50 kali systemd[954]: Closed gcr-ssh-agent.socket - GCR ssh-agent wrapper.
+Oct 08 00:38:50 kali systemd[954]: Closed gnome-keyring-daemon.socket - GNOME Keyring daemon.
+Oct 08 00:38:50 kali systemd[954]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 08 00:38:50 kali systemd[954]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 08 00:38:50 kali systemd[954]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 08 00:38:50 kali systemd[954]: Stopping gpg-agent.socket - GnuPG cryptographic agent and passphrase cache...
+Oct 08 00:38:50 kali systemd[954]: Closed keyboxd.socket - GnuPG public key management service.
+Oct 08 00:38:50 kali systemd[954]: Closed pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 08 00:38:50 kali systemd[954]: Closed pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 08 00:38:50 kali systemd[954]: Closed speech-dispatcher.socket - Speech Dispatcher Socket.
+Oct 08 00:38:50 kali systemd[954]: Stopping ssh-agent.socket - OpenSSH Agent socket...
+Oct 08 00:38:50 kali systemd[954]: Closed systemd-ask-password.socket - Query the User Interactively for a Password.
+Oct 08 00:38:50 kali systemd[954]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 08 00:38:50 kali systemd[954]: Closed ssh-agent.socket - OpenSSH Agent socket.
+Oct 08 00:38:50 kali systemd[954]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 08 00:38:50 kali systemd[954]: Removed slice app.slice - User Application Slice.
+Oct 08 00:38:50 kali systemd[954]: Reached target shutdown.target - Shutdown.
+Oct 08 00:38:50 kali systemd[954]: Finished systemd-exit.service - Exit the Session.
+Oct 08 00:38:50 kali systemd[954]: Reached target exit.target - Exit the Session.
+Oct 08 00:38:50 kali (sd-pam)[957]: pam_unix(systemd-user:session): session closed for user lightdm
+Oct 08 00:38:50 kali systemd-logind[608]: Removed session 1.
+Oct 08 00:38:50 kali systemd[1]: user@111.service: Deactivated successfully.
+Oct 08 00:38:50 kali systemd[1]: Stopped user@111.service - User Manager for UID 111.
+Oct 08 00:38:50 kali systemd[1]: user@111.service: Consumed 1.676s CPU time, 63.7M memory peak.
+Oct 08 00:38:50 kali systemd[1]: Stopping user-runtime-dir@111.service - User Runtime Directory /run/user/111...
+Oct 08 00:38:50 kali systemd[1]: run-user-111.mount: Deactivated successfully.
+Oct 08 00:38:50 kali systemd[1]: user-runtime-dir@111.service: Deactivated successfully.
+Oct 08 00:38:50 kali systemd[1]: Stopped user-runtime-dir@111.service - User Runtime Directory /run/user/111.
+Oct 08 00:38:50 kali systemd[1]: Removed slice user-111.slice - User Slice of UID 111.
+Oct 08 00:38:50 kali systemd[1]: user-111.slice: Consumed 3.071s CPU time, 132.9M memory peak.
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Activating via systemd: service name='org.freedesktop.portal.Desktop' unit='xdg-desktop-portal.service' requested by ':1.64' (uid=1000 pid=1806 comm="/usr/bin/qterminal")
+Oct 08 00:38:51 kali systemd[1246]: Starting xdg-desktop-portal.service - Portal service...
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Activating via systemd: service name='org.freedesktop.impl.portal.PermissionStore' unit='xdg-permission-store.service' requested by ':1.65' (uid=1000 pid=1832 comm="/usr/libexec/xdg-desktop-portal")
+Oct 08 00:38:51 kali systemd[1246]: Starting xdg-permission-store.service - sandboxed app permission store...
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+Oct 08 00:38:51 kali systemd[1246]: Started xdg-permission-store.service - sandboxed app permission store.
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Activating via systemd: service name='org.freedesktop.portal.Documents' unit='xdg-document-portal.service' requested by ':1.65' (uid=1000 pid=1832 comm="/usr/libexec/xdg-desktop-portal")
+Oct 08 00:38:51 kali systemd[1246]: Starting xdg-document-portal.service - flatpak document portal service...
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+Oct 08 00:38:51 kali systemd[1246]: Started xdg-document-portal.service - flatpak document portal service.
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Activating via systemd: service name='org.freedesktop.impl.portal.desktop.gtk' unit='xdg-desktop-portal-gtk.service' requested by ':1.65' (uid=1000 pid=1832 comm="/usr/libexec/xdg-desktop-portal")
+Oct 08 00:38:51 kali systemd[1246]: Starting xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation)...
+Oct 08 00:38:51 kali xdg-desktop-por[1858]: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+Oct 08 00:38:51 kali systemd[1246]: Started xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation).
+Oct 08 00:38:51 kali xdg-desktop-por[1832]: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali rtkit-daemon[1000]: Supervising 6 threads of 3 processes of 1 users.
+Oct 08 00:38:51 kali dbus-daemon[1269]: [session uid=1000 pid=1269 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+Oct 08 00:38:51 kali systemd[1246]: Started xdg-desktop-portal.service - Portal service.
+Oct 08 00:38:55 kali systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 08 00:39:01 kali CRON[1893]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 08 00:39:01 kali CRON[1895]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+Oct 08 00:39:01 kali CRON[1893]: pam_unix(cron:session): session closed for user root
+Oct 08 00:39:10 kali systemd[1]: Starting phpsessionclean.service - Clean php session files...
+Oct 08 00:39:10 kali systemd[1]: phpsessionclean.service: Deactivated successfully.
+Oct 08 00:39:10 kali systemd[1]: Finished phpsessionclean.service - Clean php session files.
+Oct 08 00:39:46 kali systemd[1]: pcscd.service: Deactivated successfully.
+Oct 08 00:40:21 kali sudo[1998]: pam_unix(sudo:auth): authentication failure; logname=kali uid=1000 euid=0 tty=/dev/pts/0 ruser=kali rhost=  user=kali
+Oct 08 00:40:26 kali sudo[1998]:     kali : TTY=pts/0 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/timeout 60 tcpdump -w results/forensics/run1/run1_capture.pcap
+Oct 08 00:40:26 kali sudo[1998]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 08 00:40:26 kali kernel: Bluetooth: Core ver 2.22
+Oct 08 00:40:26 kali kernel: NET: Registered PF_BLUETOOTH protocol family
+Oct 08 00:40:26 kali kernel: Bluetooth: HCI device and connection manager initialized
+Oct 08 00:40:26 kali kernel: Bluetooth: HCI socket layer initialized
+Oct 08 00:40:26 kali kernel: Bluetooth: L2CAP socket layer initialized
+Oct 08 00:40:26 kali kernel: Bluetooth: SCO socket layer initialized
+Oct 08 00:40:26 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Oct 08 00:40:35 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Oct 08 00:40:35 kali sudo[1998]: pam_unix(sudo:session): session closed for user root
+Oct 08 00:41:56 kali sudo[2037]:     kali : TTY=pts/0 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/timeout 30 tcpdump -w results/defensive_monitoring/run10/run10_network.pcap
+Oct 08 00:41:56 kali sudo[2037]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 08 00:41:56 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Oct 08 00:41:59 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Oct 08 00:41:59 kali sudo[2037]: pam_unix(sudo:session): session closed for user root

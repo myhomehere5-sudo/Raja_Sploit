@@ -1,0 +1,300 @@
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:47 kali gvfsd-trash[1773]: GFileInfo created without standard::name
+Oct 02 00:56:47 kali gvfsd-trash[1773]: file ../../../gio/gfileinfo.c: line 1713 (g_file_info_get_name): should not be reached
+Oct 02 00:56:51 kali systemd[1]: Stopping user@111.service - User Manager for UID 111...
+Oct 02 00:56:51 kali systemd[955]: Activating special unit exit.target...
+Oct 02 00:56:51 kali systemd[955]: Stopped target default.target - Main User Target.
+Oct 02 00:56:51 kali systemd[955]: Stopping at-spi-dbus-bus.service - Accessibility services bus...
+Oct 02 00:56:51 kali systemd[955]: Stopping filter-chain.service - PipeWire filter chain daemon...
+Oct 02 00:56:51 kali systemd[955]: Stopping gvfs-daemon.service - Virtual filesystem service...
+Oct 02 00:56:51 kali systemd[955]: Stopping pipewire-pulse.service - PipeWire PulseAudio...
+Oct 02 00:56:51 kali systemd[955]: Stopped filter-chain.service - PipeWire filter chain daemon.
+Oct 02 00:56:51 kali systemd[955]: Stopped at-spi-dbus-bus.service - Accessibility services bus.
+Oct 02 00:56:51 kali systemd[955]: Stopped pipewire-pulse.service - PipeWire PulseAudio.
+Oct 02 00:56:51 kali systemd[1]: run-user-111-gvfs.mount: Deactivated successfully.
+Oct 02 00:56:51 kali systemd[955]: Stopping wireplumber.service - Multimedia Service Session Manager...
+Oct 02 00:56:51 kali systemd[955]: Stopped gvfs-daemon.service - Virtual filesystem service.
+Oct 02 00:56:51 kali systemd[955]: Stopped wireplumber.service - Multimedia Service Session Manager.
+Oct 02 00:56:51 kali systemd[955]: Stopping dbus.service - D-Bus User Message Bus...
+Oct 02 00:56:51 kali systemd[955]: Stopping pipewire.service - PipeWire Multimedia Service...
+Oct 02 00:56:52 kali systemd[955]: Stopped dbus.service - D-Bus User Message Bus.
+Oct 02 00:56:52 kali systemd[955]: Stopped pipewire.service - PipeWire Multimedia Service.
+Oct 02 00:56:52 kali systemd[955]: Removed slice session.slice - User Core Session Slice.
+Oct 02 00:56:52 kali systemd[955]: Stopped target basic.target - Basic System.
+Oct 02 00:56:52 kali systemd[955]: Stopped target paths.target - Paths.
+Oct 02 00:56:52 kali systemd[955]: Stopped target sockets.target - Sockets.
+Oct 02 00:56:52 kali systemd[955]: Stopped target timers.target - Timers.
+Oct 02 00:56:52 kali systemd[955]: Closed dbus.socket - D-Bus User Message Bus Socket.
+Oct 02 00:56:52 kali systemd[955]: Closed dirmngr.socket - GnuPG network certificate management daemon.
+Oct 02 00:56:52 kali systemd[955]: Closed gcr-ssh-agent.socket - GCR ssh-agent wrapper.
+Oct 02 00:56:52 kali systemd[955]: Closed gnome-keyring-daemon.socket - GNOME Keyring daemon.
+Oct 02 00:56:52 kali systemd[955]: Closed gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Oct 02 00:56:52 kali systemd[955]: Closed gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Oct 02 00:56:52 kali systemd[955]: Stopping gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Oct 02 00:56:52 kali systemd[955]: Stopping gpg-agent.socket - GnuPG cryptographic agent and passphrase cache...
+Oct 02 00:56:52 kali systemd[955]: Closed keyboxd.socket - GnuPG public key management service.
+Oct 02 00:56:52 kali systemd[955]: Closed pipewire-pulse.socket - PipeWire PulseAudio.
+Oct 02 00:56:52 kali systemd[955]: Closed pipewire.socket - PipeWire Multimedia System Sockets.
+Oct 02 00:56:52 kali systemd[955]: Closed speech-dispatcher.socket - Speech Dispatcher Socket.
+Oct 02 00:56:52 kali systemd[955]: Stopping ssh-agent.socket - OpenSSH Agent socket...
+Oct 02 00:56:52 kali systemd[955]: Closed gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Oct 02 00:56:52 kali systemd[955]: Closed gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Oct 02 00:56:52 kali systemd[955]: Closed ssh-agent.socket - OpenSSH Agent socket.
+Oct 02 00:56:52 kali systemd[955]: Removed slice app.slice - User Application Slice.
+Oct 02 00:56:52 kali systemd[955]: Reached target shutdown.target - Shutdown.
+Oct 02 00:56:52 kali systemd[955]: Finished systemd-exit.service - Exit the Session.
+Oct 02 00:56:52 kali systemd[955]: Reached target exit.target - Exit the Session.
+Oct 02 00:56:52 kali (sd-pam)[967]: pam_unix(systemd-user:session): session closed for user lightdm
+Oct 02 00:56:52 kali systemd-logind[615]: Removed session 1.
+Oct 02 00:56:52 kali systemd[1]: user@111.service: Deactivated successfully.
+Oct 02 00:56:52 kali systemd[1]: Stopped user@111.service - User Manager for UID 111.
+Oct 02 00:56:52 kali systemd[1]: user@111.service: Consumed 1.537s CPU time, 64M memory peak.
+Oct 02 00:56:52 kali systemd[1]: Stopping user-runtime-dir@111.service - User Runtime Directory /run/user/111...
+Oct 02 00:56:52 kali systemd[1]: run-user-111.mount: Deactivated successfully.
+Oct 02 00:56:52 kali systemd[1]: user-runtime-dir@111.service: Deactivated successfully.
+Oct 02 00:56:52 kali systemd[1]: Stopped user-runtime-dir@111.service - User Runtime Directory /run/user/111.
+Oct 02 00:56:52 kali systemd[1]: Removed slice user-111.slice - User Slice of UID 111.
+Oct 02 00:56:52 kali systemd[1]: user-111.slice: Consumed 2.625s CPU time, 133.4M memory peak.
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.freedesktop.portal.Desktop' unit='xdg-desktop-portal.service' requested by ':1.64' (uid=1000 pid=1822 comm="/usr/bin/qterminal")
+Oct 02 00:56:53 kali systemd[1241]: Starting xdg-desktop-portal.service - Portal service...
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.freedesktop.impl.portal.PermissionStore' unit='xdg-permission-store.service' requested by ':1.66' (uid=1000 pid=1826 comm="/usr/libexec/xdg-desktop-portal")
+Oct 02 00:56:53 kali systemd[1241]: Starting xdg-permission-store.service - sandboxed app permission store...
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.PermissionStore'
+Oct 02 00:56:53 kali systemd[1241]: Started xdg-permission-store.service - sandboxed app permission store.
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.freedesktop.portal.Documents' unit='xdg-document-portal.service' requested by ':1.66' (uid=1000 pid=1826 comm="/usr/libexec/xdg-desktop-portal")
+Oct 02 00:56:53 kali systemd[1241]: Starting xdg-document-portal.service - flatpak document portal service...
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.freedesktop.portal.Documents'
+Oct 02 00:56:53 kali systemd[1241]: Started xdg-document-portal.service - flatpak document portal service.
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.freedesktop.impl.portal.desktop.gtk' unit='xdg-desktop-portal-gtk.service' requested by ':1.66' (uid=1000 pid=1826 comm="/usr/libexec/xdg-desktop-portal")
+Oct 02 00:56:53 kali systemd[1241]: Starting xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation)...
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.freedesktop.impl.portal.desktop.gtk'
+Oct 02 00:56:53 kali systemd[1241]: Started xdg-desktop-portal-gtk.service - Portal service (GTK/GNOME implementation).
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 2 users.
+Oct 02 00:56:53 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.freedesktop.portal.Desktop'
+Oct 02 00:56:53 kali systemd[1241]: Started xdg-desktop-portal.service - Portal service.
+Oct 02 00:57:01 kali systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 02 00:57:46 kali systemd[1]: pcscd.service: Deactivated successfully.
+Oct 02 00:59:34 kali sudo[1949]:     kali : TTY=pts/0 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/timeout 30 tcpdump -w results/defensive_monitoring/run3/run3_network.pcap
+Oct 02 00:59:34 kali sudo[1949]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 00:59:34 kali kernel: Bluetooth: Core ver 2.22
+Oct 02 00:59:34 kali kernel: NET: Registered PF_BLUETOOTH protocol family
+Oct 02 00:59:34 kali kernel: Bluetooth: HCI device and connection manager initialized
+Oct 02 00:59:34 kali kernel: Bluetooth: HCI socket layer initialized
+Oct 02 00:59:34 kali kernel: Bluetooth: L2CAP socket layer initialized
+Oct 02 00:59:34 kali kernel: Bluetooth: SCO socket layer initialized
+Oct 02 00:59:34 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Oct 02 01:00:04 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Oct 02 01:00:04 kali sudo[1949]: pam_unix(sudo:session): session closed for user root
+Oct 02 01:05:01 kali CRON[2048]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 01:05:01 kali CRON[2050]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 01:05:01 kali CRON[2048]: pam_unix(cron:session): session closed for user root
+Oct 02 01:09:01 kali CRON[2068]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 01:09:01 kali CRON[2070]: (root) CMD (  [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; then /usr/lib/php/sessionclean; fi)
+Oct 02 01:09:01 kali systemd[1]: Starting phpsessionclean.service - Clean php session files...
+Oct 02 01:09:01 kali CRON[2068]: pam_unix(cron:session): session closed for user root
+Oct 02 01:09:01 kali systemd[1]: phpsessionclean.service: Deactivated successfully.
+Oct 02 01:09:01 kali systemd[1]: Finished phpsessionclean.service - Clean php session files.
+Oct 02 01:11:03 kali sudo[2146]:     kali : TTY=pts/0 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/timeout 30 tcpdump -w results/defensive_monitoring/run5/run5_network.pcap
+Oct 02 01:11:03 kali sudo[2146]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 01:11:03 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Oct 02 01:11:33 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Oct 02 01:11:33 kali systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
+Oct 02 01:11:33 kali sudo[2146]: pam_unix(sudo:session): session closed for user root
+Oct 02 01:11:33 kali systemd-tmpfiles[2155]: /usr/lib/tmpfiles.d/legacy.conf:14: Duplicate line for path "/run/lock", ignoring.
+Oct 02 01:11:33 kali systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+Oct 02 01:11:33 kali systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
+Oct 02 01:11:51 kali sudo[2166]:     kali : TTY=pts/0 ; PWD=/home/kali/Rajasploit ; USER=root ; COMMAND=/usr/bin/timeout 30 tcpdump -w results/defensive_monitoring/run5/run5_network.pcap
+Oct 02 01:11:51 kali sudo[2166]: pam_unix(sudo:session): session opened for user root(uid=0) by kali(uid=1000)
+Oct 02 01:11:51 kali kernel: e1000 0000:00:08.0 eth0: entered promiscuous mode
+Oct 02 01:12:11 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.xfce.Xfconf' unit='xfconfd.service' requested by ':1.26' (uid=1000 pid=1486 comm="xfsettingsd")
+Oct 02 01:12:11 kali systemd[1241]: Starting xfconfd.service - Xfce configuration service...
+Oct 02 01:12:11 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.xfce.Xfconf'
+Oct 02 01:12:11 kali systemd[1241]: Started xfconfd.service - Xfce configuration service.
+Oct 02 01:12:21 kali kernel: e1000 0000:00:08.0 eth0: left promiscuous mode
+Oct 02 01:12:22 kali sudo[2166]: pam_unix(sudo:session): session closed for user root
+Oct 02 01:12:31 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.freedesktop.thumbnails.Thumbnailer1' unit='tumblerd.service' requested by ':1.29' (uid=1000 pid=1502 comm="Thunar --daemon")
+Oct 02 01:12:31 kali systemd[1241]: Starting tumblerd.service - Thumbnailing service...
+Oct 02 01:12:32 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.freedesktop.thumbnails.Thumbnailer1'
+Oct 02 01:12:32 kali systemd[1241]: Started tumblerd.service - Thumbnailing service.
+Oct 02 01:14:38 kali systemd[1]: Starting plocate-updatedb.service - Update the plocate database...
+Oct 02 01:15:01 kali systemd[1]: plocate-updatedb.service: Deactivated successfully.
+Oct 02 01:15:01 kali systemd[1]: Finished plocate-updatedb.service - Update the plocate database.
+Oct 02 01:15:01 kali systemd[1]: plocate-updatedb.service: Consumed 8.350s CPU time, 475.8M memory peak.
+Oct 02 01:15:01 kali CRON[2407]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 01:15:01 kali CRON[2409]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 01:15:01 kali CRON[2407]: pam_unix(cron:session): session closed for user root
+Oct 02 01:17:01 kali CRON[2418]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 01:17:01 kali CRON[2420]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Oct 02 01:17:01 kali CRON[2418]: pam_unix(cron:session): session closed for user root
+Oct 02 01:17:40 kali systemd[1]: Starting apt-daily-upgrade.service - Daily apt upgrade and clean activities...
+Oct 02 01:17:41 kali systemd[1]: apt-daily-upgrade.service: Deactivated successfully.
+Oct 02 01:17:41 kali systemd[1]: Finished apt-daily-upgrade.service - Daily apt upgrade and clean activities.
+Oct 02 01:23:54 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating service name='org.mate.atril.Daemon' requested by ':1.91' (uid=1000 pid=2740 comm="/usr/bin/atril /home/kali/Rajasploit/results/defen")
+Oct 02 01:23:54 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.mate.atril.Daemon'
+Oct 02 01:24:36 kali dbus-daemon[610]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.67' (uid=1000 pid=2812 comm="x-www-browser /home/kali/Rajasploit/results/defens")
+Oct 02 01:24:36 kali systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+Oct 02 01:24:36 kali systemd[1]: Started systemd-timedated.service - Time & Date Service.
+Oct 02 01:24:36 kali dbus-daemon[610]: [system] Successfully activated service 'org.freedesktop.timedate1'
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 1 users.
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 1 users.
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 1 users.
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Supervising 6 threads of 3 processes of 1 users.
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Successfully made thread 2942 of process 2812 owned by '1000' RT at priority 10.
+Oct 02 01:24:37 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:37 kali systemd[1]: Started pcscd.service - PC/SC Smart Card Daemon.
+Oct 02 01:24:38 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:38 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:39 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:40 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:40 kali rtkit-daemon[1038]: Supervising 7 threads of 4 processes of 1 users.
+Oct 02 01:24:54 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Activating via systemd: service name='org.xfce.Xfconf' unit='xfconfd.service' requested by ':1.31' (uid=1000 pid=1514 comm="/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0")
+Oct 02 01:24:54 kali systemd[1241]: Starting xfconfd.service - Xfce configuration service...
+Oct 02 01:24:54 kali dbus-daemon[1263]: [session uid=1000 pid=1263 pidfd=5] Successfully activated service 'org.xfce.Xfconf'
+Oct 02 01:24:54 kali systemd[1241]: Started xfconfd.service - Xfce configuration service.
+Oct 02 01:24:55 kali kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Oct 02 01:24:55 kali kernel: Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+Oct 02 01:24:55 kali kernel: Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+Oct 02 01:24:55 kali kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Oct 02 01:24:55 kali kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:56 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.78 (uid=1000 pid=3205 comm="/usr/bin/dumpcap --log-level MESSAGE -S -D -L -Z 3") with uid 1000
+Oct 02 01:24:58 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.79 (uid=1000 pid=3221 comm="/usr/bin/dumpcap --log-level MESSAGE -S -Z 31") with uid 1000
+Oct 02 01:24:58 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.79 (uid=1000 pid=3221 comm="/usr/bin/dumpcap --log-level MESSAGE -S -Z 31") with uid 1000
+Oct 02 01:24:58 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.79 (uid=1000 pid=3221 comm="/usr/bin/dumpcap --log-level MESSAGE -S -Z 31") with uid 1000
+Oct 02 01:24:58 kali dbus-daemon[610]: [system] rejected attempt to call AddMatch by connection :1.79 (uid=1000 pid=3221 comm="/usr/bin/dumpcap --log-level MESSAGE -S -Z 31") with uid 1000
+Oct 02 01:25:01 kali CRON[3224]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Oct 02 01:25:01 kali CRON[3226]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Oct 02 01:25:01 kali CRON[3224]: pam_unix(cron:session): session closed for user root
+Oct 02 01:25:07 kali systemd[1]: systemd-timedated.service: Deactivated successfully.
+Oct 02 01:25:11 kali dbus-daemon[610]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.80' (uid=1000 pid=3158 comm="wireshark")
+Oct 02 01:25:11 kali systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Oct 02 01:25:12 kali dbus-daemon[610]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.81' (uid=1000 pid=3246 comm="/usr/libexec/gvfsd-dnssd --spawner :1.24 /org/gtk/")
+Oct 02 01:25:12 kali dbus-daemon[610]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Oct 02 01:25:12 kali systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Oct 02 01:25:12 kali dbus-daemon[610]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Oct 02 01:25:12 kali gvfsd-wsdd[3252]: Failed to spawn the wsdd daemon: Failed to execute child process “wsdd” (No such file or directory)
+Oct 02 01:25:12 kali gvfsd-network[3239]: Couldn't create directory monitor on wsdd:///. Error: Automount failed: Failed to spawn the underlying wsdd daemon.
+Oct 02 01:25:42 kali systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Oct 02 01:25:43 kali systemd[1]: pcscd.service: Deactivated successfully.
+Oct 02 01:29:45 kali systemd[1]: Starting logrotate.service - Rotate log files...
+Oct 02 01:29:45 kali systemd[1]: Reloading apache2.service - The Apache HTTP Server...
+Oct 02 01:29:45 kali systemd[1]: logrotate.service: Deactivated successfully.
+Oct 02 01:29:45 kali systemd[1]: Finished logrotate.service - Rotate log files.
+Oct 02 01:29:45 kali apachectl[3386]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+Oct 02 01:29:45 kali systemd[1]: Reloaded apache2.service - The Apache HTTP Server.

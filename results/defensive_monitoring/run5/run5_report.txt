@@ -1,0 +1,22 @@
+Rajasploit Defensive Monitoring Run 5
+Timestamp: 2025-10-02T05:23:29.913203Z
+Run folder: /home/kali/Rajasploit/results/defensive_monitoring/run5
+
+Contents:
+logs/
+logs/journal_recent.txt
+processes/
+processes/ps_aux.txt
+processes/top.txt
+resources/
+resources/disk_usage.txt
+resources/memory.txt
+resources/top.txt
+resources/uptime.txt
+run5_file_integrity.txt
+run5_network.pcap
+run5_network_summary.txt
+run5_nmap.txt
+run5_report.txt
+
+End of report.

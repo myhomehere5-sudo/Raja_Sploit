@@ -1,0 +1,63 @@
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+systemd-timesync:x:992:992:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:991:991:System Message Bus:/nonexistent:/usr/sbin/nologin
+tss:x:101:104:TPM software stack:/var/lib/tpm:/bin/false
+strongswan:x:102:65534::/var/lib/strongswan:/usr/sbin/nologin
+tcpdump:x:103:105::/nonexistent:/usr/sbin/nologin
+sshd:x:990:65534:sshd user:/run/sshd:/usr/sbin/nologin
+_rpc:x:104:65534::/run/rpcbind:/usr/sbin/nologin
+dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
+avahi:x:105:108:Avahi mDNS daemon:/run/avahi-daemon:/usr/sbin/nologin
+nm-openvpn:x:106:109:NetworkManager OpenVPN:/var/lib/openvpn/chroot:/usr/sbin/nologin
+speech-dispatcher:x:107:29:Speech Dispatcher:/run/speech-dispatcher:/bin/false
+usbmux:x:108:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
+nm-openconnect:x:109:110:NetworkManager OpenConnect plugin:/var/lib/NetworkManager:/usr/sbin/nologin
+pulse:x:110:111:PulseAudio daemon:/run/pulse:/usr/sbin/nologin
+lightdm:x:111:114:Light Display Manager:/var/lib/lightdm:/bin/false
+statd:x:112:65534::/var/lib/nfs:/usr/sbin/nologin
+saned:x:113:115::/var/lib/saned:/usr/sbin/nologin
+polkitd:x:989:989:User for polkitd:/:/usr/sbin/nologin
+rtkit:x:114:116:RealtimeKit:/proc:/usr/sbin/nologin
+colord:x:115:117:colord colour management daemon:/var/lib/colord:/usr/sbin/nologin
+stunnel4:x:988:988:stunnel service system account:/var/run/stunnel4:/usr/sbin/nologin
+geoclue:x:117:120::/var/lib/geoclue:/usr/sbin/nologin
+Debian-snmp:x:118:121::/var/lib/snmp:/bin/false
+sslh:x:119:122::/nonexistent:/usr/sbin/nologin
+cups-pk-helper:x:120:125:user for cups-pk-helper service:/nonexistent:/usr/sbin/nologin
+redsocks:x:121:126::/var/run/redsocks:/usr/sbin/nologin
+_gophish:x:122:128::/var/lib/gophish:/usr/sbin/nologin
+iodine:x:123:65534::/run/iodine:/usr/sbin/nologin
+miredo:x:124:65534::/var/run/miredo:/usr/sbin/nologin
+redis:x:125:129::/var/lib/redis:/usr/sbin/nologin
+postgres:x:126:130:PostgreSQL administrator:/var/lib/postgresql:/bin/bash
+mosquitto:x:127:131::/var/lib/mosquitto:/usr/sbin/nologin
+inetsim:x:128:132::/var/lib/inetsim:/usr/sbin/nologin
+_gvm:x:129:134::/var/lib/openvas:/usr/sbin/nologin
+kali:x:1000:1000::/home/kali:/usr/bin/zsh
+pipewire:x:985:113:system user for pipewire:/nonexistent:/usr/sbin/nologin
+debian-tor:x:130:138::/var/lib/tor:/bin/false
+mysql:x:116:119:MariaDB Server:/nonexistent:/bin/false
+student_test:x:1001:1002::/home/student_test:/bin/bash
+new_man:x:1002:1003::/home/new_man:/bin/bash
+avodha_work:x:1004:1004:,,,:/home/avodha_work:/bin/bash
+avodha1_work:x:1005:1005:avodha1234,2,2,22,111:/home/avodha1_work:/bin/bash
+clamav:x:131:139::/var/lib/clamav:/bin/false

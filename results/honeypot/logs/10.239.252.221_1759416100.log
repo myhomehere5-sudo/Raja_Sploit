@@ -1,0 +1,9 @@
+connection_from: 10.239.252.221:53214
+start: 2025-10-02T14:41:40.971471Z
+mac: N/A
+reverse_dns: N/A
+
+[2025-10-02T14:41:41.077381Z] ACTION: simulated_shell
+[2025-10-02T14:41:46.711916Z] CMD: ls
+[2025-10-02T14:42:18.028946Z] CMD: cd boot
+[2025-10-02T14:42:23.886819Z] CMD: ls -la

@@ -1,0 +1,6 @@
+connection_from: 10.239.252.195:46010
+start: 2025-10-07T06:11:20.253540Z
+mac: 08:d2:3e:0b:de:c1
+reverse_dns: N/A
+
+[2025-10-07T06:11:20.330922Z] ACTION: simulated_shell

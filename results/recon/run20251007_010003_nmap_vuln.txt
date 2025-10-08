@@ -1,0 +1,180 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-07 01:00 EDT
+Stats: 0:00:02 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE Timing: About 0.00% done
+Stats: 0:00:04 elapsed; 0 hosts completed (0 up), Nmap scan report for 10.239.252.194
+Host is up (0.018s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE            VERSION
+8834/tcp open  ssl/nessus-xmlrpc?
+MAC Address: 08:D2:3E:0B:DE:C0 (Intel Corporate)
+Device type: general purpose|router
+Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 4.15 - 5.19, OpenWrt 21.02 (Linux 5.4), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 1 hop
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct  7 01:04:29 2025 -- 1 IP address (1 host up) scanned in 259.19 seconds
+f 1 host. Timing: About 0.00% done
+Stats: 0:00:18 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:20 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:22 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:24 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:26 elapsed; 0 hosts completed (0 up), 1 undergoing ARP Ping Scan
+Parallel DNS resolution of 1 host. Timing: About 0.00% done
+Stats: 0:00:28 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 0.02% done
+Stats: 0:00:30 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 1.11% done; ETC: 01:03 (0:02:59 remaining)
+Stats: 0:00:32 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 2.68% done; ETC: 01:03 (0:02:25 remaining)
+Stats: 0:00:34 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 3.01% done; ETC: 01:03 (0:03:13 remaining)
+Stats: 0:00:36 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.33% done; ETC: 01:03 (0:02:22 remaining)
+Stats: 0:00:38 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.53% done; ETC: 01:03 (0:02:51 remaining)
+Stats: 0:00:40 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.56% done; ETC: 01:04 (0:03:24 remaining)
+Stats: 0:00:42 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.64% done; ETC: 01:04 (0:03:54 remaining)
+Stats: 0:00:44 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.70% done; ETC: 01:05 (0:04:25 remaining)
+Stats: 0:00:46 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.75% done; ETC: 01:05 (0:04:55 remaining)
+Stats: 0:00:48 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.79% done; ETC: 01:06 (0:05:25 remaining)
+Stats: 0:00:50 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 5.95% done; ETC: 01:06 (0:05:48 remaining)
+Stats: 0:00:52 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 6.33% done; ETC: 01:06 (0:05:55 remaining)
+Stats: 0:00:54 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 7.22% done; ETC: 01:06 (0:05:34 remaining)
+Stats: 0:00:56 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 10.54% done; ETC: 01:05 (0:03:58 remaining)
+Stats: 0:00:58 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 12.46% done; ETC: 01:04 (0:03:31 remaining)
+Stats: 0:01:00 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 17.54% done; ETC: 01:03 (0:02:30 remaining)
+Stats: 0:01:02 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 23.79% done; ETC: 01:03 (0:01:49 remaining)
+Stats: 0:01:04 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 31.30% done; ETC: 01:02 (0:01:19 remaining)
+Stats: 0:01:06 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 37.10% done; ETC: 01:02 (0:01:04 remaining)
+Stats: 0:01:08 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 44.26% done; ETC: 01:02 (0:00:50 remaining)
+Stats: 0:01:10 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 53.69% done; ETC: 01:01 (0:00:36 remaining)
+Stats: 0:01:12 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 66.33% done; ETC: 01:01 (0:00:22 remaining)
+Stats: 0:01:14 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 75.06% done; ETC: 01:01 (0:00:15 remaining)
+Stats: 0:01:16 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 85.75% done; ETC: 01:01 (0:00:08 remaining)
+Stats: 0:01:18 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 88.75% done; ETC: 01:01 (0:00:06 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 89.43% done; ETC: 01:01 (0:00:06 remaining)
+Stats: 0:01:22 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 90.40% done; ETC: 01:01 (0:00:06 remaining)
+Stats: 0:01:24 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 94.28% done; ETC: 01:01 (0:00:03 remaining)
+Stats: 0:01:26 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 97.19% done; ETC: 01:01 (0:00:02 remaining)
+Stats: 0:01:28 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 99.35% done; ETC: 01:01 (0:00:00 remaining)
+Stats: 0:01:34 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:01:40 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:01:46 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:01:51 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:01:56 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:01:57 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:03 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:04 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:16 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:21 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:27 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:33 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:38 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:44 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:49 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:55 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:00 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:06 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:12 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:17 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:23 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:28 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:34 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:39 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:44 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:50 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:03:56 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:04:01 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 100.00% done; ETC: 01:04 (0:00:00 remaining)
+Stats: 0:04:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 0.00% done
+Stats: 0:04:03 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.84% done; ETC: 01:04 (0:00:00 remaining)
+Stats: 0:04:05 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.28% done; ETC: 01:04 (0:00:00 remaining)
+Stats: 0:04:07 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.28% done; ETC: 01:04 (0:00:00 remaining)
+Stats: 0:04:09 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 72.73% done; ETC: 01:04 (0:00:00 remaining)
+Stats: 0:04:11 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 81.82% done; ETC: 01:04 (0:00:01 remaining)
+Stats: 0:04:13 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 90.91% done; ETC: 01:04 (0:00:01 remaining)
+Stats: 0:04:15 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 90.91% done; ETC: 01:04 (0:00:01 remaining)
+Stats: 0:04:17 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 90.91% done; ETC: 01:04 (0:00:01 remaining)
+Nmap scan report for 10.239.252.194
+Host is up (0.018s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT     STATE SERVICE            VERSION
+8834/tcp open  ssl/nessus-xmlrpc?
+MAC Address: 08:D2:3E:0B:DE:C0 (Intel Corporate)
+Device type: general purpose|router
+Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 4.15 - 5.19, OpenWrt 21.02 (Linux 5.4), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 1 hop
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 259.19 seconds

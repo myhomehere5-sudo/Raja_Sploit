@@ -1,0 +1,2 @@
+Open TCP ports for 10.239.252.194 (10.239.252.194) scanned at 20251007_005903
+No open TCP ports found (1-1000) for 10.239.252.194 (10.239.252.194)

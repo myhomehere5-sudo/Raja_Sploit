@@ -1,0 +1,12 @@
+connection_from: 10.239.252.221:49626
+start: 2025-10-03T04:53:08.362559Z
+mac: N/A
+reverse_dns: N/A
+
+[2025-10-03T04:53:08.481645Z] ACTION: simulated_shell
+[2025-10-03T04:53:10.822557Z] CMD: ls
+[2025-10-03T04:53:18.820812Z] CMD: whoami
+[2025-10-03T04:53:24.618601Z] CMD: cd root
+
+end: 2025-10-03T04:55:24.970889Z
+[2025-10-03T04:55:24.971224Z] ALERT_FORCE_EXCEPTION: name 'force_send_alert_email' is not defined

@@ -1,0 +1,15 @@
+connection_from: 10.239.252.221:35718
+start: 2025-10-04T13:40:21.455377Z
+mac: N/A
+reverse_dns: N/A
+
+[2025-10-04T13:40:21.697429Z] ACTION: simulated_shell
+[2025-10-04T13:40:25.427274Z] CMD: pwd
+[2025-10-04T13:40:27.381047Z] CMD: ls
+[2025-10-04T13:40:31.050882Z] CMD: cd boot
+[2025-10-04T13:40:35.118337Z] CMD: nmap
+
+end: 2025-10-04T13:42:35.609917Z
+[2025-10-04T13:42:35.624128Z] ALERT_LOG: ALERT_SEND_FAILED method=SSL exception=[Errno -3] Temporary failure in name resolution
+[2025-10-04T13:42:36.225940Z] ALERT_LOG: ALERT_SEND_FAILED method=STARTTLS exception=[Errno -3] Temporary failure in name resolution
+[2025-10-04T13:42:36.827028Z] ALERT_LOG: ALERT_SEND_ALL_FAILED last_exception: [Errno -3] Temporary failure in name resolution

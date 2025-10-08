@@ -1,0 +1,11 @@
+{
+  "enable_alerts": true,
+  "alert_min_interval": 300,
+  "auto_ban_threshold": 20,
+  "ban_time_seconds": 3600,
+  "smtp_user": "myhomehere5@gmail.com",
+  "app_password": "ednqyoxbtuxnfvpm",
+  "notify_to": "myhomehere5@gmail.com",
+  "telegram_token": "7600223112:AAEAZlTAepT9u-cGw6gTdGzhTUjQ1yApcwY",
+  "telegram_chat_id": "7494990730"
+}

@@ -1,0 +1,20 @@
+# Nmap 7.95 scan initiated Sun Oct  5 09:38:12 2025 as: /usr/lib/nmap/nmap --privileged -sS -sV -O -p 135,139,445,554 -oN results/port_scan_nmap_10.239.252.820251005_093806.txt 10.239.252.8
+Nmap scan report for 10.239.252.8
+Host is up (0.0013s latency).
+
+PORT    STATE SERVICE      VERSION
+135/tcp open  msrpc        Microsoft Windows RPC
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+554/tcp open  rtsp?
+MAC Address: 08:00:27:FF:09:D1 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|phone
+Running: Microsoft Windows 7|Phone
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows
+OS details: Microsoft Windows Embedded Standard 7, Microsoft Windows Phone 7.5 or 8.0
+Network Distance: 1 hop
+Service Info: Host: ALAN-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct  5 09:40:16 2025 -- 1 IP address (1 host up) scanned in 124.30 seconds

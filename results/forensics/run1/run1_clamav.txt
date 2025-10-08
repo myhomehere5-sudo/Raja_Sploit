@@ -1,0 +1,35 @@
+/home/kali/Rajasploit/results/forensics/run1/run1_capture.pcap: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_report.json: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_clamav.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_logs.tar.gz: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_report.html: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_report.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/run1_report.pdf: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/env.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/id.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/lsblk.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/journal_recent.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/last_50.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/whoami.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/passwd.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/lastlog.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/netstat_tunlp.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/df_h.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/ss_tunap.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/date.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/uptime.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/ps_aux.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/mounts.txt: OK
+/home/kali/Rajasploit/results/forensics/run1/basic/uname.txt: OK
+
+----------- SCAN SUMMARY -----------
+Known viruses: 8708646
+Engine version: 1.4.3
+Scanned directories: 3
+Scanned files: 23
+Infected files: 0
+Data scanned: 54.17 MB
+Data read: 50.84 MB (ratio 1.07:1)
+Time: 23.309 sec (0 m 23 s)
+Start Date: 2025:10:08 00:41:02
+End Date:   2025:10:08 00:41:25
