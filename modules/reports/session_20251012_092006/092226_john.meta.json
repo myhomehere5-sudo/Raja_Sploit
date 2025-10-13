@@ -1,0 +1,8 @@
+{
+  "label": "john",
+  "command": "john --wordlist=/home/kali/Downloads/rockyou.txt /home/kali/.msf4/loot/20251012091305_default_10.239.252.202_linux.hashes_154378.txt",
+  "start": "2025-10-12T09:22:26.510396",
+  "end": "2025-10-12T09:29:03.555026",
+  "returncode": 0,
+  "logfile": "092226_john.log"
+}

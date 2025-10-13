@@ -1,0 +1,14 @@
+connection_from: 10.239.252.1:34724
+start: 2025-10-13T05:06:50.726592Z
+mac: e4:60:17:d4:01:d0
+reverse_dns: N/A
+
+[2025-10-13T05:06:50.812906Z] ACTION: simulated_shell
+
+end: 2025-10-13T05:06:50.827510Z
+[2025-10-13T05:06:52.759664Z] ALERT_LOG: ALERT_SEND_FAILED method=SSL exception=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-29034f0712fsm121374825ad.71 - gsmtp')
+[2025-10-13T05:06:53.416660Z] ALERT_LOG: ALERT_SEND_FAILED method=SSL exception=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-b678ddfeb7fsm8233182a12.19 - gsmtp')
+[2025-10-13T05:06:56.342494Z] ALERT_LOG: ALERT_SEND_FAILED method=STARTTLS exception=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-29034e1cb78sm120413775ad.36 - gsmtp')
+[2025-10-13T05:06:56.757813Z] ALERT_LOG: ALERT_SEND_FAILED method=STARTTLS exception=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-33b626e8f80sm10540051a91.22 - gsmtp')
+[2025-10-13T05:06:56.946576Z] ALERT_LOG: ALERT_SEND_ALL_FAILED last_exception: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-29034e1cb78sm120413775ad.36 - gsmtp')
+[2025-10-13T05:06:57.373380Z] ALERT_LOG: ALERT_SEND_ALL_FAILED last_exception: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-33b626e8f80sm10540051a91.22 - gsmtp')

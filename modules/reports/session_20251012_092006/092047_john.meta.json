@@ -1,0 +1,8 @@
+{
+  "label": "john",
+  "command": "--wordlist=/home/kali/Downloads/rockyou.txt",
+  "start": "2025-10-12T09:20:47.453148",
+  "end": "2025-10-12T09:20:47.474530",
+  "returncode": 0,
+  "logfile": "092047_john.log"
+}

@@ -1,0 +1,9 @@
+PING google.com (2404:6800:4007:808::200e) 56 data bytes
+64 bytes from pnmaaa-aq-in-x0e.1e100.net (2404:6800:4007:808::200e): icmp_seq=1 ttl=108 time=668 ms
+64 bytes from pnmaaa-aq-in-x0e.1e100.net (2404:6800:4007:808::200e): icmp_seq=2 ttl=108 time=180 ms
+64 bytes from pnmaaa-aq-in-x0e.1e100.net (2404:6800:4007:808::200e): icmp_seq=3 ttl=108 time=294 ms
+64 bytes from pnmaaa-aq-in-x0e.1e100.net (2404:6800:4007:808::200e): icmp_seq=4 ttl=108 time=461 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3179ms
+rtt min/avg/max/mdev = 180.082/400.907/667.854/183.715 ms

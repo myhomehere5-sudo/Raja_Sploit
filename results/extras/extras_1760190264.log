@@ -1,0 +1,5 @@
+[2025-10-11T13:44:43.249866Z] Generated password (len=16)
+[2025-10-11T13:45:03.385219Z] Base64 encode performed
+[2025-10-11T13:45:19.130523Z] Base64 encode performed
+[2025-10-11T13:45:47.898162Z] Base64 decode performed
+[2025-10-11T13:46:12.616578Z] Generated QR code -> results/extras/qr.png

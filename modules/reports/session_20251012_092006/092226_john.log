@@ -1,0 +1,18 @@
+Script started on 2025-10-12 09:22:26-04:00 [COMMAND="bash -ic 'john --wordlist=/home/kali/Downloads/rockyou.txt /home/kali/.msf4/loot/20251012091305_default_10.239.252.202_linux.hashes_154378.txt'" TERM="xterm-256color" TTY="/dev/pts/9" COLUMNS="236" LINES="59"]
+Warning: detected hash type "md5crypt", but the string is also recognized as "md5crypt-long"
+Use the "--format=md5crypt-long" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 7 password hashes with 7 different salts (md5crypt, crypt(3) $1$ (and variants) [MD5 128/128 SSE2 4x3])
+Will run 7 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+[0;33m123456789[0m        ([0;33mklog[0m[0m)     
+[0;33mbatman[0m           ([0;33msys[0m[0m)     
+[0;33mservice[0m          ([0;33mservice[0m[0m)     
+3g 0:00:00:12 5.12% (ETA: 09:26:20) 0.2493g/s 69741p/s 279888c/s 279888C/s nikiiscul..nidas
+3g 0:00:00:13 5.89% (ETA: 09:26:07) 0.2186g/s 69942p/s 280530c/s 280530C/s eketahuna..egiptul
+3g 0:00:00:37 13.47% (ETA: 09:27:01) 0.07936g/s 55920p/s 223964c/s 223964C/s LESLEY3003..LAURITA1
+3g 0:00:06:36 DONE (2025-10-12 09:29) 0.007563g/s 35549p/s 142223c/s 142223C/s  ejngyhga007..*7¡Vamos!
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+
+Script done on 2025-10-12 09:29:03-04:00 [COMMAND_EXIT_CODE="0"]

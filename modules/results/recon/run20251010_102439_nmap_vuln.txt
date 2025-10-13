@@ -1,0 +1,565 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-10 10:25 EDT
+Stats: 0:00:02 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE Timing: About 0.00% done
+Stats: 0:00:04 elapsed; 0 hosts completed (0 up), 0 undeNmap scan report for 10.239.252.8
+Host is up (0.0014s latency).
+Not shown: 65528 filtered tcp ports (no-response)
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+554/tcp   open  rtsp?
+2869/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+5357/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+10243/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+MAC Address: 08:00:27:FF:09:D1 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: phone
+Running: Microsoft Windows Phone
+OS CPE: cpe:/o:microsoft:windows
+OS details: Microsoft Windows Phone 7.5 or 8.0
+Network Distance: 1 hop
+Service Info: Host: ALAN-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 10 10:34:33 2025 -- 1 IP address (1 host up) scanned in 566.94 seconds
+1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 13.41% done; ETC: 10:28 (0:02:48 remaining)
+Stats: 0:00:44 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 14.80% done; ETC: 10:28 (0:02:41 remaining)
+Stats: 0:00:46 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 16.19% done; ETC: 10:28 (0:02:35 remaining)
+Stats: 0:00:48 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 17.77% done; ETC: 10:28 (0:02:28 remaining)
+Stats: 0:00:50 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 19.39% done; ETC: 10:28 (0:02:21 remaining)
+Stats: 0:00:52 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 20.99% done; ETC: 10:28 (0:02:16 remaining)
+Stats: 0:00:54 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 22.37% done; ETC: 10:28 (0:02:12 remaining)
+Stats: 0:00:56 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 24.01% done; ETC: 10:28 (0:02:07 remaining)
+Stats: 0:00:58 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 25.69% done; ETC: 10:28 (0:02:01 remaining)
+Stats: 0:01:00 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 27.16% done; ETC: 10:28 (0:01:58 remaining)
+Stats: 0:01:02 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 28.85% done; ETC: 10:28 (0:01:53 remaining)
+Stats: 0:01:04 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 30.30% done; ETC: 10:28 (0:01:50 remaining)
+Stats: 0:01:06 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 31.95% done; ETC: 10:27 (0:01:46 remaining)
+Stats: 0:01:08 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 33.68% done; ETC: 10:27 (0:01:42 remaining)
+Stats: 0:01:10 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 35.45% done; ETC: 10:27 (0:01:38 remaining)
+Stats: 0:01:12 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 37.32% done; ETC: 10:27 (0:01:34 remaining)
+Stats: 0:01:14 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 39.23% done; ETC: 10:27 (0:01:30 remaining)
+Stats: 0:01:16 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 40.92% done; ETC: 10:27 (0:01:27 remaining)
+Stats: 0:01:18 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 42.69% done; ETC: 10:27 (0:01:23 remaining)
+Stats: 0:01:20 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 44.48% done; ETC: 10:27 (0:01:20 remaining)
+Stats: 0:01:22 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 46.40% done; ETC: 10:27 (0:01:16 remaining)
+Stats: 0:01:24 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 48.26% done; ETC: 10:27 (0:01:13 remaining)
+Stats: 0:01:26 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 50.26% done; ETC: 10:27 (0:01:09 remaining)
+Stats: 0:01:28 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 52.28% done; ETC: 10:27 (0:01:06 remaining)
+Stats: 0:01:30 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 54.39% done; ETC: 10:27 (0:01:02 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 56.56% done; ETC: 10:27 (0:00:58 remaining)
+Stats: 0:01:34 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 58.74% done; ETC: 10:27 (0:00:55 remaining)
+Stats: 0:01:36 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 60.98% done; ETC: 10:27 (0:00:51 remaining)
+Stats: 0:01:38 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 63.24% done; ETC: 10:27 (0:00:48 remaining)
+Stats: 0:01:40 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 65.20% done; ETC: 10:27 (0:00:45 remaining)
+Stats: 0:01:42 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 67.41% done; ETC: 10:27 (0:00:42 remaining)
+Stats: 0:01:44 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 69.70% done; ETC: 10:27 (0:00:38 remaining)
+Stats: 0:01:46 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 71.72% done; ETC: 10:27 (0:00:35 remaining)
+Stats: 0:01:48 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 73.84% done; ETC: 10:27 (0:00:33 remaining)
+Stats: 0:01:50 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 76.23% done; ETC: 10:27 (0:00:29 remaining)
+Stats: 0:01:52 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 78.61% done; ETC: 10:27 (0:00:26 remaining)
+Stats: 0:01:54 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 81.01% done; ETC: 10:27 (0:00:23 remaining)
+Stats: 0:01:56 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 83.51% done; ETC: 10:27 (0:00:20 remaining)
+Stats: 0:01:58 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 85.79% done; ETC: 10:27 (0:00:17 remaining)
+Stats: 0:02:00 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 88.27% done; ETC: 10:27 (0:00:14 remaining)
+Stats: 0:02:02 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 90.58% done; ETC: 10:27 (0:00:11 remaining)
+Stats: 0:02:04 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 93.10% done; ETC: 10:27 (0:00:08 remaining)
+Stats: 0:02:06 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 95.59% done; ETC: 10:27 (0:00:05 remaining)
+Stats: 0:02:08 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 98.14% done; ETC: 10:27 (0:00:02 remaining)
+Stats: 0:02:15 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+Stats: 0:02:20 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 42.86% done; ETC: 10:27 (0:00:15 remaining)
+Stats: 0:02:25 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 71.43% done; ETC: 10:27 (0:00:06 remaining)
+Stats: 0:02:31 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 71.43% done; ETC: 10:27 (0:00:09 remaining)
+Stats: 0:02:36 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:27 (0:00:05 remaining)
+Stats: 0:02:41 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:27 (0:00:05 remaining)
+Stats: 0:02:46 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:27 (0:00:06 remaining)
+Stats: 0:02:51 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:07 remaining)
+Stats: 0:02:56 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:08 remaining)
+Stats: 0:03:01 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:09 remaining)
+Stats: 0:03:06 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:10 remaining)
+Stats: 0:03:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:10 remaining)
+Stats: 0:03:16 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:11 remaining)
+Stats: 0:03:21 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:12 remaining)
+Stats: 0:03:26 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:13 remaining)
+Stats: 0:03:31 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:14 remaining)
+Stats: 0:03:36 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:28 (0:00:15 remaining)
+Stats: 0:03:41 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:29 (0:00:15 remaining)
+Stats: 0:03:46 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:29 (0:00:16 remaining)
+Stats: 0:03:51 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:29 (0:00:17 remaining)
+Stats: 0:03:56 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 85.71% done; ETC: 10:29 (0:00:18 remaining)
+Stats: 0:04:01 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 100.00% done; ETC: 10:29 (0:00:00 remaining)
+Stats: 0:04:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 0.00% done
+Stats: 0:04:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 79.42% done; ETC: 10:29 (0:00:00 remaining)
+Stats: 0:04:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 83.43% done; ETC: 10:29 (0:00:00 remaining)
+Stats: 0:04:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 88.33% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 90.86% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 94.07% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 95.94% done; ETC: 10:29 (0:00:00 remaining)
+Stats: 0:04:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.05% done; ETC: 10:29 (0:00:00 remaining)
+Stats: 0:04:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.16% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.93% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.04% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.04% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.04% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:30 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.94% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.94% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.94% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:36 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.83% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:38 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.83% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:40 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.83% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:42 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.94% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:44 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.05% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.05% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:48 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.05% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:50 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.05% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:52 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:29 (0:00:01 remaining)
+Stats: 0:04:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:01 remaining)
+Stats: 0:04:56 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:01 remaining)
+Stats: 0:04:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:01 remaining)
+Stats: 0:05:00 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:04 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.38% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.38% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.38% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.27% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.16% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:02 remaining)
+Stats: 0:05:30 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:36 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:38 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:40 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:42 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:44 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:48 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.06% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:50 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:30 (0:00:03 remaining)
+Stats: 0:05:52 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:05:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.17% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:05:56 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.28% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:05:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.28% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:00 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.28% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.28% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:04 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.39% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.61% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.71% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.71% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:02 remaining)
+Stats: 0:06:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:02 remaining)
+Stats: 0:06:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:30 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:36 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:38 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:40 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:42 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.26% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:44 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:31 (0:00:02 remaining)
+Stats: 0:06:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:31 (0:00:02 remaining)
+Stats: 0:06:48 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:50 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:31 (0:00:03 remaining)
+Stats: 0:06:52 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:06:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:06:56 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:06:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:00 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.48% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:04 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.59% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:30 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:36 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:38 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:40 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:42 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 98.80% done; ETC: 10:32 (0:00:03 remaining)
+Stats: 0:07:44 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:48 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:50 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:32 (0:00:02 remaining)
+Stats: 0:07:52 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:07:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:07:56 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:07:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:00 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.02% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:04 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.24% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:30 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:36 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:38 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:40 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:42 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.46% done; ETC: 10:33 (0:00:02 remaining)
+Stats: 0:08:44 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.67% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:46 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.67% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:48 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.67% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:50 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.67% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:52 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:33 (0:00:01 remaining)
+Stats: 0:08:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:08:56 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:08:58 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:00 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:02 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:04 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:06 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:08 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:10 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.57% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:12 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.78% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:14 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.78% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.78% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:18 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.78% done; ETC: 10:34 (0:00:01 remaining)
+Stats: 0:09:20 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 96.10% done; ETC: 10:34 (0:00:00 remaining)
+Stats: 0:09:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.40% done; ETC: 10:34 (0:00:00 remaining)
+Stats: 0:09:24 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.40% done; ETC: 10:34 (0:00:00 remaining)
+Stats: 0:09:26 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 97.40% done; ETC: 10:34 (0:00:00 remaining)
+Nmap scan report for 10.239.252.8
+Host is up (0.0014s latency).
+Not shown: 65528 filtered tcp ports (no-response)
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+554/tcp   open  rtsp?
+2869/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+5357/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+10243/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+MAC Address: 08:00:27:FF:09:D1 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: phone
+Running: Microsoft Windows Phone
+OS CPE: cpe:/o:microsoft:windows
+OS details: Microsoft Windows Phone 7.5 or 8.0
+Network Distance: 1 hop
+Service Info: Host: ALAN-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 566.94 seconds

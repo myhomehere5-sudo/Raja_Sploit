@@ -64,7 +64,7 @@ LOGDIR.mkdir(parents=True, exist_ok=True)
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------------- Email / Telegram defaults (env overrides) ----------------
-MY_GMAIL = os.environ.get("HONEY_GMAIL_USER", os.environ.get("RAJASPLOIT_GMAIL", "your_"))
+MY_GMAIL = os.environ.get("HONEY_GMAIL_USER", os.environ.get("RAJASPLOIT_GMAIL", "myhomehere5@gmail.com"))
 MY_APP_PASSWORD = os.environ.get("HONEY_GMAIL_APP_PASSWORD", os.environ.get("RAJASPLOIT_GMAIL_APP_PASS", "ednqyoxbtuxnfvpm"))
 NOTIFY_TO = os.environ.get("HONEY_ALERT_RECIPIENT", "myhomehere5@gmail.com")
 
