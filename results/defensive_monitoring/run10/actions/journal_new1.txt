@@ -1,0 +1,3035 @@
+Real-time network capture
+Duration: 30s
+Files:
+results/defensive_monitoring/run10/run10_network.pcap
+results/defensive_monitoring/run10/run10_network_summary.txt
+
+Summary:
+Frame 1: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:57.991952000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:57.991952000 UTC
+    Epoch Arrival Time: 1759898517.991952000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 106 bytes (848 bits)
+    Capture Length: 106 bytes (848 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2402:3a80:1e0d:5b9a::a2
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0010 1110 1010 0010 = Flow Label: 0x72ea2
+    Payload Length: 52
+    Next Header: UDP (17)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 62568, Dst Port: 53
+    Source Port: 62568
+    Destination Port: 53
+    Length: 52
+    Checksum: 0xf412 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Stream Packet Number: 1]
+    [Timestamps]
+        [Time since first frame: 0.000000000 seconds]
+        [Time since previous frame: 0.000000000 seconds]
+    UDP payload (44 bytes)
+Domain Name System (query)
+    Transaction ID: 0x2ad8
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type AAAA, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: AAAA (28) (IP6 Address)
+            Class: IN (0x0001)
+
+Frame 2: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:57.991954000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:57.991954000 UTC
+    Epoch Arrival Time: 1759898517.991954000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000002000 seconds]
+    [Time delta from previous displayed frame: 0.000002000 seconds]
+    [Time since reference or first frame: 0.000002000 seconds]
+    Frame Number: 2
+    Frame Length: 106 bytes (848 bits)
+    Capture Length: 106 bytes (848 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2402:3a80:1e0d:5b9a::a2
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1010 0001 1000 1110 0100 = Flow Label: 0xa18e4
+    Payload Length: 52
+    Next Header: UDP (17)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 64671, Dst Port: 53
+    Source Port: 64671
+    Destination Port: 53
+    Length: 52
+    Checksum: 0x2080 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Stream Packet Number: 1]
+    [Timestamps]
+        [Time since first frame: 0.000000000 seconds]
+        [Time since previous frame: 0.000000000 seconds]
+    UDP payload (44 bytes)
+Domain Name System (query)
+    Transaction ID: 0xf64e
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type A, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+
+Frame 3: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:57.991954000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:57.991954000 UTC
+    Epoch Arrival Time: 1759898517.991954000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000002000 seconds]
+    Frame Number: 3
+    Frame Length: 106 bytes (848 bits)
+    Capture Length: 106 bytes (848 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2402:3a80:1e0d:5b9a::a2
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1110 0001 0110 1001 1110 = Flow Label: 0xe169e
+    Payload Length: 52
+    Next Header: UDP (17)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 51503, Dst Port: 53
+    Source Port: 51503
+    Destination Port: 53
+    Length: 52
+    Checksum: 0x386d [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 2]
+    [Stream Packet Number: 1]
+    [Timestamps]
+        [Time since first frame: 0.000000000 seconds]
+        [Time since previous frame: 0.000000000 seconds]
+    UDP payload (44 bytes)
+Domain Name System (query)
+    Transaction ID: 0x1192
+    Flags: 0x0100 Standard query
+        0... .... .... .... = Response: Message is a query
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+    Questions: 1
+    Answer RRs: 0
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type HTTPS, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: HTTPS (65) (HTTPS Specific Service Endpoints)
+            Class: IN (0x0001)
+
+Frame 4: 291 bytes on wire (2328 bits), 291 bytes captured (2328 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.234131000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.234131000 UTC
+    Epoch Arrival Time: 1759898518.234131000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.242177000 seconds]
+    [Time delta from previous displayed frame: 0.242177000 seconds]
+    [Time since reference or first frame: 0.242179000 seconds]
+    Frame Number: 4
+    Frame Length: 291 bytes (2328 bits)
+    Capture Length: 291 bytes (2328 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a::a2, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0001 0101 1110 0100 1010 = Flow Label: 0x15e4a
+    Payload Length: 237
+    Next Header: UDP (17)
+    Hop Limit: 64
+    Source Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 53, Dst Port: 51503
+    Source Port: 53
+    Destination Port: 51503
+    Length: 237
+    Checksum: 0xa2ef [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 2]
+    [Stream Packet Number: 2]
+    [Timestamps]
+        [Time since first frame: 0.242177000 seconds]
+        [Time since previous frame: 0.242177000 seconds]
+    UDP payload (229 bytes)
+Domain Name System (response)
+    Transaction ID: 0x1192
+    Flags: 0x8180 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .0.. .... .... = Authoritative: Server is not an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 3
+    Authority RRs: 1
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type HTTPS, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: HTTPS (65) (HTTPS Specific Service Endpoints)
+            Class: IN (0x0001)
+    Answers
+        config.teams.microsoft.com: type CNAME, class IN, cname config.teams.trafficmanager.net
+            Name: config.teams.microsoft.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 2830 (47 minutes, 10 seconds)
+            Data length: 33
+            CNAME: config.teams.trafficmanager.net
+        config.teams.trafficmanager.net: type CNAME, class IN, cname dual-s-0005-teams.config.skype.com
+            Name: config.teams.trafficmanager.net
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 47 (47 seconds)
+            Data length: 33
+            CNAME: dual-s-0005-teams.config.skype.com
+        dual-s-0005-teams.config.skype.com: type CNAME, class IN, cname config-teams.s-0005.dual-s-msedge.net
+            Name: dual-s-0005-teams.config.skype.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 6259 (1 hour, 44 minutes, 19 seconds)
+            Data length: 36
+            CNAME: config-teams.s-0005.dual-s-msedge.net
+    Authoritative nameservers
+        dual-s-msedge.net: type SOA, class IN, mname ns1.dual-s-msedge.net
+            Name: dual-s-msedge.net
+            Type: SOA (6) (Start Of a zone of Authority)
+            Class: IN (0x0001)
+            Time to live: 70 (1 minute, 10 seconds)
+            Data length: 35
+            Primary name server: ns1.dual-s-msedge.net
+            Responsible authority's mailbox: msnhst.microsoft.com
+            Serial Number: 2016060801
+            Refresh Interval: 1800 (30 minutes)
+            Retry Interval: 900 (15 minutes)
+            Expire limit: 2419200 (28 days)
+            Minimum TTL: 240 (4 minutes)
+    [Request In: 3]
+    [Time: 0.242177000 seconds]
+
+Frame 5: 314 bytes on wire (2512 bits), 314 bytes captured (2512 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.234134000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.234134000 UTC
+    Epoch Arrival Time: 1759898518.234134000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000003000 seconds]
+    [Time delta from previous displayed frame: 0.000003000 seconds]
+    [Time since reference or first frame: 0.242182000 seconds]
+    Frame Number: 5
+    Frame Length: 314 bytes (2512 bits)
+    Capture Length: 314 bytes (2512 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a::a2, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1111 0101 1111 1001 1100 = Flow Label: 0xf5f9c
+    Payload Length: 260
+    Next Header: UDP (17)
+    Hop Limit: 64
+    Source Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 53, Dst Port: 62568
+    Source Port: 53
+    Destination Port: 62568
+    Length: 260
+    Checksum: 0xa2d1 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 0]
+    [Stream Packet Number: 2]
+    [Timestamps]
+        [Time since first frame: 0.242182000 seconds]
+        [Time since previous frame: 0.242182000 seconds]
+    UDP payload (252 bytes)
+Domain Name System (response)
+    Transaction ID: 0x2ad8
+    Flags: 0x8180 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .0.. .... .... = Authoritative: Server is not an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 6
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type AAAA, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: AAAA (28) (IP6 Address)
+            Class: IN (0x0001)
+    Answers
+        config.teams.microsoft.com: type CNAME, class IN, cname config.teams.trafficmanager.net
+            Name: config.teams.microsoft.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 2830 (47 minutes, 10 seconds)
+            Data length: 33
+            CNAME: config.teams.trafficmanager.net
+        config.teams.trafficmanager.net: type CNAME, class IN, cname dual-s-0005-teams.config.skype.com
+            Name: config.teams.trafficmanager.net
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 47 (47 seconds)
+            Data length: 33
+            CNAME: dual-s-0005-teams.config.skype.com
+        dual-s-0005-teams.config.skype.com: type CNAME, class IN, cname config-teams.s-0005.dual-s-msedge.net
+            Name: dual-s-0005-teams.config.skype.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 6259 (1 hour, 44 minutes, 19 seconds)
+            Data length: 36
+            CNAME: config-teams.s-0005.dual-s-msedge.net
+        config-teams.s-0005.dual-s-msedge.net: type CNAME, class IN, cname s-0005.dual-s-msedge.net
+            Name: config-teams.s-0005.dual-s-msedge.net
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 202 (3 minutes, 22 seconds)
+            Data length: 2
+            CNAME: s-0005.dual-s-msedge.net
+        s-0005.dual-s-msedge.net: type AAAA, class IN, addr 2603:1063:27:2::14
+            Name: s-0005.dual-s-msedge.net
+            Type: AAAA (28) (IP6 Address)
+            Class: IN (0x0001)
+            Time to live: 24 (24 seconds)
+            Data length: 16
+            AAAA Address: 2603:1063:27:2::14
+        s-0005.dual-s-msedge.net: type AAAA, class IN, addr 2603:1063:27:1::14
+            Name: s-0005.dual-s-msedge.net
+            Type: AAAA (28) (IP6 Address)
+            Class: IN (0x0001)
+            Time to live: 24 (24 seconds)
+            Data length: 16
+            AAAA Address: 2603:1063:27:1::14
+    [Request In: 1]
+    [Time: 0.242182000 seconds]
+
+Frame 6: 290 bytes on wire (2320 bits), 290 bytes captured (2320 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.234134000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.234134000 UTC
+    Epoch Arrival Time: 1759898518.234134000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.242182000 seconds]
+    Frame Number: 6
+    Frame Length: 290 bytes (2320 bits)
+    Capture Length: 290 bytes (2320 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:udp:dns]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a::a2, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1010 0010 1010 0100 0110 = Flow Label: 0xa2a46
+    Payload Length: 236
+    Next Header: UDP (17)
+    Hop Limit: 64
+    Source Address: 2402:3a80:1e0d:5b9a::a2
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 0]
+User Datagram Protocol, Src Port: 53, Dst Port: 64671
+    Source Port: 53
+    Destination Port: 64671
+    Length: 236
+    Checksum: 0xd13e [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 1]
+    [Stream Packet Number: 2]
+    [Timestamps]
+        [Time since first frame: 0.242180000 seconds]
+        [Time since previous frame: 0.242180000 seconds]
+    UDP payload (228 bytes)
+Domain Name System (response)
+    Transaction ID: 0xf64e
+    Flags: 0x8180 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .0.. .... .... = Authoritative: Server is not an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 6
+    Authority RRs: 0
+    Additional RRs: 0
+    Queries
+        config.teams.microsoft.com: type A, class IN
+            Name: config.teams.microsoft.com
+            [Name Length: 26]
+            [Label Count: 4]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+    Answers
+        config.teams.microsoft.com: type CNAME, class IN, cname config.teams.trafficmanager.net
+            Name: config.teams.microsoft.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 2830 (47 minutes, 10 seconds)
+            Data length: 33
+            CNAME: config.teams.trafficmanager.net
+        config.teams.trafficmanager.net: type CNAME, class IN, cname dual-s-0005-teams.config.skype.com
+            Name: config.teams.trafficmanager.net
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 47 (47 seconds)
+            Data length: 33
+            CNAME: dual-s-0005-teams.config.skype.com
+        dual-s-0005-teams.config.skype.com: type CNAME, class IN, cname config-teams.s-0005.dual-s-msedge.net
+            Name: dual-s-0005-teams.config.skype.com
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 6259 (1 hour, 44 minutes, 19 seconds)
+            Data length: 36
+            CNAME: config-teams.s-0005.dual-s-msedge.net
+        config-teams.s-0005.dual-s-msedge.net: type CNAME, class IN, cname s-0005.dual-s-msedge.net
+            Name: config-teams.s-0005.dual-s-msedge.net
+            Type: CNAME (5) (Canonical NAME for an alias)
+            Class: IN (0x0001)
+            Time to live: 202 (3 minutes, 22 seconds)
+            Data length: 2
+            CNAME: s-0005.dual-s-msedge.net
+        s-0005.dual-s-msedge.net: type A, class IN, addr 52.123.128.14
+            Name: s-0005.dual-s-msedge.net
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+            Time to live: 240 (4 minutes)
+            Data length: 4
+            Address: 52.123.128.14
+        s-0005.dual-s-msedge.net: type A, class IN, addr 52.123.129.14
+            Name: s-0005.dual-s-msedge.net
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+            Time to live: 240 (4 minutes)
+            Data length: 4
+            Address: 52.123.129.14
+    [Request In: 2]
+    [Time: 0.242180000 seconds]
+
+Frame 7: 86 bytes on wire (688 bits), 86 bytes captured (688 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.235449000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.235449000 UTC
+    Epoch Arrival Time: 1759898518.235449000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.001315000 seconds]
+    [Time delta from previous displayed frame: 0.001315000 seconds]
+    [Time since reference or first frame: 0.243497000 seconds]
+    Frame Number: 7
+    Frame Length: 86 bytes (688 bits)
+    Capture Length: 86 bytes (688 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 32
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 0, Len: 0
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 1]
+    [Conversation completeness: Incomplete (0)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 0... = Data: Absent
+        .... .0.. = ACK: Absent
+        .... ..0. = SYN-ACK: Absent
+        .... ...0 = SYN: Absent
+        [Completeness Flags: [ Null ]]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 1754892566
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 0
+    Acknowledgment number (raw): 0
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x002 (SYN)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...0 .... = Acknowledgment: Not set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+            [Expert Info (Chat/Sequence): Connection establish request (SYN): server port 443]
+                [Connection establish request (SYN): server port 443]
+                [Severity level: Chat]
+                [Group: Sequence]
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ··········S·]
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0xc4ee [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1440 bytes
+            Kind: Maximum Segment Size (2)
+            Length: 4
+            MSS Value: 1440
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 8
+            [Multiplier: 256]
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+            Kind: SACK Permitted (4)
+            Length: 2
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.000000000 seconds]
+        [Time since previous frame in this TCP stream: 0.000000000 seconds]
+
+Frame 8: 86 bytes on wire (688 bits), 86 bytes captured (688 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.363198000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.363198000 UTC
+    Epoch Arrival Time: 1759898518.363198000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.127749000 seconds]
+    [Time delta from previous displayed frame: 0.127749000 seconds]
+    [Time since reference or first frame: 0.371246000 seconds]
+    Frame Number: 8
+    Frame Length: 86 bytes (688 bits)
+    Capture Length: 86 bytes (688 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 32
+    Next Header: TCP (6)
+    Hop Limit: 50
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 0, Ack: 1, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 2]
+    [Conversation completeness: Incomplete, SYN_SENT (1)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 0... = Data: Absent
+        .... .0.. = ACK: Absent
+        .... ..0. = SYN-ACK: Absent
+        .... ...1 = SYN: Present
+        [Completeness Flags: ·····S]
+    [TCP Segment Len: 0]
+    Sequence Number: 0    (relative sequence number)
+    Sequence Number (raw): 1556176821
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 1754892567
+    1000 .... = Header Length: 32 bytes (8)
+    Flags: 0x012 (SYN, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..1. = Syn: Set
+            [Expert Info (Chat/Sequence): Connection establish acknowledge (SYN+ACK): server port 443]
+                [Connection establish acknowledge (SYN+ACK): server port 443]
+                [Severity level: Chat]
+                [Group: Sequence]
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A··S·]
+    Window: 65535
+    [Calculated window size: 65535]
+    Checksum: 0x08cb [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    Options: (12 bytes), Maximum segment size, No-Operation (NOP), Window scale, No-Operation (NOP), No-Operation (NOP), SACK permitted
+        TCP Option - Maximum segment size: 1340 bytes
+            Kind: Maximum Segment Size (2)
+            Length: 4
+            MSS Value: 1340
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - Window scale: 8 (multiply by 256)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 8
+            [Multiplier: 256]
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - No-Operation (NOP)
+            Kind: No-Operation (1)
+        TCP Option - SACK permitted
+            Kind: SACK Permitted (4)
+            Length: 2
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.127749000 seconds]
+        [Time since previous frame in this TCP stream: 0.127749000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 7]
+        [The RTT to ACK the segment was: 0.127749000 seconds]
+
+Frame 9: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.363200000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.363200000 UTC
+    Epoch Arrival Time: 1759898518.363200000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000002000 seconds]
+    [Time delta from previous displayed frame: 0.000002000 seconds]
+    [Time since reference or first frame: 0.371248000 seconds]
+    Frame Number: 9
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 1, Ack: 1, Len: 0
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 3]
+    [Conversation completeness: Incomplete, CLIENT_ESTABLISHED (3)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 0... = Data: Absent
+        .... .0.. = ACK: Absent
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ····SS]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 1754892567
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 1556176822
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x4827 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.127751000 seconds]
+        [Time since previous frame in this TCP stream: 0.000002000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 8]
+        [The RTT to ACK the segment was: 0.000002000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 10: 1810 bytes on wire (14480 bits), 1810 bytes captured (14480 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.363785000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.363785000 UTC
+    Epoch Arrival Time: 1759898518.363785000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000585000 seconds]
+    [Time delta from previous displayed frame: 0.000585000 seconds]
+    [Time since reference or first frame: 0.371833000 seconds]
+    Frame Number: 10
+    Frame Length: 1810 bytes (14480 bits)
+    Capture Length: 1810 bytes (14480 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 1756
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 1, Ack: 1, Len: 1736
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 4]
+    [Conversation completeness: Incomplete, ESTABLISHED (7)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 0... = Data: Absent
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ···ASS]
+    [TCP Segment Len: 1736]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 1754892567
+    [Next Sequence Number: 1737    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 1556176822
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0xcf53 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.128336000 seconds]
+        [Time since previous frame in this TCP stream: 0.000585000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 1736]
+        [Bytes sent since last PSH flag: 1736]
+    TCP payload (1736 bytes)
+Transport Layer Security
+    TLSv1 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 1731
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 1727
+            Version: TLS 1.2 (0x0303)
+                [Expert Info (Chat/Deprecated): This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [Severity level: Chat]
+                    [Group: Deprecated]
+            Random: c10f1c8b355db415f925e35968541d2ef348050851c50d74e0e951e64576261a
+                GMT Unix Time: Aug 21, 2072 04:17:15.000000000 EDT
+                Random Bytes: 355db415f925e35968541d2ef348050851c50d74e0e951e64576261a
+            Session ID Length: 32
+            Session ID: ba7465b1671a6b3008b6ee09f220f098668b3c530bd7cd01b830857bdc3ce155
+            Cipher Suites Length: 32
+            Cipher Suites (16 suites)
+                Cipher Suite: Reserved (GREASE) (0x0a0a)
+                Cipher Suite: TLS_AES_128_GCM_SHA256 (0x1301)
+                Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+                Cipher Suite: TLS_CHACHA20_POLY1305_SHA256 (0x1303)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca9)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca8)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+                Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 1622
+            Extension: Reserved (GREASE) (len=0)
+                Type: Reserved (GREASE) (10794)
+                Length: 0
+                Data: <MISSING>
+            Extension: encrypted_client_hello (len=186)
+                Type: encrypted_client_hello (65037)
+                Length: 186
+                Client Hello type: Outer Client Hello (0)
+                Cipher Suite: HKDF-SHA256/AES-128-GCM
+                    KDF Id: HKDF-SHA256 (1)
+                    AEAD Id: AES-128-GCM (1)
+                Config Id: 121
+                Enc length: 32
+                Enc: 6f42ea1526f1938cbaa839acaba94608a55e82bfb05cbd646e2b92263df88c00
+                Payload length: 144
+                Payload […]: 169f9379e4d8a649e9efb31bb3f94ee4607768d9db182d0d7b9b7921aa1aed1afec5df40368d8cba0bfecb16207a4e2f226d727ef53c637fac9e11d64956a8ced55d5cc702537ef27ac6daf103939d55febf4fb19668965d27575979b48704caac46f22e2ba7a63671a0bbbfbf1d1a1f
+            Extension: renegotiation_info (len=1)
+                Type: renegotiation_info (65281)
+                Length: 1
+                Renegotiation Info extension
+                    Renegotiation info extension length: 0
+            Extension: status_request (len=5)
+                Type: status_request (5)
+                Length: 5
+                Certificate Status Type: OCSP (1)
+                Responder ID list Length: 0
+                Request Extensions Length: 0
+            Extension: supported_groups (len=12)
+                Type: supported_groups (10)
+                Length: 12
+                Supported Groups List Length: 10
+                Supported Groups (5 groups)
+                    Supported Group: Reserved (GREASE) (0x8a8a)
+                    Supported Group: X25519MLKEM768 (0x11ec)
+                    Supported Group: x25519 (0x001d)
+                    Supported Group: secp256r1 (0x0017)
+                    Supported Group: secp384r1 (0x0018)
+            Extension: application_layer_protocol_negotiation (len=14)
+                Type: application_layer_protocol_negotiation (16)
+                Length: 14
+                ALPN Extension Length: 12
+                ALPN Protocol
+                    ALPN string length: 2
+                    ALPN Next Protocol: h2
+                    ALPN string length: 8
+                    ALPN Next Protocol: http/1.1
+            Extension: session_ticket (len=0)
+                Type: session_ticket (35)
+                Length: 0
+                Session Ticket: <MISSING>
+            Extension: compress_certificate (len=3)
+                Type: compress_certificate (27)
+                Length: 3
+                Algorithms Length: 2
+                Algorithm: brotli (2)
+            Extension: signature_algorithms (len=18)
+                Type: signature_algorithms (13)
+                Length: 18
+                Signature Hash Algorithms Length: 16
+                Signature Hash Algorithms (8 algorithms)
+                    Signature Algorithm: ecdsa_secp256r1_sha256 (0x0403)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Algorithm: rsa_pss_rsae_sha256 (0x0804)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (4)
+                    Signature Algorithm: rsa_pkcs1_sha256 (0x0401)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Algorithm: ecdsa_secp384r1_sha384 (0x0503)
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Algorithm: rsa_pss_rsae_sha384 (0x0805)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (5)
+                    Signature Algorithm: rsa_pkcs1_sha384 (0x0501)
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Algorithm: rsa_pss_rsae_sha512 (0x0806)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (6)
+                    Signature Algorithm: rsa_pkcs1_sha512 (0x0601)
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: RSA (1)
+            Extension: supported_versions (len=7) TLS 1.3, TLS 1.2
+                Type: supported_versions (43)
+                Length: 7
+                Supported Versions length: 6
+                Supported Version: Reserved (GREASE) (0xeaea)
+                Supported Version: TLS 1.3 (0x0304)
+                Supported Version: TLS 1.2 (0x0303)
+            Extension: extended_master_secret (len=0)
+                Type: extended_master_secret (23)
+                Length: 0
+            Extension: Unknown type 17613 (len=5)
+                Type: Unknown (17613)
+                Length: 5
+                Data: 0003026832
+            Extension: ec_point_formats (len=2)
+                Type: ec_point_formats (11)
+                Length: 2
+                EC point formats Length: 1
+                Elliptic curves point formats (1)
+                    EC point format: uncompressed (0)
+            Extension: signed_certificate_timestamp (len=0)
+                Type: signed_certificate_timestamp (18)
+                Length: 0
+            Extension: psk_key_exchange_modes (len=2)
+                Type: psk_key_exchange_modes (45)
+                Length: 2
+                PSK Key Exchange Modes Length: 1
+                PSK Key Exchange Mode: PSK with (EC)DHE key establishment (psk_dhe_ke) (1)
+            Extension: server_name (len=31) name=config.teams.microsoft.com
+                Type: server_name (0)
+                Length: 31
+                Server Name Indication extension
+                    Server Name list length: 29
+                    Server Name Type: host_name (0)
+                    Server Name length: 26
+                    Server Name: config.teams.microsoft.com
+            Extension: key_share (len=1263) X25519MLKEM768, x25519
+                Type: key_share (51)
+                Length: 1263
+                Key Share extension
+                    Client Key Share Length: 1261
+                    Key Share Entry: Group: Reserved (GREASE), Key Exchange length: 1
+                        Group: Reserved (GREASE) (35466)
+                        Key Exchange Length: 1
+                        Key Exchange: 00
+                    Key Share Entry: Group: X25519MLKEM768, Key Exchange length: 1216
+                        Group: X25519MLKEM768 (4588)
+                        Key Exchange Length: 1216
+                        Key Exchange […]: 83b35ed6925a78882ed00206e6367b90eac4d613ad6e65812737974be2172888cb435842b46916e9561dbae38055695ac8d09522e41c0c8466b79b090e38c24a960dc13518c0ec3999d670246145bfc4b16fa6c51ea10c9dc64c52eb5b6d60ca2a912d444c4a27d5b2c1658be08
+                    Key Share Entry: Group: x25519, Key Exchange length: 32
+                        Group: x25519 (29)
+                        Key Exchange Length: 32
+                        Key Exchange: e2ee57b1793ef25d88cf1e18d39114cd8db63a07ab30bd8a2503a52bee76b943
+            Extension: Reserved (GREASE) (len=1)
+                Type: Reserved (GREASE) (35466)
+                Length: 1
+                Data: 00
+            [JA4: t13d1516h2_8daaf6152771_d8a2da3f94cd]
+            [JA4_r: t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,44cd,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601]
+            [JA3 Fullstring: 771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-65281-5-10-16-35-27-13-43-23-17613-11-18-45-0-51,4588-29-23-24,0]
+            [JA3: 88d736bf797f5d6982d4a3be979c12d1]
+
+Frame 11: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.537911000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.537911000 UTC
+    Epoch Arrival Time: 1759898518.537911000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.174126000 seconds]
+    [Time delta from previous displayed frame: 0.174126000 seconds]
+    [Time since reference or first frame: 0.545959000 seconds]
+    Frame Number: 11
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 1, Ack: 1341, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 5]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 1556176822
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1341    (relative ack number)
+    Acknowledgment number (raw): 1754893907
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0x03e6 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.302462000 seconds]
+        [Time since previous frame in this TCP stream: 0.174126000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 10]
+            [Expert Info (Note/Sequence): Partial Acknowledgement of a segment]
+                [Partial Acknowledgement of a segment]
+                [Severity level: Note]
+                [Group: Sequence]
+        [The RTT to ACK the segment was: 0.174126000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 12: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.537912000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.537912000 UTC
+    Epoch Arrival Time: 1759898518.537912000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.545960000 seconds]
+    Frame Number: 12
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 1, Ack: 1737, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 6]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 1556176822
+    [Next Sequence Number: 1    (relative sequence number)]
+    Acknowledgment Number: 1737    (relative ack number)
+    Acknowledgment number (raw): 1754894303
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16387
+    [Calculated window size: 4195072]
+    [Window size scaling factor: 256]
+    Checksum: 0x025b [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.302463000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 10]
+        [The RTT to ACK the segment was: 0.174127000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 13: 173 bytes on wire (1384 bits), 173 bytes captured (1384 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.537912000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.537912000 UTC
+    Epoch Arrival Time: 1759898518.537912000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.545960000 seconds]
+    Frame Number: 13
+    Frame Length: 173 bytes (1384 bits)
+    Capture Length: 173 bytes (1384 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 119
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 1, Ack: 1737, Len: 99
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 7]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 99]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 1556176822
+    [Next Sequence Number: 100    (relative sequence number)]
+    Acknowledgment Number: 1737    (relative ack number)
+    Acknowledgment number (raw): 1754894303
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 16387
+    [Calculated window size: 4195072]
+    [Window size scaling factor: 256]
+    Checksum: 0x63fb [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.302463000 seconds]
+        [Time since previous frame in this TCP stream: 0.000000000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 99]
+        [Bytes sent since last PSH flag: 99]
+    TCP payload (99 bytes)
+Transport Layer Security
+    TLSv1.2 Record Layer: Handshake Protocol: Hello Retry Request
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 88
+        Handshake Protocol: Hello Retry Request
+            Handshake Type: Server Hello (2)
+            Length: 84
+            Version: TLS 1.2 (0x0303)
+                [Expert Info (Chat/Deprecated): This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [Severity level: Chat]
+                    [Group: Deprecated]
+            Random: cf21ad74e59a6111be1d8c021e65b891c2a211167abb8c5e079e09e2c8a8339c (HelloRetryRequest magic)
+            Session ID Length: 32
+            Session ID: ba7465b1671a6b3008b6ee09f220f098668b3c530bd7cd01b830857bdc3ce155
+            Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+            Compression Method: null (0)
+            Extensions Length: 12
+            Extension: supported_versions (len=2) TLS 1.3
+                Type: supported_versions (43)
+                Length: 2
+                Supported Version: TLS 1.3 (0x0304)
+            Extension: key_share (len=2) secp384r1
+                Type: key_share (51)
+                Length: 2
+                Key Share extension
+                    Selected Group: secp384r1 (24)
+            [JA3S Fullstring: 771,4866,43-51]
+            [JA3S: 15af977ce25de452b96affa2addb1036]
+    TLSv1.3 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+
+Frame 14: 656 bytes on wire (5248 bits), 656 bytes captured (5248 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.539031000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.539031000 UTC
+    Epoch Arrival Time: 1759898518.539031000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.001119000 seconds]
+    [Time delta from previous displayed frame: 0.001119000 seconds]
+    [Time since reference or first frame: 0.547079000 seconds]
+    Frame Number: 14
+    Frame Length: 656 bytes (5248 bits)
+    Capture Length: 656 bytes (5248 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 602
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 1737, Ack: 100, Len: 582
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 8]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 582]
+    Sequence Number: 1737    (relative sequence number)
+    Sequence Number (raw): 1754894303
+    [Next Sequence Number: 2319    (relative sequence number)]
+    Acknowledgment Number: 100    (relative ack number)
+    Acknowledgment number (raw): 1556176921
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x972c [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.303582000 seconds]
+        [Time since previous frame in this TCP stream: 0.001119000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 13]
+        [The RTT to ACK the segment was: 0.001119000 seconds]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 582]
+        [Bytes sent since last PSH flag: 582]
+    TCP payload (582 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+    TLSv1.3 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 571
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 567
+            Version: TLS 1.2 (0x0303)
+                [Expert Info (Chat/Deprecated): This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [This legacy_version field MUST be ignored. The supported_versions extension is present and MUST be used instead.]
+                    [Severity level: Chat]
+                    [Group: Deprecated]
+            Random: c10f1c8b355db415f925e35968541d2ef348050851c50d74e0e951e64576261a
+            Session ID Length: 32
+            Session ID: ba7465b1671a6b3008b6ee09f220f098668b3c530bd7cd01b830857bdc3ce155
+            Cipher Suites Length: 32
+            Cipher Suites (16 suites)
+                Cipher Suite: Reserved (GREASE) (0x0a0a)
+                Cipher Suite: TLS_AES_128_GCM_SHA256 (0x1301)
+                Cipher Suite: TLS_AES_256_GCM_SHA384 (0x1302)
+                Cipher Suite: TLS_CHACHA20_POLY1305_SHA256 (0x1303)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca9)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca8)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+                Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 462
+            Extension: Reserved (GREASE) (len=0)
+                Type: Reserved (GREASE) (10794)
+                Length: 0
+                Data: <MISSING>
+            Extension: encrypted_client_hello (len=186)
+                Type: encrypted_client_hello (65037)
+                Length: 186
+                Client Hello type: Outer Client Hello (0)
+                Cipher Suite: HKDF-SHA256/AES-128-GCM
+                    KDF Id: HKDF-SHA256 (1)
+                    AEAD Id: AES-128-GCM (1)
+                Config Id: 121
+                Enc length: 32
+                Enc: 6f42ea1526f1938cbaa839acaba94608a55e82bfb05cbd646e2b92263df88c00
+                Payload length: 144
+                Payload […]: 169f9379e4d8a649e9efb31bb3f94ee4607768d9db182d0d7b9b7921aa1aed1afec5df40368d8cba0bfecb16207a4e2f226d727ef53c637fac9e11d64956a8ced55d5cc702537ef27ac6daf103939d55febf4fb19668965d27575979b48704caac46f22e2ba7a63671a0bbbfbf1d1a1f
+            Extension: renegotiation_info (len=1)
+                Type: renegotiation_info (65281)
+                Length: 1
+                Renegotiation Info extension
+                    Renegotiation info extension length: 0
+            Extension: status_request (len=5)
+                Type: status_request (5)
+                Length: 5
+                Certificate Status Type: OCSP (1)
+                Responder ID list Length: 0
+                Request Extensions Length: 0
+            Extension: supported_groups (len=12)
+                Type: supported_groups (10)
+                Length: 12
+                Supported Groups List Length: 10
+                Supported Groups (5 groups)
+                    Supported Group: Reserved (GREASE) (0x8a8a)
+                    Supported Group: X25519MLKEM768 (0x11ec)
+                    Supported Group: x25519 (0x001d)
+                    Supported Group: secp256r1 (0x0017)
+                    Supported Group: secp384r1 (0x0018)
+            Extension: application_layer_protocol_negotiation (len=14)
+                Type: application_layer_protocol_negotiation (16)
+                Length: 14
+                ALPN Extension Length: 12
+                ALPN Protocol
+                    ALPN string length: 2
+                    ALPN Next Protocol: h2
+                    ALPN string length: 8
+                    ALPN Next Protocol: http/1.1
+            Extension: session_ticket (len=0)
+                Type: session_ticket (35)
+                Length: 0
+                Session Ticket: <MISSING>
+            Extension: compress_certificate (len=3)
+                Type: compress_certificate (27)
+                Length: 3
+                Algorithms Length: 2
+                Algorithm: brotli (2)
+            Extension: signature_algorithms (len=18)
+                Type: signature_algorithms (13)
+                Length: 18
+                Signature Hash Algorithms Length: 16
+                Signature Hash Algorithms (8 algorithms)
+                    Signature Algorithm: ecdsa_secp256r1_sha256 (0x0403)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Algorithm: rsa_pss_rsae_sha256 (0x0804)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (4)
+                    Signature Algorithm: rsa_pkcs1_sha256 (0x0401)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Algorithm: ecdsa_secp384r1_sha384 (0x0503)
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Algorithm: rsa_pss_rsae_sha384 (0x0805)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (5)
+                    Signature Algorithm: rsa_pkcs1_sha384 (0x0501)
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Algorithm: rsa_pss_rsae_sha512 (0x0806)
+                        Signature Hash Algorithm Hash: Unknown (8)
+                        Signature Hash Algorithm Signature: Unknown (6)
+                    Signature Algorithm: rsa_pkcs1_sha512 (0x0601)
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: RSA (1)
+            Extension: supported_versions (len=7) TLS 1.3, TLS 1.2
+                Type: supported_versions (43)
+                Length: 7
+                Supported Versions length: 6
+                Supported Version: Reserved (GREASE) (0xeaea)
+                Supported Version: TLS 1.3 (0x0304)
+                Supported Version: TLS 1.2 (0x0303)
+            Extension: extended_master_secret (len=0)
+                Type: extended_master_secret (23)
+                Length: 0
+            Extension: Unknown type 17613 (len=5)
+                Type: Unknown (17613)
+                Length: 5
+                Data: 0003026832
+            Extension: ec_point_formats (len=2)
+                Type: ec_point_formats (11)
+                Length: 2
+                EC point formats Length: 1
+                Elliptic curves point formats (1)
+                    EC point format: uncompressed (0)
+            Extension: signed_certificate_timestamp (len=0)
+                Type: signed_certificate_timestamp (18)
+                Length: 0
+            Extension: psk_key_exchange_modes (len=2)
+                Type: psk_key_exchange_modes (45)
+                Length: 2
+                PSK Key Exchange Modes Length: 1
+                PSK Key Exchange Mode: PSK with (EC)DHE key establishment (psk_dhe_ke) (1)
+            Extension: server_name (len=31) name=config.teams.microsoft.com
+                Type: server_name (0)
+                Length: 31
+                Server Name Indication extension
+                    Server Name list length: 29
+                    Server Name Type: host_name (0)
+                    Server Name length: 26
+                    Server Name: config.teams.microsoft.com
+            Extension: key_share (len=103) secp384r1
+                Type: key_share (51)
+                Length: 103
+                Key Share extension
+                    Client Key Share Length: 101
+                    Key Share Entry: Group: secp384r1, Key Exchange length: 97
+                        Group: secp384r1 (24)
+                        Key Exchange Length: 97
+                        Key Exchange: 04a479f5e61323fc8b27160dfcf931ba8c50f69c3c5e3cb8d8b59c980c1f693423ec62192839ce057e903ce47a902e861f3a8868b7f609d8416251da09d2069e19be82e976d6f870e8e7fe25e9a5a0bcb75493c4138980c0d62a4f254dcd54aa84
+            Extension: Reserved (GREASE) (len=1)
+                Type: Reserved (GREASE) (35466)
+                Length: 1
+                Data: 00
+            [JA4: t13d1516h2_8daaf6152771_d8a2da3f94cd]
+            [JA4_r: t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,44cd,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601]
+            [JA3 Fullstring: 771,4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53,65037-65281-5-10-16-35-27-13-43-23-17613-11-18-45-0-51,4588-29-23-24,0]
+            [JA3: 88d736bf797f5d6982d4a3be979c12d1]
+
+Frame 15: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.737606000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.737606000 UTC
+    Epoch Arrival Time: 1759898518.737606000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.198575000 seconds]
+    [Time delta from previous displayed frame: 0.198575000 seconds]
+    [Time since reference or first frame: 0.745654000 seconds]
+    Frame Number: 15
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 100, Ack: 2319, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 9]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 100    (relative sequence number)
+    Sequence Number (raw): 1556176921
+    [Next Sequence Number: 100    (relative sequence number)]
+    Acknowledgment Number: 2319    (relative ack number)
+    Acknowledgment number (raw): 1754894885
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16385
+    [Calculated window size: 4194560]
+    [Window size scaling factor: 256]
+    Checksum: 0xffb3 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.502157000 seconds]
+        [Time since previous frame in this TCP stream: 0.198575000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 14]
+        [The RTT to ACK the segment was: 0.198575000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 16: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.738319000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.738319000 UTC
+    Epoch Arrival Time: 1759898518.738319000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000713000 seconds]
+    [Time delta from previous displayed frame: 0.000713000 seconds]
+    [Time since reference or first frame: 0.746367000 seconds]
+    Frame Number: 16
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 2319, Ack: 2780, Len: 0
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 10]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 2319    (relative sequence number)
+    Sequence Number (raw): 1754894885
+    [Next Sequence Number: 2319    (relative sequence number)]
+    Acknowledgment Number: 2780    (relative ack number)
+    Acknowledgment number (raw): 1556179601
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x343e [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.502870000 seconds]
+        [Time since previous frame in this TCP stream: 0.000713000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [TCP Analysis Flags]
+            [Expert Info (Warning/Sequence): ACKed segment that wasn't captured (common at capture start)]
+                [ACKed segment that wasn't captured (common at capture start)]
+                [Severity level: Warning]
+                [Group: Sequence]
+
+Frame 17: 2754 bytes on wire (22032 bits), 2754 bytes captured (22032 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.738321000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.738321000 UTC
+    Epoch Arrival Time: 1759898518.738321000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000002000 seconds]
+    [Time delta from previous displayed frame: 0.000002000 seconds]
+    [Time since reference or first frame: 0.746369000 seconds]
+    Frame Number: 17
+    Frame Length: 2754 bytes (22032 bits)
+    Capture Length: 2754 bytes (22032 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 2700
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 100, Ack: 2319, Len: 2680
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 11]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 2680]
+    Sequence Number: 100    (relative sequence number)
+    Sequence Number (raw): 1556176921
+    [Next Sequence Number: 2780    (relative sequence number)]
+    Acknowledgment Number: 2319    (relative ack number)
+    Acknowledgment number (raw): 1754894885
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16385
+    [Calculated window size: 4194560]
+    [Window size scaling factor: 256]
+    Checksum: 0xd303 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.502872000 seconds]
+        [Time since previous frame in this TCP stream: 0.000002000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 2680]
+        [Bytes sent since last PSH flag: 2680]
+        [TCP Analysis Flags]
+            [Expert Info (Note/Sequence): This frame is a (suspected) spurious retransmission]
+                [This frame is a (suspected) spurious retransmission]
+                [Severity level: Note]
+                [Group: Sequence]
+            [Expert Info (Note/Sequence): This frame is a (suspected) retransmission]
+                [This frame is a (suspected) retransmission]
+                [Severity level: Note]
+                [Group: Sequence]
+    TCP payload (2680 bytes)
+    Retransmitted TCP segment data (2680 bytes)
+
+Frame 18: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.739309000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.739309000 UTC
+    Epoch Arrival Time: 1759898518.739309000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000988000 seconds]
+    [Time delta from previous displayed frame: 0.000988000 seconds]
+    [Time since reference or first frame: 0.747357000 seconds]
+    Frame Number: 18
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 2319, Ack: 5460, Len: 0
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 12]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 2319    (relative sequence number)
+    Sequence Number (raw): 1754894885
+    [Next Sequence Number: 2319    (relative sequence number)]
+    Acknowledgment Number: 5460    (relative ack number)
+    Acknowledgment number (raw): 1556182281
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 255
+    [Calculated window size: 65280]
+    [Window size scaling factor: 256]
+    Checksum: 0x29c6 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.503860000 seconds]
+        [Time since previous frame in this TCP stream: 0.000988000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [TCP Analysis Flags]
+            [Expert Info (Warning/Sequence): ACKed segment that wasn't captured (common at capture start)]
+                [ACKed segment that wasn't captured (common at capture start)]
+                [Severity level: Warning]
+                [Group: Sequence]
+
+Frame 19: 3486 bytes on wire (27888 bits), 3486 bytes captured (27888 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.739311000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.739311000 UTC
+    Epoch Arrival Time: 1759898518.739311000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000002000 seconds]
+    [Time delta from previous displayed frame: 0.000002000 seconds]
+    [Time since reference or first frame: 0.747359000 seconds]
+    Frame Number: 19
+    Frame Length: 3486 bytes (27888 bits)
+    Capture Length: 3486 bytes (27888 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 3432
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 2780, Ack: 2319, Len: 3412
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 13]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 3412]
+    Sequence Number: 2780    (relative sequence number)
+    Sequence Number (raw): 1556179601
+    [Next Sequence Number: 6192    (relative sequence number)]
+    Acknowledgment Number: 2319    (relative ack number)
+    Acknowledgment number (raw): 1754894885
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 16385
+    [Calculated window size: 4194560]
+    [Window size scaling factor: 256]
+    Checksum: 0xd5df [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.503862000 seconds]
+        [Time since previous frame in this TCP stream: 0.000002000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 3412]
+        [Bytes sent since last PSH flag: 6092]
+    TCP payload (3412 bytes)
+Transport Layer Security
+
+Frame 20: 148 bytes on wire (1184 bits), 148 bytes captured (1184 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.741384000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.741384000 UTC
+    Epoch Arrival Time: 1759898518.741384000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.002073000 seconds]
+    [Time delta from previous displayed frame: 0.002073000 seconds]
+    [Time since reference or first frame: 0.749432000 seconds]
+    Frame Number: 20
+    Frame Length: 148 bytes (1184 bits)
+    Capture Length: 148 bytes (1184 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 94
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 2319, Ack: 6192, Len: 74
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 14]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 74]
+    Sequence Number: 2319    (relative sequence number)
+    Sequence Number (raw): 1754894885
+    [Next Sequence Number: 2393    (relative sequence number)]
+    Acknowledgment Number: 6192    (relative ack number)
+    Acknowledgment number (raw): 1556183013
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 253
+    [Calculated window size: 64768]
+    [Window size scaling factor: 256]
+    Checksum: 0x7cb3 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.505935000 seconds]
+        [Time since previous frame in this TCP stream: 0.002073000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 19]
+        [The RTT to ACK the segment was: 0.002073000 seconds]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 74]
+        [Bytes sent since last PSH flag: 74]
+        [TCP Analysis Flags]
+            [Expert Info (Warning/Sequence): ACKed segment that wasn't captured (common at capture start)]
+                [ACKed segment that wasn't captured (common at capture start)]
+                [Severity level: Warning]
+                [Group: Sequence]
+    TCP payload (74 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 69
+        Encrypted Application Data: e1454452973696b6c41bc3eccd146247f44e2334ad384721564cc8a0f44095fb986b67de01d1989486fde14435652cbc90e739880714f3f4c9fdd726f9e6cebbb9a29a633b
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 21: 166 bytes on wire (1328 bits), 166 bytes captured (1328 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.741385000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.741385000 UTC
+    Epoch Arrival Time: 1759898518.741385000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.749433000 seconds]
+    Frame Number: 21
+    Frame Length: 166 bytes (1328 bits)
+    Capture Length: 166 bytes (1328 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 112
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 2393, Ack: 6192, Len: 92
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 15]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 92]
+    Sequence Number: 2393    (relative sequence number)
+    Sequence Number (raw): 1754894959
+    [Next Sequence Number: 2485    (relative sequence number)]
+    Acknowledgment Number: 6192    (relative ack number)
+    Acknowledgment number (raw): 1556183013
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 253
+    [Calculated window size: 64768]
+    [Window size scaling factor: 256]
+    Checksum: 0x1bc7 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.505936000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 166]
+        [Bytes sent since last PSH flag: 92]
+    TCP payload (92 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 87
+        Encrypted Application Data: a8ae89176fc14b527edea185c00b397190531a4dd3413938e6055b9bcf5a4d4969b3fe465c05b40d7e85867ec78afb1c69922ccd1f26db9a99f3b722fbc6f436269fc9a4041c7c7f1a3f0ed3c6e6690c13a6af04300089
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 22: 901 bytes on wire (7208 bits), 901 bytes captured (7208 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.742164000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.742164000 UTC
+    Epoch Arrival Time: 1759898518.742164000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000779000 seconds]
+    [Time delta from previous displayed frame: 0.000779000 seconds]
+    [Time since reference or first frame: 0.750212000 seconds]
+    Frame Number: 22
+    Frame Length: 901 bytes (7208 bits)
+    Capture Length: 901 bytes (7208 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 847
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 2485, Ack: 6192, Len: 827
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 16]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 827]
+    Sequence Number: 2485    (relative sequence number)
+    Sequence Number (raw): 1754895051
+    [Next Sequence Number: 3312    (relative sequence number)]
+    Acknowledgment Number: 6192    (relative ack number)
+    Acknowledgment number (raw): 1556183013
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 253
+    [Calculated window size: 64768]
+    [Window size scaling factor: 256]
+    Checksum: 0x8bc1 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.506715000 seconds]
+        [Time since previous frame in this TCP stream: 0.000779000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 993]
+        [Bytes sent since last PSH flag: 827]
+    TCP payload (827 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 822
+        Encrypted Application Data […]: ba80d37b7ed95f9bf1afdfc06e7bf89cc7a9eca2298c659f68623351e9b4bb60d605b5eacfdef7d7cab7235dce6c0b00c7912c746bd68ad1fc336d03d2a038b74f103349b1ab709c89c5afb4ec5a740282c4c2026b74cabb8b757657b433db3b63c8b8fbda350
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 23: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.856772000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.856772000 UTC
+    Epoch Arrival Time: 1759898518.856772000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.114608000 seconds]
+    [Time delta from previous displayed frame: 0.114608000 seconds]
+    [Time since reference or first frame: 0.864820000 seconds]
+    Frame Number: 23
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 6192, Ack: 3312, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 17]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 6192    (relative sequence number)
+    Sequence Number (raw): 1556183013
+    [Next Sequence Number: 6192    (relative sequence number)]
+    Acknowledgment Number: 3312    (relative ack number)
+    Acknowledgment number (raw): 1754895878
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0xe403 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.621323000 seconds]
+        [Time since previous frame in this TCP stream: 0.114608000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 22]
+        [The RTT to ACK the segment was: 0.114608000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 24: 533 bytes on wire (4264 bits), 533 bytes captured (4264 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.856773000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.856773000 UTC
+    Epoch Arrival Time: 1759898518.856773000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.864821000 seconds]
+    Frame Number: 24
+    Frame Length: 533 bytes (4264 bits)
+    Capture Length: 533 bytes (4264 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 479
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 6192, Ack: 3312, Len: 459
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 18]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 459]
+    Sequence Number: 6192    (relative sequence number)
+    Sequence Number (raw): 1556183013
+    [Next Sequence Number: 6651    (relative sequence number)]
+    Acknowledgment Number: 3312    (relative ack number)
+    Acknowledgment number (raw): 1754895878
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0x1e5e [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.621324000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 459]
+        [Bytes sent since last PSH flag: 459]
+    TCP payload (459 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 454
+        Encrypted Application Data […]: 52ab9f261ad86c0c0d371daea924afe82f4a4daabdbd4871968eaf7579fc79c68f305fb59097c7666221c777b44875d6836a0da3805a1d4bd5a6ff07565d74b462326f37f4968745f82bdabd77584a4baa43e1c8f6f1b8475f88208abb0841d32f42c55c139dd
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 25: 136 bytes on wire (1088 bits), 136 bytes captured (1088 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.857371000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.857371000 UTC
+    Epoch Arrival Time: 1759898518.857371000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000598000 seconds]
+    [Time delta from previous displayed frame: 0.000598000 seconds]
+    [Time since reference or first frame: 0.865419000 seconds]
+    Frame Number: 25
+    Frame Length: 136 bytes (1088 bits)
+    Capture Length: 136 bytes (1088 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 82
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 6651, Ack: 3312, Len: 62
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 19]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 62]
+    Sequence Number: 6651    (relative sequence number)
+    Sequence Number (raw): 1556183472
+    [Next Sequence Number: 6713    (relative sequence number)]
+    Acknowledgment Number: 3312    (relative ack number)
+    Acknowledgment number (raw): 1754895878
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0x10d3 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.621922000 seconds]
+        [Time since previous frame in this TCP stream: 0.000598000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 521]
+        [Bytes sent since last PSH flag: 62]
+    TCP payload (62 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 57
+        Encrypted Application Data: c5a9b0ab6940254ca29c729c046368ee681628a2935b1696a635790a43b0894a40e3b44e4ebee2c989e38f2709dda995f4846c164f03dd54ee
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 26: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.857372000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.857372000 UTC
+    Epoch Arrival Time: 1759898518.857372000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.865420000 seconds]
+    Frame Number: 26
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 3312, Ack: 6713, Len: 0
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 20]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 3312    (relative sequence number)
+    Sequence Number (raw): 1754895878
+    [Next Sequence Number: 3312    (relative sequence number)]
+    Acknowledgment Number: 6713    (relative ack number)
+    Acknowledgment number (raw): 1556183534
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 251
+    [Calculated window size: 64256]
+    [Window size scaling factor: 256]
+    Checksum: 0x2104 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.621923000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 25]
+        [The RTT to ACK the segment was: 0.000001000 seconds]
+        [iRTT: 0.127751000 seconds]
+
+Frame 27: 105 bytes on wire (840 bits), 105 bytes captured (840 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.857373000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.857373000 UTC
+    Epoch Arrival Time: 1759898518.857373000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.865421000 seconds]
+    Frame Number: 27
+    Frame Length: 105 bytes (840 bits)
+    Capture Length: 105 bytes (840 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3), Dst: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+    Destination: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140, Dst: 2603:1063:27:2::14
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 0111 0111 0000 0101 1111 = Flow Label: 0x7705f
+    Payload Length: 51
+    Next Header: TCP (6)
+    Hop Limit: 254
+    Source Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    Destination Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 61017, Dst Port: 443, Seq: 3312, Ack: 6713, Len: 31
+    Source Port: 61017
+    Destination Port: 443
+    [Stream index: 0]
+    [Stream Packet Number: 21]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 31]
+    Sequence Number: 3312    (relative sequence number)
+    Sequence Number (raw): 1754895878
+    [Next Sequence Number: 3343    (relative sequence number)]
+    Acknowledgment Number: 6713    (relative ack number)
+    Acknowledgment number (raw): 1556183534
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 251
+    [Calculated window size: 64256]
+    [Window size scaling factor: 256]
+    Checksum: 0x4053 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.621924000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 31]
+        [Bytes sent since last PSH flag: 31]
+    TCP payload (31 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 26
+        Encrypted Application Data: 5976a0d20e523a47ec132fec722e67daefe9538431e202c6d5aa
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 28: 105 bytes on wire (840 bits), 105 bytes captured (840 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.946928000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.946928000 UTC
+    Epoch Arrival Time: 1759898518.946928000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.089555000 seconds]
+    [Time delta from previous displayed frame: 0.089555000 seconds]
+    [Time since reference or first frame: 0.954976000 seconds]
+    Frame Number: 28
+    Frame Length: 105 bytes (840 bits)
+    Capture Length: 105 bytes (840 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp:tls]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 51
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 6713, Ack: 3312, Len: 31
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 22]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 31]
+    Sequence Number: 6713    (relative sequence number)
+    Sequence Number (raw): 1556183534
+    [Next Sequence Number: 6744    (relative sequence number)]
+    Acknowledgment Number: 3312    (relative ack number)
+    Acknowledgment number (raw): 1754895878
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0xd46f [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.711479000 seconds]
+        [Time since previous frame in this TCP stream: 0.089555000 seconds]
+    [SEQ/ACK analysis]
+        [iRTT: 0.127751000 seconds]
+        [Bytes in flight: 31]
+        [Bytes sent since last PSH flag: 31]
+    TCP payload (31 bytes)
+Transport Layer Security
+    TLSv1.3 Record Layer: Application Data Protocol: Hypertext Transfer Protocol
+        Opaque Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 26
+        Encrypted Application Data: 49626bcbd0bb990d3b91bb8049e2c4f2f17f641a109503fcd1cf
+        [Application Data Protocol: Hypertext Transfer Protocol]
+
+Frame 29: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Oct  8, 2025 00:41:58.946929000 EDT
+    UTC Arrival Time: Oct  8, 2025 04:41:58.946929000 UTC
+    Epoch Arrival Time: 1759898518.946929000
+    [Time shift for this packet: 0.000000000 seconds]
+    [Time delta from previous captured frame: 0.000001000 seconds]
+    [Time delta from previous displayed frame: 0.000001000 seconds]
+    [Time since reference or first frame: 0.954977000 seconds]
+    Frame Number: 29
+    Frame Length: 74 bytes (592 bits)
+    Capture Length: 74 bytes (592 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ipv6:tcp]
+Ethernet II, Src: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0), Dst: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+    Destination: CloudNetwork_28:03:b3 (d8:b3:2f:28:03:b3)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 2e:b4:69:6b:dd:a0 (2e:b4:69:6b:dd:a0)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv6 (0x86dd)
+    [Stream index: 0]
+Internet Protocol Version 6, Src: 2603:1063:27:2::14, Dst: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+    0110 .... = Version: 6
+    .... 1000 1000 .... .... .... .... .... = Traffic Class: 0x88 (DSCP: AF41, ECN: Not-ECT)
+        .... 1000 10.. .... .... .... .... .... = Differentiated Services Codepoint: Assured Forwarding 41 (34)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... 1101 1010 0000 0110 1000 = Flow Label: 0xda068
+    Payload Length: 20
+    Next Header: TCP (6)
+    Hop Limit: 51
+    Source Address: 2603:1063:27:2::14
+        [Address Space: Global Unicast]
+    Destination Address: 2402:3a80:1e0d:5b9a:3004:d403:d45b:e140
+        [Address Space: Global Unicast]
+    [Stream index: 1]
+Transmission Control Protocol, Src Port: 443, Dst Port: 61017, Seq: 6744, Ack: 3343, Len: 0
+    Source Port: 443
+    Destination Port: 61017
+    [Stream index: 0]
+    [Stream Packet Number: 23]
+    [Conversation completeness: Incomplete, DATA (15)]
+        ..0. .... = RST: Absent
+        ...0 .... = FIN: Absent
+        .... 1... = Data: Present
+        .... .1.. = ACK: Present
+        .... ..1. = SYN-ACK: Present
+        .... ...1 = SYN: Present
+        [Completeness Flags: ··DASS]
+    [TCP Segment Len: 0]
+    Sequence Number: 6744    (relative sequence number)
+    Sequence Number (raw): 1556183565
+    [Next Sequence Number: 6744    (relative sequence number)]
+    Acknowledgment Number: 3343    (relative ack number)
+    Acknowledgment number (raw): 1754895909
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Accurate ECN: Not set
+        .... 0... .... = Congestion Window Reduced: Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······A····]
+    Window: 16388
+    [Calculated window size: 4195328]
+    [Window size scaling factor: 256]
+    Checksum: 0xe1bc [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.711480000 seconds]
+        [Time since previous frame in this TCP stream: 0.000001000 seconds]
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 27]
+        [The RTT to ACK the segment was: 0.089556000 seconds]
+        [iRTT: 0.127751000 seconds]
+

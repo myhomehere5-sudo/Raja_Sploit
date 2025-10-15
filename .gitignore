@@ -1,0 +1,12 @@
+# Large output files and temporary data
+hydra.restore
+results/defensive_monitoring/run6/actions/journal_new1.txt
+results/forensics/run1/run1_logs.tar.gz
+# General output directories
+results/
+output/
+logs/
+*.restore
+*.log
+*.tar.gz
+*.txt
