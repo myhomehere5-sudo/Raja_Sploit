@@ -1,4 +1,4 @@
-# Rajasploit
+# Rajasploit(Pronunced as Reja_sploit)
 
 **Rajasploit** is a professional, modular cybersecurity toolkit for ethical hackers, penetration testers, and security enthusiasts. It provides reconnaissance, exploitation, forensics, monitoring, honeypot deployment, and extra utility modules. The tool automatically collects session results and generates polished PDF and HTML reports.
 
