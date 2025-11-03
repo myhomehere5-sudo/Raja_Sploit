@@ -42,7 +42,62 @@ RUN_FOLDER.mkdir(parents=True, exist_ok=True)
 # Print debug info about where outputs are written
 print(f"{GREEN}[INFO]{RESET} RUN_FOLDER = {RUN_FOLDER.resolve()} (user={getpass.getuser()})")
 
-# --- Utility: robust run-and-save that always writes something ---
+# --- replace existing run_and_save with this improved version ---
+def _fallback_write(out_path: Path, data: bytes, binary: bool):
+    """
+    Try to write data to a per-user fallback directory when the original out_path is not writable.
+    Returns the Path actually written to.
+    """
+    home = Path.home()
+    # keep same subpath under fallback so reports remain organized:
+    # e.g. fallback_dir = ~/.rajasploit_results/<RUN_FOLDER.name>/recon/...
+    try:
+        # compute a fallback directory that mirrors RUN_FOLDER structure where possible
+        rel = None
+        try:
+            rel = out_path.relative_to(Path.cwd())
+        except Exception:
+            # if we can't relativize use filename only
+            rel = Path(out_path.name)
+        fallback_base = home / ".rajasploit_results"
+        fallback_path = fallback_base / rel
+        fallback_path.parent.mkdir(parents=True, exist_ok=True)
+        if binary:
+            fallback_path.write_bytes(data)
+            written = fallback_path.stat().st_size
+        else:
+            # decode bytes to text for text files; best-effort
+            try:
+                text = data.decode("utf-8")
+            except Exception:
+                text = data.decode("latin-1", errors="replace")
+            fallback_path.write_text(text, encoding="utf-8", errors="ignore")
+            written = fallback_path.stat().st_size
+        try_fix_ownership(fallback_path)
+        print(f"{YELLOW}[FALLBACK]{RESET} Permission denied writing {out_path}. Wrote output to {fallback_path.resolve()} instead.")
+        return fallback_path, written
+    except Exception as e:
+        print(f"{RED}[ERROR]{RESET} Fallback write failed: {e}")
+        # last resort: try /tmp with username
+        try:
+            tmpdir = Path("/tmp") / f"rajasploit_{getpass.getuser()}"
+            tmpdir.mkdir(parents=True, exist_ok=True)
+            tmp_path = tmpdir / out_path.name
+            if binary:
+                tmp_path.write_bytes(data)
+            else:
+                try:
+                    text = data.decode("utf-8")
+                except Exception:
+                    text = data.decode("latin-1", errors="replace")
+                tmp_path.write_text(text, encoding="utf-8", errors="ignore")
+            try_fix_ownership(tmp_path)
+            print(f"{YELLOW}[FALLBACK]{RESET} Wrote output to temporary location {tmp_path.resolve()}.")
+            return tmp_path, tmp_path.stat().st_size
+        except Exception as e2:
+            print(f"{RED}[ERROR]{RESET} Ultimate fallback failed: {e2}")
+            return None, 0
+
 def run_and_save(cmd_list, out_path, binary=False, show_preview=True, env=None):
     """
     Run a command and save stdout+stderr to out_path.
@@ -61,57 +116,61 @@ def run_and_save(cmd_list, out_path, binary=False, show_preview=True, env=None):
         proc = subprocess.run(list(map(str, cmd_list)), stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=env, check=False)
         data = proc.stdout or b""
 
+        # handle binary output
         if binary:
             # If command produced no stdout but file already exists (tool wrote it with -w), don't overwrite
             if len(data) == 0 and out_path.exists():
                 print(f"{YELLOW}[WARN]{RESET} Command produced no stdout but {out_path} already exists (not overwriting).")
                 return True, proc.returncode, out_path.stat().st_size
-            out_path.write_bytes(data)
+            try:
+                out_path.write_bytes(data)
+                written = out_path.stat().st_size
+                try_fix_ownership(out_path)
+            except PermissionError:
+                fallback_path, written = _fallback_write(out_path, data, binary=True)
+                if fallback_path is None:
+                    return False, proc.returncode, 0
         else:
+            # text mode
             try:
                 text = data.decode("utf-8")
             except Exception:
                 text = data.decode("latin-1", errors="replace")
-            out_path.write_text(text, errors="ignore")
+            try:
+                out_path.write_text(text, encoding="utf-8", errors="ignore")
+                written = out_path.stat().st_size
+                try_fix_ownership(out_path)
+            except PermissionError:
+                fallback_path, written = _fallback_write(out_path, data, binary=False)
+                if fallback_path is None:
+                    return False, proc.returncode, 0
 
         # Print debug info to console
         print(f"{CYAN}[RUN]{RESET} {' '.join(map(str,cmd_list))}")
-        print(f"{CYAN}[OUT]{RESET} Wrote {len(data)} bytes -> {out_path.resolve()}")
+        print(f"{CYAN}[OUT]{RESET} Wrote {written} bytes -> {out_path.resolve() if out_path.exists() else (fallback_path.resolve() if 'fallback_path' in locals() and fallback_path else 'unknown')}")
         if show_preview and len(data) > 0 and not binary:
             preview = data[:800]
             try:
                 print(f"{CYAN}[PREVIEW]{RESET}\n{preview.decode('utf-8')}\n...")
             except Exception:
                 print(f"{CYAN}[PREVIEW]{RESET}\n{preview.decode('latin-1',errors='replace')}\n...")
-        return True, proc.returncode, len(data)
+        return True, proc.returncode, written
     except Exception as e:
+        # If an exception happens running the command itself, try to write the error message somewhere safe.
+        err_text = f"[ERROR] Exception running {' '.join(map(str,cmd_list))}\n{e}\n"
         try:
-            out_path.write_text(f"[ERROR] Exception running {' '.join(map(str,cmd_list))}\n{e}\n", errors="ignore")
+            out_path.write_text(err_text, encoding="utf-8", errors="ignore")
+            try_fix_ownership(out_path)
+            print(f"{RED}[ERROR]{RESET} Exception while running {' '.join(map(str,cmd_list))}: {e}")
+            return False, -1, out_path.stat().st_size
+        except PermissionError:
+            fallback_path, written = _fallback_write(out_path, err_text.encode("utf-8"), binary=False)
+            if fallback_path:
+                return False, -1, written
         except Exception:
             pass
         print(f"{RED}[ERROR]{RESET} Exception while running {' '.join(map(str,cmd_list))}: {e}")
         return False, -1, 0
-
-def check_tool(name):
-    return shutil.which(name) is not None
-
-# Helper to chown files back to user if they are root-owned and sudo is available
-def try_fix_ownership(path: Path):
-    try:
-        if not path.exists():
-            return
-        st = path.stat()
-        # If file owned by root try to chown to current user
-        if hasattr(os, "getuid") and st.st_uid == 0:
-            uid = os.getuid()
-            gid = os.getgid()
-            try:
-                os.chown(str(path), uid, gid)
-            except PermissionError:
-                if check_tool("sudo"):
-                    subprocess.run(["sudo", "chown", f"{uid}:{gid}", str(path)], check=False)
-    except Exception:
-        pass
 
 # --- UI helpers ---
 def banner():
@@ -155,26 +214,11 @@ def log_action(prefix, content):
     try_fix_ownership(fname)
     return fname
 
-# --- Metadata collection for reports (client, creator, owner) ---
-REPORT_METADATA = {
-    'client_name': '',
-    'creator_name': '',
-    'system_owner': ''
-}
-
-def collect_metadata():
-    # ask once per run
-    if REPORT_METADATA['client_name']:
-        return
-    print(f"{CYAN}Report metadata setup (optional) — press Enter to skip.{RESET}")
-    REPORT_METADATA['client_name'] = input('Client name: ').strip()
-    REPORT_METADATA['creator_name'] = input('Creator name: ').strip()
-    REPORT_METADATA['system_owner'] = input('System owner name: ').strip()
+# --- NOTE: Metadata prompts removed (client/creator/system owner) ---
 
 # --- 1) Real-time network capture (pcap + summary) ---
 def real_time_network():
     print(f"{MAGENTA}[+] Real-time network capture{RESET}")
-    collect_metadata()
     iface = input(f"{YELLOW}Enter interface (leave blank for default): {RESET}").strip()
     dur = input(f"{YELLOW}Duration seconds (default 30): {RESET}").strip()
     try:
@@ -251,7 +295,6 @@ def real_time_network():
 # --- 2) Detect open ports & services (nmap) ---
 def detect_ports_services():
     print(f"{MAGENTA}[+] Nmap scan{RESET}")
-    collect_metadata()
     if not check_tool("nmap"):
         print(f"{RED}nmap not found. Install nmap to use this option.{RESET}")
         return
@@ -316,7 +359,6 @@ def is_local_target(target):
 # --- 3) Monitor running processes ---
 def monitor_processes():
     print(f"{MAGENTA}[+] Collecting process info{RESET}")
-    collect_metadata()
     prefix = RUN_FOLDER / "processes"
     prefix.mkdir(parents=True, exist_ok=True)
     ps_file = prefix / "ps_aux.txt"
@@ -340,7 +382,6 @@ def monitor_processes():
 # --- 4) File integrity implemented in pure Python (sha256 of files) ---
 def file_integrity():
     print(f"{MAGENTA}[+] File integrity check (sha256){RESET}")
-    collect_metadata()
     target = input(f"{YELLOW}Directory to hash (default /etc): {RESET}").strip()
     if not target:
         target = "/etc"
@@ -389,7 +430,6 @@ def hash_file_sha256(path: Path, block_size=65536):
 # --- 5) Log collection ---
 def log_monitoring():
     print(f"{MAGENTA}[+] Collecting logs{RESET}")
-    collect_metadata()
     prefix = RUN_FOLDER / "logs"
     prefix.mkdir(parents=True, exist_ok=True)
     saved = []
@@ -427,7 +467,6 @@ def log_monitoring():
 # --- 6) IDS status check ---
 def ids_check():
     print(f"{MAGENTA}[+] IDS check{RESET}")
-    collect_metadata()
     saved = []
     if check_tool("snort"):
         p = RUN_FOLDER / f"run{RUN_ID}_snort_version.txt"
@@ -455,7 +494,6 @@ def ids_check():
 # --- 7) System resource snapshots ---
 def monitor_resources():
     print(f"{MAGENTA}[+] System resources{RESET}")
-    collect_metadata()
     prefix = RUN_FOLDER / "resources"
     prefix.mkdir(parents=True, exist_ok=True)
     uptime_file = prefix / "uptime.txt"
@@ -509,12 +547,9 @@ def save_numbered_copy(src: Path, base_name: str):
         return None
 
 def generate_report():
-    """Enhanced report: embeds results content, metadata, per-option sections, and simple charts."""
+    """Enhanced report: embeds results content, per-option sections, and simple charts."""
     print(f"{MAGENTA}[+] Generating enhanced report{RESET}")
-    # Ask for metadata (allow empty to skip)
-    client_name = input(f"{YELLOW}Client name (optional): {RESET}").strip() or REPORT_METADATA.get('client_name', '')
-    creator_name = input(f"{YELLOW}Creator name (optional): {RESET}").strip() or REPORT_METADATA.get('creator_name', '')
-    system_owner = input(f"{YELLOW}System owner name (optional): {RESET}").strip() or REPORT_METADATA.get('system_owner', '')
+    # Report title only (metadata prompts removed)
     title = input(f"{YELLOW}Report title (default: Rajasploit Defensive Monitoring Report): {RESET}").strip() or "Rajasploit Defensive Monitoring Report"
 
     report_txt = RUN_FOLDER / f"run{RUN_ID}_report.txt"
@@ -581,7 +616,6 @@ def generate_report():
     # Write plain text report (human readable, includes embedded results where small)
     with report_txt.open("w", errors="ignore") as rf:
         rf.write(f"{title}\n")
-        rf.write(f"Client: {client_name}\nCreator: {creator_name}\nSystem owner: {system_owner}\n")
         rf.write(f"Timestamp: {datetime.utcnow().isoformat()}Z\nRun folder: {RUN_FOLDER.resolve()}\n\n")
         rf.write("Short summary:\n")
         # Auto-generate a short summary from available sections (first lines)
@@ -599,7 +633,6 @@ def generate_report():
     html_lines = []
     html_lines.append("<html><head><meta charset='utf-8'><title>" + title + "</title></head><body style='font-family:Arial,Helvetica,sans-serif'>")
     html_lines.append(f"<h1 style='background:#eee;padding:10px;border-radius:6px'>{title}</h1>")
-    html_lines.append(f"<p><strong>Client:</strong> {client_name} &nbsp;&nbsp; <strong>Creator:</strong> {creator_name} &nbsp;&nbsp; <strong>Owner:</strong> {system_owner}</p>")
     html_lines.append(f"<p><strong>Timestamp:</strong> {datetime.utcnow().isoformat()}Z</p>")
 
     # Short summary box
@@ -688,7 +721,6 @@ def menu():
     print(f"{GREEN}5){RESET} Log monitoring & alerting (journalctl / syslog)")
     print(f"{GREEN}6){RESET} IDS check (Snort / Suricata)")
     print(f"{GREEN}7){RESET} System resource snapshot (uptime, free, df)")
-    print(f"{GREEN}8){RESET} Generate defensive report")
     print(f"{GREEN}0){RESET} Exit")
     return input(f"\n{CYAN}Defensive > {RESET}").strip()
 
@@ -709,8 +741,6 @@ def main():
             ids_check()
         elif choice == "7":
             monitor_resources()
-        elif choice == "8":
-            generate_report()
         elif choice == "0":
             print("Exiting.")
             break

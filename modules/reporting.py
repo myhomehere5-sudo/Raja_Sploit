@@ -2,477 +2,540 @@
 """
 modules/reporting.py
 
-Professional Rajasploit Reporting Module (auto-detect session results, summarize, generate PDF + HTML).
-
-- Auto-detects latest session folder under common result dirs.
-- Summarizes activity for Modules 1..6 (counts of text/log/json/csv and images).
-- Embeds charts and images and writes a polished PDF (ReportLab).
-- Also writes an HTML copy for quick review.
-
-Dependencies:
-  pip3 install reportlab matplotlib
-(HTML output uses plain files; no extra deps)
-
-Drop into modules/ and call from main menu.
+Robust reporting helper for Rajasploit.
+- Finds the session/results to report on (supports both Rajasploit/results/<module> and Rajasploit/results/runX/<module> layouts)
+- Collects files from modules 1..5 (configurable names)
+- Generates a colored HTML report (no external libraries required)
+- Generates a PDF report (using ReportLab if available)
+- Produces small inline SVG bar charts (no matplotlib)
+- Adds: centered professional title, detailed top summary, per-module short summaries, colorful charts,
+  final note, and saves reports under results/reports
 """
+
+from __future__ import annotations
 import os
 import sys
-import io
-import glob
-import math
-import json
-import shutil
-import textwrap
+import time
+from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
+import html
+import mimetypes
 
-# PDF + layout
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.units import cm
-from reportlab.platypus import (
-    SimpleDocTemplate,
-    Paragraph,
-    Spacer,
-    Image,
-    Table,
-    TableStyle,
-    PageBreak,
-    KeepTogether,
-)
+# Optional PDF dependencies (ReportLab). PDF generation will gracefully skip with informative error if missing.
+try:
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    from reportlab.lib import colors as rl_colors
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle
+    REPORTLAB_AVAILABLE = True
+except Exception:
+    REPORTLAB_AVAILABLE = False
 
-# plotting for a small summary chart
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+# ----------------- CONFIG -----------------
+# Base project folder (adjust if your repo layout differs)
+PROJECT_ROOT = Path.cwd()  # expects to be run from project root; change if needed
+RESULTS_BASE = PROJECT_ROOT / "results"  # where sessions live (e.g., results/run1 or results/<module>)
+# Reports should be stored in: Rajasploit/results/reports (per your request)
+REPORT_DIR = PROJECT_ROOT / "results" / "reports"
 
-# ------------- Configuration -------------
-MODULE_LABELS = {
-    1: "Reconnaissance",
-    2: "Attacks & Exploitation",
-    3: "Forensics & Incident Response",
-    4: "Defensive & Monitoring",
-    5: "Honeypot",
-    6: "Extra Features"
-}
+# Module names to collect (Modules 1..5 typically). Add/remove names as your tool uses.
+MODULE_NAMES = [
+    "recon",                # reconnaissance
+    "forensics",            # forensics & IR
+    "defensive_monitoring", # defensive & monitoring (some users call it defensive)
+    "defensive",            # alternate name
+    "honeypot",             # honeypot
+    "scanning",             # optional scanning module
+    "exploitation",         # optional exploitation module
+    "other"                 # a catch-all
+]
 
-# file type buckets and their readable names
-EXT_BUCKETS = {
-    'text': ('.txt', '.log', '.md'),
-    'json': ('.json',),
-    'csv' : ('.csv',),
-    'image': ('.png', '.jpg', '.jpeg', '.svg'),
-    'pdf' : ('.pdf',),
-}
+# How many sample file contents to embed for text files per module
+SAMPLE_LINES_PER_MODULE = 3
+SAMPLE_CHAR_LIMIT = 500
 
-TRUNCATE_TEXT_CHARS = 2500  # inline text show limit
+# Colors (used for charts / module accents). Will cycle.
+SVG_COLOR_PALETTE = ["#007bff", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#17becf"]
 
-# ---------------- Helpers ----------------
-def find_candidate_session_dirs(base_paths=None):
-    """Return list of candidate session directories (absolute paths)."""
-    if base_paths is None:
-        base_paths = ['results', 'session_results', 'reports', os.getcwd()]
-    candidates = []
-    for base in base_paths:
-        if not os.path.isabs(base):
-            base = os.path.join(os.getcwd(), base)
-        if not os.path.exists(base):
-            continue
-        # if base is a session dir itself add; otherwise add its subdirs
-        if any(pat in os.path.basename(base).lower() for pat in ('session', 'run', 'results', 'report')):
-            candidates.append(os.path.abspath(base))
-        # include subdirectories
-        for entry in os.listdir(base):
-            path = os.path.join(base, entry)
-            if os.path.isdir(path):
-                candidates.append(os.path.abspath(path))
-    # deduplicate and sort by mtime desc
-    uniq = list(dict.fromkeys(candidates))
-    uniq.sort(key=lambda p: os.path.getmtime(p), reverse=True)
-    return uniq
-
-def auto_detect_session_folder():
-    cand = find_candidate_session_dirs()
-    if cand:
-        return cand[0]
-    # fallback: check modules subfolders per-module
-    fallback = os.path.join(os.getcwd(), 'session_results')
-    return fallback if os.path.exists(fallback) else os.getcwd()
-
-def module_folder_candidates(session_dir, module_index):
+# ----------------- UTILITIES -----------------
+def find_session_root(base: Path) -> Path:
     """
-    Returns list of candidate folders for a module.
-    Preferred: session_dir/module_{i} (or module-i), else folders containing a module name hint.
+    Determine which folder to treat as the 'session' to report on.
+    - If base contains expected module folders directly -> use base
+    - Else, if base contains run*/session folders, pick most recently modified session folder
     """
-    candidates = []
-    names = [f"module_{module_index}", f"module-{module_index}", f"module{module_index}"]
-    # also add common synonyms
-    synonyms = {
-        1: ['recon','reconnaissance'],
-        2: ['attack','attacks','exploitation','exploit'],
-        3: ['forensic','forensics','incident'],
-        4: ['defensive','monitor','monitoring'],
-        5: ['honeypot','honey'],
-        6: ['extra','extras','utilities','tools']
-    }.get(module_index, [])
+    if not base.exists():
+        raise FileNotFoundError(f"Results base path not found: {base}")
 
-    for name in names + synonyms:
-        p = os.path.join(session_dir, name)
-        if os.path.isdir(p):
-            candidates.append(p)
+    entries = [p for p in base.iterdir() if p.is_dir()]
+    entry_names = {p.name.lower() for p in entries}
+    if entry_names & set(MODULE_NAMES):
+        # results layout: results/<module> directly
+        return base
 
-    # scan top-level session dir for folders containing synonyms
-    for entry in os.listdir(session_dir):
-        p = os.path.join(session_dir, entry)
-        if not os.path.isdir(p):
+    # Otherwise treat subdirectories as session runs and pick the latest
+    session_dirs = entries
+    if not session_dirs:
+        raise FileNotFoundError(f"No session directories found under: {base}")
+    latest = max(session_dirs, key=lambda p: p.stat().st_mtime)
+    return latest
+
+def collect_files_for_module(session_root: Path, module_name: str) -> list[Path]:
+    """
+    Flexible collection:
+    - matches directories where the name equals module_name or contains module_name
+    - collects files recursively
+    """
+    module_candidates = []
+    for d in session_root.iterdir():
+        if not d.is_dir():
             continue
-        low = entry.lower()
-        for syn in synonyms + names:
-            if syn in low and p not in candidates:
-                candidates.append(p)
-    return candidates
+        dn = d.name.lower()
+        if dn == module_name.lower() or module_name.lower() in dn:
+            module_candidates.append(d)
+    if not module_candidates:
+        return []
+    files = []
+    for moddir in module_candidates:
+        for f in sorted(moddir.rglob("*")):
+            if f.is_file():
+                files.append(f)
+    return sorted(files, key=lambda p: p.stat().st_mtime)
 
-def classify_files(file_paths):
-    """Return counts per ext bucket and list of categorized files."""
-    counts = Counter()
-    categorized = defaultdict(list)
-    for fp in file_paths:
-        lower = fp.lower()
-        ext = os.path.splitext(lower)[1]
-        matched = False
-        for cat, exts in EXT_BUCKETS.items():
-            if ext in exts:
-                categorized[cat].append(fp)
-                counts[cat] += 1
-                matched = True
-                break
-        if not matched:
-            categorized['other'].append(fp)
-            counts['other'] += 1
-    return counts, categorized
+def file_summary_info(f: Path) -> dict:
+    """Return small summary info for a file (size, mtime, mime)."""
+    try:
+        s = f.stat()
+        mtime = datetime.fromtimestamp(s.st_mtime).strftime("%Y-%m-%d %H:%M:%S")
+        size = s.st_size
+    except Exception:
+        mtime = "N/A"
+        size = 0
+    mime, _ = mimetypes.guess_type(str(f))
+    return {"path": str(f), "name": f.name, "size": size, "mtime": mtime, "mime": mime or "unknown"}
 
-def collect_module_results(session_dir, module_index):
-    """Return summary dict for a module: folder used, file list, counts & categorized files."""
-    folder_candidates = module_folder_candidates(session_dir, module_index)
-    # pick the first candidate if exists else search for files that match module name
-    chosen = None
-    if folder_candidates:
-        chosen = folder_candidates[0]
-        files = []
-        for root, _, filenames in os.walk(chosen):
-            for fn in filenames:
-                files.append(os.path.join(root, fn))
-    else:
-        # fallback: search for files in session_dir matching module keywords
-        keywords = [MODULE_LABELS[module_index].split()[0].lower()]  # e.g. 'Reconnaissance' -> 'reconnaissance'
-        files = []
-        for root, _, filenames in os.walk(session_dir):
-            for fn in filenames:
-                low = fn.lower()
-                if any(k in low for k in keywords) or f"module{module_index}" in low:
-                    files.append(os.path.join(root, fn))
-        if files:
-            chosen = os.path.commonpath([os.path.abspath(f) for f in files])
-    counts, categorized = classify_files(files)
-    total_files = sum(counts.values())
-    return {
-        'module_index': module_index,
-        'module_name': MODULE_LABELS.get(module_index, f"Module {module_index}"),
-        'folder': chosen,
-        'files': files,
-        'counts': dict(counts),
-        'categorized': dict(categorized),
-        'total_files': total_files
+def read_text_sample(f: Path, charlimit=SAMPLE_CHAR_LIMIT) -> str:
+    """Read a small text sample from a file; handle binary safely."""
+    try:
+        text = f.read_text(errors="ignore")
+        text = text.strip()
+        if len(text) > charlimit:
+            text = text[:charlimit] + "\n\n... (truncated)"
+        return text
+    except Exception:
+        return "<unreadable>"
+
+def human_size(n: int) -> str:
+    """Human friendly byte size."""
+    try:
+        n = float(n)
+    except Exception:
+        return "0B"
+    for unit in ['B','KB','MB','GB','TB']:
+        if n < 1024:
+            return f"{n:.0f}{unit}"
+        n /= 1024.0
+    return f"{n:.1f}PB"
+
+# ----------------- HTML / SVG helpers -----------------
+def svg_bar_chart(labels: list[str], values: list[int], width=560, height=140, palette=None) -> str:
+    """Return an inline SVG bar chart (simple, multi-colored)."""
+    palette = palette or SVG_COLOR_PALETTE
+    if not values or sum(values) == 0:
+        return "<div style='font-style:italic;color:#777'>No data for chart</div>"
+    maxv = max(values)
+    gap = 8
+    bar_w = (width - (len(values)+1)*gap) / len(values)
+    height_inner = height - 36  # reserve for labels
+    parts = [f"<svg width='{width}' height='{height}' viewBox='0 0 {width} {height}' xmlns='http://www.w3.org/2000/svg'>"]
+    parts.append(f"<rect x='0' y='0' width='{width}' height='{height}' fill='transparent' />")
+    x = gap
+    for i, v in enumerate(values):
+        color = palette[i % len(palette)]
+        bar_h = int((v / maxv) * height_inner) if maxv else 0
+        y = height_inner - bar_h + 8
+        parts.append(f"<rect x='{x:.1f}' y='{y:.1f}' width='{bar_w:.1f}' height='{bar_h:.1f}' rx='4' fill='{color}' opacity='0.95' />")
+        lbl = html.escape(labels[i])[:12]
+        parts.append(f"<text x='{x + bar_w/2:.1f}' y='{height - 6}' font-size='11' text-anchor='middle' fill='#333'>{lbl}</text>")
+        parts.append(f"<text x='{x + bar_w/2:.1f}' y='{y - 4:.1f}' font-size='11' text-anchor='middle' fill='#222'>{v}</text>")
+        x += bar_w + gap
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+def safe_html_escape(s: str) -> str:
+    return html.escape(str(s))
+
+# ----------------- REPORT BUILDING -----------------
+def build_report(session_root: Path, out_path: Path, client_name="General", creator="Rajasploit", title=None):
+    """
+    Build full report and write HTML to out_path.
+    Returns the path wrote.
+    Also prepares a 'report' dict which can be passed to PDF generator.
+    """
+    start = datetime.now()
+    title = title or f"Rajasploit Security Assessment — {session_root.name}"
+    report = {
+        "meta": {
+            "session": str(session_root),
+            "generated_at": start.strftime("%Y-%m-%d %H:%M:%S"),
+            "client": client_name,
+            "creator": creator,
+            "title": title,
+        },
+        "modules": {}
     }
 
-# ---------- Visual helpers ----------
-def make_summary_chart(mod_summaries, out_path):
-    """Create a small bar chart: visuals vs logs per module."""
-    modules = []
-    visuals = []
-    texts = []
-    for s in mod_summaries:
-        modules.append(s['module_name'])
-        cat = s['counts']
-        visuals.append(cat.get('image', 0))
-        texts.append(cat.get('text', 0) + cat.get('json', 0) + cat.get('csv', 0) + cat.get('pdf', 0) + cat.get('other', 0))
-    x = range(len(modules))
-    width = 0.35
-    plt.figure(figsize=(8,2.4))
-    plt.bar([i - width/2 for i in x], visuals, width=width, label='Visuals (png/jpg)')
-    plt.bar([i + width/2 for i in x], texts, width=width, label='Text / Data')
-    plt.xticks(x, modules, rotation=25, fontsize=8)
-    plt.legend(fontsize=8)
-    plt.tight_layout()
-    plt.savefig(out_path, dpi=150)
-    plt.close()
+    # collect files for each module name
+    for module in MODULE_NAMES:
+        files = collect_files_for_module(session_root, module)
+        if not files:
+            continue
+        info = [file_summary_info(f) for f in files]
+        ext_counts = Counter([Path(i["name"]).suffix.lower() or "<noext>" for i in info])
+        mime_counts = Counter([i["mime"].split("/")[0] if i["mime"] and "/" in i["mime"] else i["mime"] for i in info])
+        mtimes = [i["mtime"] for i in info if i["mtime"] != "N/A"]
+        # short auto-generated summary (one/two sentences)
+        short_summary = (f"{len(info)} files collected. Top file types: "
+                         + ", ".join(f"{k}({v})" for k, v in ext_counts.most_common(3)))
+        # sample small text snippets
+        samples = []
+        text_like = [Path(i["path"]) for i in info if i["mime"] in ("text/plain", "unknown") or str(i["name"]).lower().endswith((".log", ".txt", ".json", ".csv"))]
+        for t in text_like[:SAMPLE_LINES_PER_MODULE]:
+            samples.append({"fname": t.name, "sample": read_text_sample(t)})
+        report["modules"][module] = {
+            "count_files": len(info),
+            "size_total": sum(i["size"] for i in info),
+            "ext_counts": dict(ext_counts.most_common()),
+            "mime_counts": dict(mime_counts.most_common()),
+            "first_mtime": min(mtimes) if mtimes else "N/A",
+            "last_mtime": max(mtimes) if mtimes else "N/A",
+            "files": info,
+            "samples": samples,
+            "short_summary": short_summary
+        }
 
-def scaled_image(path, max_width_cm=16, max_height_cm=10):
-    """Return width, height in points suitable for ReportLab Image call (scale to fit)."""
-    try:
-        from PIL import Image as PILImage
-    except Exception:
-        # fallback: return default
-        return (max_width_cm*cm, max_height_cm*cm)
-    try:
-        im = PILImage.open(path)
-        w, h = im.size
-        dpi = im.info.get('dpi', (96,96))[0] if isinstance(im.info.get('dpi', None), tuple) else 96
-        # convert pixels to points: 1 pt = 1/72 inch. points = pixels * 72 / dpi
-        pw = w * 72.0 / dpi
-        ph = h * 72.0 / dpi
-        maxpw = max_width_cm * cm
-        maxph = max_height_cm * cm
-        scale = min(1.0, maxpw / pw if pw else 1.0, maxph / ph if ph else 1.0)
-        return (pw*scale, ph*scale)
-    except Exception:
-        return (max_width_cm*cm, max_height_cm*cm)
+    # Build a dynamic overall/detailed summary for top of report
+    total_files = sum(m["count_files"] for m in report["modules"].values()) or 0
+    total_size = sum(m["size_total"] for m in report["modules"].values()) or 0
+    all_ext_counts = Counter()
+    all_mime_counts = Counter()
+    mtime_earliest = None
+    mtime_latest = None
+    for m in report["modules"].values():
+        all_ext_counts.update(m["ext_counts"])
+        all_mime_counts.update(m["mime_counts"])
+        if m["first_mtime"] != "N/A":
+            try:
+                t = datetime.strptime(m["first_mtime"], "%Y-%m-%d %H:%M:%S")
+                if not mtime_earliest or t < mtime_earliest:
+                    mtime_earliest = t
+            except Exception:
+                pass
+        if m["last_mtime"] != "N/A":
+            try:
+                t = datetime.strptime(m["last_mtime"], "%Y-%m-%d %H:%M:%S")
+                if not mtime_latest or t > mtime_latest:
+                    mtime_latest = t
+            except Exception:
+                pass
 
-# ---------- Build report ----------
-def generate_polished_report(session_dir=None):
-    # detect session
-    detected = auto_detect_session_folder()
-    if session_dir is None:
-        session_dir = input(f"Session folder (press Enter to use detected: {detected}): ").strip() or detected
-    session_dir = os.path.abspath(session_dir)
-    if not os.path.exists(session_dir) or not os.path.isdir(session_dir):
-        print(f"[!] Session folder does not exist: {session_dir}")
+    overall_summary = (
+        f"Collected {total_files} files across {len(report['modules'])} module folders "
+        f"({human_size(total_size)} total). Top extensions: "
+        + ", ".join(f"{k}({v})" for k, v in all_ext_counts.most_common(5))
+    )
+    if mtime_earliest and mtime_latest:
+        overall_summary += f". Data time range: {mtime_earliest.strftime('%Y-%m-%d %H:%M:%S')} → {mtime_latest.strftime('%Y-%m-%d %H:%M:%S')}."
+
+    # Build HTML
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    out_path_parent = Path(out_path).parent
+    out_path_parent.mkdir(parents=True, exist_ok=True)
+
+    html_lines = []
+    html_lines.append("<!doctype html><html><head><meta charset='utf-8'>")
+    html_lines.append(f"<title>{safe_html_escape(report['meta']['title'])}</title>")
+    # CSS — centered professional title + colorful accents
+    html_lines.append(f"""
+    <style>
+      :root {{
+        --bg: #f4f6f8;
+        --card: #ffffff;
+        --muted: #666;
+        --accent-1: {SVG_COLOR_PALETTE[0]};
+        --accent-2: {SVG_COLOR_PALETTE[1]};
+        --accent-3: {SVG_COLOR_PALETTE[2]};
+        --accent-4: {SVG_COLOR_PALETTE[3]};
+      }}
+      body{{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#222;margin:0;padding:28px}}
+      .container{{max-width:1100px;margin:0 auto}}
+      .title-card{{background:linear-gradient(90deg, rgba(0,51,102,0.95), rgba(0,102,51,0.95));color:white;padding:28px 24px;border-radius:10px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.08)}}
+      .title-card h1{{margin:0;font-size:28px;letter-spacing:0.6px}}
+      .meta{{margin-top:8px;color:#dfeee0;font-size:14px}}
+      .summary-card{{background:var(--card);padding:16px;margin-top:18px;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}}
+      .module{{background:var(--card);padding:14px;margin-top:18px;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,20,0.04)}}
+      h2{{margin:6px 0 10px 0}}
+      .small{{font-size:13px;color:var(--muted)}}
+      table{{width:100%;border-collapse:collapse;margin-top:8px}}
+      th,td{{padding:8px;border-bottom:1px solid #eee;text-align:left;font-size:13px}}
+      .stat{{display:inline-block;padding:6px 8px;border-radius:6px;background:#eafaf0;color:#007a3a;font-weight:600}}
+      pre{{background:#0f1720;color:#e6fff0;padding:10px;border-radius:6px;overflow:auto;max-height:220px}}
+      .final-note{{background:#fff7e6;border-left:6px solid #ff9900;padding:12px;margin-top:18px;border-radius:6px}}
+      .charts-row{{display:flex;gap:12px;flex-wrap:wrap}}
+      .chart-box{{flex:1;min-width:260px;background:#fff;padding:10px;border-radius:8px;border:1px solid #f0f0f0}}
+      .footer{{font-size:12px;color:#666;margin-top:18px;text-align:center}}
+    </style>
+    """)
+    html_lines.append("</head><body>")
+    html_lines.append("<div class='container'>")
+
+    # Title
+    html_lines.append("<div class='title-card'>")
+    html_lines.append(f"<h1>{safe_html_escape(report['meta']['title'])}</h1>")
+    html_lines.append(f"<div class='meta'>Client: {safe_html_escape(client_name)} &nbsp; | &nbsp; Creator: {safe_html_escape(creator)} &nbsp; | &nbsp; Generated: {report['meta']['generated_at']}</div>")
+    html_lines.append("</div>")  # title-card
+
+    # Overall summary (detailed)
+    html_lines.append("<div class='summary-card'>")
+    html_lines.append("<h2>Executive Summary</h2>")
+    html_lines.append(f"<p class='small'>{safe_html_escape(overall_summary)}</p>")
+    # quick stats
+    html_lines.append(f"<p><span class='stat'>{total_files} files</span> across <strong>{len(report['modules'])}</strong> modules · Total size <strong>{human_size(total_size)}</strong></p>")
+    html_lines.append("</div>")  # summary-card
+
+    # Inline small charts area (top extensions and mime)
+    # Top extensions chart data
+    ext_items = list(all_ext_counts.items())[:8]
+    if ext_items:
+        labels = [k for k, _ in ext_items]
+        values = [int(v) for _, v in ext_items]
+        html_lines.append("<div class='charts-row'>")
+        html_lines.append("<div class='chart-box'>")
+        html_lines.append("<h3 style='margin-top:0'>Top File Extensions</h3>")
+        html_lines.append(svg_bar_chart(labels, values, width=420, height=140))
+        html_lines.append("</div>")
+        # mime chart
+        mime_items = list(all_mime_counts.items())[:8]
+        labels2 = [k for k, _ in mime_items]
+        values2 = [int(v) for _, v in mime_items]
+        html_lines.append("<div class='chart-box'>")
+        html_lines.append("<h3 style='margin-top:0'>Top MIME Types</h3>")
+        html_lines.append(svg_bar_chart(labels2, values2, width=420, height=140))
+        html_lines.append("</div>")
+        html_lines.append("</div>")  # charts-row
+
+    # Per-module details with short summary and charts
+    for idx, (modname, data) in enumerate(report["modules"].items()):
+        html_lines.append("<div class='module'>")
+        accent = SVG_COLOR_PALETTE[idx % len(SVG_COLOR_PALETTE)]
+        html_lines.append(f"<h2 style='color:{accent};margin-bottom:6px'>{safe_html_escape(modname)}</h2>")
+        html_lines.append(f"<div class='small'>{safe_html_escape(data.get('short_summary','No summary'))}</div>")
+        html_lines.append(f"<p class='small'>Files: <strong>{data['count_files']}</strong> · Size: <strong>{human_size(data['size_total'])}</strong> · Last modified: <strong>{data.get('last_mtime','N/A')}</strong></p>")
+
+        # module-specific chart for top extensions
+        ext_items = list(data["ext_counts"].items())[:6]
+        if ext_items:
+            labels = [k for k, _ in ext_items]
+            values = [int(v) for _, v in ext_items]
+            html_lines.append("<div style='margin:10px 0'>")
+            html_lines.append(svg_bar_chart(labels, values, width=700, height=120, palette=SVG_COLOR_PALETTE))
+            html_lines.append("</div>")
+
+        # top files table
+        html_lines.append("<details><summary>Top files (by modification time)</summary>")
+        html_lines.append("<table><thead><tr><th>Name</th><th>Size</th><th>Mime</th><th>Modified</th></tr></thead><tbody>")
+        for f in data["files"][-12:][::-1]:
+            html_lines.append(f"<tr><td><code>{safe_html_escape(f['name'])}</code></td><td class='small'>{human_size(f['size'])}</td><td class='small'>{safe_html_escape(f['mime'])}</td><td class='small'>{safe_html_escape(f['mtime'])}</td></tr>")
+        html_lines.append("</tbody></table></details>")
+
+        # sample contents
+        if data["samples"]:
+            html_lines.append("<div style='margin-top:12px'><h4>Sample contents</h4>")
+            for s in data["samples"]:
+                html_lines.append(f"<div class='small'><strong>{safe_html_escape(s['fname'])}</strong></div>")
+                html_lines.append(f"<pre>{safe_html_escape(s['sample'])}</pre>")
+            html_lines.append("</div>")
+
+        html_lines.append("</div>")  # module end
+
+    # Final note & recommendations
+    final_note = ("Critical findings should be reviewed and remediated immediately. Prioritize patching, access controls, "
+                  "and monitoring for systems flagged by the defensive and honeypot modules. Schedule a follow-up scan after fixes.")
+    html_lines.append(f"<div class='final-note'><h3>Final Note & Recommendations</h3><p class='small'>{safe_html_escape(final_note)}</p></div>")
+
+    html_lines.append(f"<div class='footer'>Rajasploit report · Generated on {report['meta']['generated_at']}</div>")
+    html_lines.append("</div>")  # container
+    html_lines.append("</body></html>")
+
+    out_path.write_text("\n".join(html_lines), encoding="utf-8")
+
+    # attach additional metadata useful for PDF generation
+    report["overall_summary"] = overall_summary
+    report["total_files"] = total_files
+    report["total_size"] = total_size
+    return out_path, report
+
+# ----------------- PDF generation -----------------
+def generate_report_pdf(report: dict, pdf_path: Path):
+    """
+    Create a PDF that mirrors the HTML structure.
+    If ReportLab is not available, raise an informative ImportError.
+    """
+    if not REPORTLAB_AVAILABLE:
+        raise ImportError("ReportLab is not installed. Install with: pip install reportlab")
+
+    doc = SimpleDocTemplate(str(pdf_path), pagesize=A4)
+    elements = []
+    styles = getSampleStyleSheet()
+    title_style = ParagraphStyle(
+        "title",
+        parent=styles["Title"],
+        fontSize=20,
+        alignment=1,
+        textColor=rl_colors.HexColor("#003366"),
+        spaceAfter=12,
+    )
+    section_title = ParagraphStyle(
+        "section_title",
+        parent=styles["Heading2"],
+        textColor=rl_colors.HexColor("#006633"),
+        spaceBefore=8,
+        spaceAfter=6,
+    )
+    normal = styles["BodyText"]
+
+    # Title block
+    elements.append(Paragraph(report["meta"].get("title", "Rajasploit Security Assessment"), title_style))
+    meta_line = f"Client: {report['meta'].get('client','N/A')}  |  Creator: {report['meta'].get('creator','N/A')}  |  Generated: {report['meta'].get('generated_at','N/A')}"
+    elements.append(Paragraph(meta_line, normal))
+    elements.append(Spacer(1, 12))
+
+    # Executive summary
+    elements.append(Paragraph("<b>Executive Summary</b>", section_title))
+    elements.append(Paragraph(report.get("overall_summary", "No summary."), normal))
+    elements.append(Spacer(1, 8))
+
+    # Quick stats table
+    stats_table = Table([["Total Files", report.get("total_files", 0)], ["Total Size", human_size(report.get("total_size", 0))]],
+                        colWidths=[150, 300])
+    stats_table.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), rl_colors.HexColor(SVG_COLOR_PALETTE[0])),
+        ("TEXTCOLOR", (0, 0), (-1, 0), rl_colors.white),
+        ("GRID", (0, 0), (-1, -1), 0.25, rl_colors.grey),
+        ("ALIGN", (0, 0), (-1, -1), "LEFT"),
+    ]))
+    elements.append(stats_table)
+    elements.append(Spacer(1, 12))
+
+    # Per-module sections
+    colors_list = [rl_colors.HexColor(c) for c in SVG_COLOR_PALETTE]
+    for i, (modname, data) in enumerate(report["modules"].items()):
+        color = colors_list[i % len(colors_list)]
+        elements.append(Paragraph(f"<font color='{color.hexval()}'><b>{modname}</b></font>", section_title))
+        elements.append(Paragraph(data.get("short_summary", "No data."), normal))
+        elements.append(Spacer(1, 6))
+        # small table with core info
+        t = Table([["Files Found", data.get("count_files", 0)], ["Total Size", human_size(data.get("size_total", 0))], ["Last Modified", data.get("last_mtime", "N/A")]],
+                  colWidths=[140, 200])
+        t.setStyle(TableStyle([
+            ("GRID", (0, 0), (-1, -1), 0.25, rl_colors.grey),
+            ("BACKGROUND", (0, 0), (-1, 0), color),
+            ("TEXTCOLOR", (0, 0), (-1, 0), rl_colors.white),
+        ]))
+        elements.append(t)
+        elements.append(Spacer(1, 6))
+        # list top extensions (text)
+        ext_summary = ", ".join(f"{k}({v})" for k, v in data.get("ext_counts", {}).items() if v)[:300]
+        elements.append(Paragraph(f"<i>Top file types:</i> {ext_summary}", normal))
+        elements.append(Spacer(1, 10))
+
+    # Final recommendations
+    elements.append(PageBreak())
+    elements.append(Paragraph("<b>Final Note & Recommendations</b>", section_title))
+    final_note = ("Critical findings should be reviewed and remediated immediately. Prioritize patch management, access control, "
+                  "and continuous monitoring for flagged systems. Perform a re-scan after remediation.")
+    elements.append(Paragraph(final_note, normal))
+    elements.append(Spacer(1, 20))
+    elements.append(Paragraph("<i>Report generated by Rajasploit</i>", normal))
+
+    doc.build(elements)
+
+# ----------------- CLI / Entrypoint -----------------
+def interactive_mode():
+    print("\n--- Rajasploit Reporting Module ---")
+    print("This tool will look for results folders and generate HTML and/or PDF reports.")
+    client = input("Client/Target name (leave blank for 'General'): ").strip() or "General"
+    creator = input("Creator name/team (leave blank for 'Rajasploit'): ").strip() or "Rajasploit"
+
+    try:
+        session = find_session_root(RESULTS_BASE)
+    except Exception as e:
+        print(f"ERROR: {e}")
         return
 
-    # metadata
-    client = input("Client name: ").strip() or "UnknownClient"
-    creator = input("Creator name: ").strip() or os.getlogin() if hasattr(os, 'getlogin') else "UnknownCreator"
-    title = input("Report title: ").strip() or f"Rajasploit Report {datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    print(f"Using session root: {session}")
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe_client = "".join(c for c in client if c.isalnum() or c in (' ', '_')).replace(' ', '_')
+    html_filename = f"{safe_client}_Rajasploit_Report_{ts}.html"
+    pdf_filename = f"{safe_client}_Rajasploit_Report_{ts}.pdf"
+    html_out = REPORT_DIR / html_filename
+    pdf_out = REPORT_DIR / pdf_filename
 
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
-    timestamp_file = datetime.now().strftime("%Y%m%d_%H%M%S")
-    pdf_name = os.path.join(session_dir, f"Rajasploit_Report_{timestamp_file}.pdf")
-    html_name = os.path.join(session_dir, f"Rajasploit_Report_{timestamp_file}.html")
-
-    # gather module summaries
-    module_summaries = []
-    for i in range(1,7):
-        module_summaries.append(collect_module_results(session_dir, i))
-
-    # overall metrics
-    overall = Counter()
-    for s in module_summaries:
-        overall.update(s['counts'])
-
-    # prepare chart
-    chart_path = os.path.join(session_dir, f"_report_summary_chart_{timestamp_file}.png")
+    print("Collecting files and building reports (this may take a few seconds)...")
     try:
-        make_summary_chart(module_summaries, chart_path)
-        chart_exists = True
-    except Exception:
-        chart_exists = False
+        html_path, report = build_report(session, html_out, client_name=client, creator=creator)
+    except Exception as e:
+        print(f"ERROR building HTML report: {e}")
+        return
 
-    # ---------------- ReportLab document build ----------------
-    doc = SimpleDocTemplate(pdf_name, pagesize=A4,
-                            rightMargin=1.6*cm, leftMargin=1.6*cm,
-                            topMargin=1.6*cm, bottomMargin=1.6*cm)
-    styles = getSampleStyleSheet()
-    # custom styles
-    title_style = ParagraphStyle('Title', parent=styles['Title'], fontSize=22, textColor=colors.HexColor('#0b4f8a'), alignment=1)
-    heading_style = ParagraphStyle('Heading', parent=styles['Heading2'], fontSize=14, textColor=colors.HexColor('#0b6fbf'), spaceAfter=6)
-    normal = ParagraphStyle('Normal', parent=styles['Normal'], fontSize=10, leading=13)
-    small = ParagraphStyle('Small', parent=styles['Normal'], fontSize=9, leading=11, textColor=colors.HexColor('#444444'))
+    # Ask format selection
+    print("\nSelect report format:")
+    print("  1. HTML")
+    print("  2. PDF")
+    print("  3. Both HTML & PDF")
+    choice = input("Enter choice (1/2/3) [default 3]: ").strip() or "3"
 
-    story = []
+    if choice in ("1", "3"):
+        print(f"[+] HTML report written to: {html_path.resolve()}")
 
-    # cover
-    story.append(Paragraph(title, title_style))
-    story.append(Spacer(1, 6))
-    info = [
-        ["Client:", client],
-        ["Creator:", creator],
-        ["Session folder:", session_dir],
-        ["Generated:", timestamp]
-    ]
-    info_table = Table(info, colWidths=(3.5*cm, 11*cm))
-    info_table.setStyle(TableStyle([
-        ('BACKGROUND', (0,0), (-1,-1), colors.whitesmoke),
-        ('BOX', (0,0), (-1,-1), 0.75, colors.grey),
-        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
-        ('FONTNAME', (0,0), (-1,-1), 'Helvetica'),
-        ('FONTSIZE', (0,0), (-1,-1), 10),
-    ]))
-    story.append(info_table)
-    story.append(Spacer(1,12))
-
-    # Executive summary + analytics table
-    story.append(Paragraph("Executive Summary", heading_style))
-    exec_text = (
-        f"This report captures results collected in the session folder <b>{os.path.basename(session_dir)}</b>. "
-        "The following analysis summarizes the modules executed, key files captured, and visualizations produced. "
-        "Use the module sections to review raw outputs and charts for technical details and evidence."
-    )
-    story.append(Paragraph(exec_text, normal))
-    story.append(Spacer(1,10))
-
-    # analytics table
-    table_data = [["Module", "Files", "Visuals", "Logs/Text", "JSON/CSV", "Other"]]
-    for s in module_summaries:
-        counts = s['counts']
-        row = [
-            s['module_name'],
-            str(s['total_files']),
-            str(counts.get('image',0)),
-            str(counts.get('text',0)+counts.get('log',0) if 'log' in counts else counts.get('text',0)),
-            str(counts.get('json',0)+counts.get('csv',0)),
-            str(counts.get('other',0))
-        ]
-        table_data.append(row)
-    analytics = Table(table_data, colWidths=[6*cm, 2*cm, 2*cm, 2*cm, 2*cm, 2*cm])
-    analytics.setStyle(TableStyle([
-        ('BACKGROUND', (0,0), (-1,0), colors.HexColor('#eaf3ff')),
-        ('GRID', (0,0), (-1,-1), 0.4, colors.grey),
-        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
-        ('FONTNAME', (0,0), (-1,0), 'Helvetica-Bold'),
-        ('FONTSIZE', (0,0), (-1,-1), 9),
-    ]))
-    story.append(analytics)
-    story.append(Spacer(1,10))
-
-    if chart_exists:
-        story.append(Paragraph("Visual Summary (Visuals vs Text/Data)", small))
+    if choice in ("2", "3"):
         try:
-            w,h = scaled_image(chart_path, max_width_cm=16, max_height_cm=4)
-            story.append(Image(chart_path, width=w, height=h))
-            story.append(Spacer(1,12))
-        except Exception:
-            pass
+            generate_report_pdf(report, pdf_out)
+            print(f"[+] PDF report written to: {pdf_out.resolve()}")
+        except ImportError as ie:
+            print(f"[!] PDF generation failed: {ie}")
+            print("[!] To enable PDF generation install ReportLab: pip install reportlab")
+        except Exception as e:
+            print(f"[!] PDF generation error: {e}")
 
-    story.append(PageBreak())
+    print("\nReport generation completed.")
 
-    # Per-module detailed sections
-    for s in module_summaries:
-        story.append(Paragraph(f"<u>{s['module_name']}</u>", heading_style))
-        story.append(Spacer(1,6))
-        # short summary box
-        summ_lines = [
-            f"Folder: {s['folder'] if s['folder'] else 'Auto-detected or mixed (see files below)'}",
-            f"Total files: {s['total_files']}",
-            "Counts: " + ", ".join(f"{k}={v}" for k,v in s['counts'].items())
-        ]
-        summ_para = Paragraph("<br/>".join(summ_lines), small)
-        summ_table = Table([[summ_para]], colWidths=[15*cm])
-        summ_table.setStyle(TableStyle([
-            ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#fafafa')),
-            ('BOX', (0,0), (-1,-1), 0.5, colors.HexColor('#d0d0d0')),
-            ('LEFTPADDING', (0,0), (-1,-1), 6),
-            ('RIGHTPADDING', (0,0), (-1,-1), 6),
-            ('TOPPADDING', (0,0), (-1,-1), 6),
-            ('BOTTOMPADDING', (0,0), (-1,-1), 6),
-        ]))
-        story.append(summ_table)
-        story.append(Spacer(1,8))
+# programmatic entry
+def noninteractive_entry(session_path: str|None=None, client="General", creator="Rajasploit", out_html: str|None=None, out_pdf: str|None=None, generate_pdf=False):
+    """
+    Call from code:
+      noninteractive_entry(session_path='results/run1', client='ACME', creator='TeamX', out_html='path/to/out.html', generate_pdf=True)
+    """
+    if session_path:
+        session = Path(session_path)
+        if not session.exists():
+            raise FileNotFoundError(f"Provided session path does not exist: {session}")
+    else:
+        session = find_session_root(RESULTS_BASE)
 
-        # Include images first (if any)
-        images = s['categorized'].get('image', []) or []
-        for img in images:
-            try:
-                w,h = scaled_image(img, max_width_cm=16, max_height_cm=10)
-                story.append(Image(img, width=w, height=h))
-                story.append(Spacer(1,8))
-            except Exception:
-                story.append(Paragraph(f"[Image could not be embedded: {os.path.basename(img)}]", small))
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    safe_client = "".join(c for c in client if c.isalnum() or c in (' ', '_')).replace(' ', '_')
+    html_out = Path(out_html) if out_html else (REPORT_DIR / f"{safe_client}_Rajasploit_Report_{ts}.html")
+    pdf_out = Path(out_pdf) if out_pdf else (REPORT_DIR / f"{safe_client}_Rajasploit_Report_{ts}.pdf")
 
-        # Include small textual files (truncate if too big)
-        text_files = (s['categorized'].get('text', []) +
-                      s['categorized'].get('json', []) +
-                      s['categorized'].get('csv', []) +
-                      s['categorized'].get('pdf', []))  # pdf listed as file but we won't embed page contents
-        for tf in text_files:
-            try:
-                ext = os.path.splitext(tf)[1].lower()
-                # read safely
-                content = ""
-                if ext == '.pdf':
-                    # list PDF filename only
-                    content = f"[PDF file captured: {os.path.basename(tf)}]"
-                else:
-                    with open(tf, 'r', errors='ignore') as fh:
-                        content = fh.read(TRUNCATE_TEXT_CHARS+200)
-                    if len(content) > TRUNCATE_TEXT_CHARS:
-                        content = content[:TRUNCATE_TEXT_CHARS] + "\n\n... (truncated) ..."
-                # display inside a box
-                txt = Paragraph(f"<b>{os.path.basename(tf)}</b><br/><pre>{content}</pre>", small)
-                box = Table([[txt]], colWidths=[15*cm])
-                box.setStyle(TableStyle([
-                    ('BACKGROUND', (0,0), (-1,-1), colors.white),
-                    ('BOX', (0,0), (-1,-1), 0.4, colors.HexColor('#cccccc')),
-                    ('LEFTPADDING', (0,0), (-1,-1), 6),
-                    ('RIGHTPADDING', (0,0), (-1,-1), 6),
-                    ('TOPPADDING', (0,0), (-1,-1), 6),
-                ]))
-                story.append(box)
-                story.append(Spacer(1,8))
-            except Exception as e:
-                story.append(Paragraph(f"[Error reading {os.path.basename(tf)}: {e}]", small))
-
-        story.append(PageBreak())
-
-    # footer page with notes & actions
-    story.append(Paragraph("Notes & Recommendations", heading_style))
-    notes = (
-        "This report aggregates results recorded during the session. Files larger than a certain threshold are truncated for in-report display — "
-        "use the archived session folder to access complete logs and artifacts. Recommendations:\n"
-        "- Validate any suspicious IPs found in Recon.\n- Review the AutoVuln Nmap & Nikto logs for actionable vulnerabilities.\n"
-        "- Preserve disk images and memory extracts securely for forensic analysis."
-    )
-    story.append(Paragraph(notes, normal))
-    story.append(Spacer(1,12))
-
-    # build the document
-    try:
-        doc.build(story)
-        print(f"\n[+] PDF report created: {pdf_name}")
-    except Exception as e:
-        print(f"[!] Failed to build PDF: {e}")
-
-    # Minimal HTML export for convenience (mirrors the structure lightly)
-    try:
-        with open(html_name, 'w', encoding='utf-8') as hf:
-            hf.write(f"<html><head><meta charset='utf-8'><title>{title}</title></head><body>")
-            hf.write(f"<h1>{title}</h1><p><b>Client:</b> {client} &nbsp; <b>Creator:</b> {creator} &nbsp; <b>Date:</b> {timestamp}</p>")
-            hf.write("<h2>Executive Summary</h2>")
-            hf.write(f"<p>{exec_text}</p>")
-            hf.write("<h2>Analytics</h2>")
-            hf.write("<table border='1' cellpadding='4'><tr><th>Module</th><th>Files</th><th>Visuals</th><th>Logs/Text</th><th>JSON/CSV</th><th>Other</th></tr>")
-            for s in module_summaries:
-                c = s['counts']
-                hf.write(f"<tr><td>{s['module_name']}</td><td>{s['total_files']}</td><td>{c.get('image',0)}</td><td>{c.get('text',0)}</td><td>{c.get('json',0)+c.get('csv',0)}</td><td>{c.get('other',0)}</td></tr>")
-            hf.write("</table>")
-            if chart_exists:
-                hf.write(f"<h3>Visual Summary</h3><img src=\"{os.path.basename(chart_path)}\" style='max-width:800px'><br/>")
-                # copy chart to session dir alongside HTML for proper display
-                try:
-                    shutil.copyfile(chart_path, os.path.join(session_dir, os.path.basename(chart_path)))
-                except Exception:
-                    pass
-            for s in module_summaries:
-                hf.write(f"<h2>{s['module_name']}</h2>")
-                hf.write(f"<p>Folder: {s['folder']}</p>")
-                if s['files']:
-                    hf.write("<ul>")
-                    for f in s['files']:
-                        name = os.path.basename(f)
-                        hf.write(f"<li>{name} ({os.path.splitext(name)[1]})</li>")
-                    hf.write("</ul>")
-                else:
-                    hf.write("<p>No files captured.</p>")
-            hf.write("</body></html>")
-        print(f"[+] HTML report created: {html_name}")
-    except Exception as e:
-        print(f"[!] Failed to create HTML report: {e}")
-
-# ---------- CLI entry ----------
-def main():
-    print("Rajasploit — Professional Reporting Module")
-    print("This module will scan your session results and create a polished PDF report.")
-    generate_polished_report()
+    html_path, report = build_report(session, html_out, client_name=client, creator=creator)
+    if generate_pdf:
+        generate_report_pdf(report, pdf_out)
+        return html_path, pdf_out
+    return html_path
 
 if __name__ == "__main__":
-    main()
+    interactive_mode()

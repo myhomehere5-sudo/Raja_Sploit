@@ -2,13 +2,13 @@
 """
 modules/honeypot.py
 
-Corrected single-file Rajasploit Honeypot with interactive CLI, Telegram + Gmail alerts,
-background server, logging, auto-ban heuristics, and deploy helper.
+Single-file Rajasploit Honeypot with interactive CLI, Telegram + Gmail alerts,
+background server, logging, auto-ban heuristics, and remote deploy helper.
 
-Usage:
-    python3 modules/honeypot.py
+This version includes an interactive SMTP prompt that validates credentials
+immediately (via SMTP SSL to smtp.gmail.com:465) and optionally persists them
+to ~/.rajasploit_honey_conf.json using the keys expected by load_alert_config().
 """
-
 from __future__ import annotations
 import os
 import sys
@@ -64,14 +64,15 @@ LOGDIR.mkdir(parents=True, exist_ok=True)
 REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------------- Email / Telegram defaults (env overrides) ----------------
-MY_GMAIL = os.environ.get("HONEY_GMAIL_USER", os.environ.get("RAJASPLOIT_GMAIL", "myhomehere5@gmail.com"))
-MY_APP_PASSWORD = os.environ.get("HONEY_GMAIL_APP_PASSWORD", os.environ.get("RAJASPLOIT_GMAIL_APP_PASS", "ednqyoxbtuxnfvpm"))
-NOTIFY_TO = os.environ.get("HONEY_ALERT_RECIPIENT", "myhomehere5@gmail.com")
+# Default runtime variables (can be overridden via env or config)
+MY_GMAIL = os.environ.get("HONEY_GMAIL_USER", os.environ.get("RAJASPLOIT_GMAIL", ""))
+MY_APP_PASSWORD = os.environ.get("HONEY_GMAIL_APP_PASSWORD", os.environ.get("RAJASPLOIT_GMAIL_APP_PASS", ""))
+NOTIFY_TO = os.environ.get("HONEY_ALERT_RECIPIENT", "")
 
 ENABLE_EMAIL_ALERTS = os.environ.get("HONEY_ENABLE_EMAIL_ALERTS", "1") not in ("0", "false", "False")
 ENABLE_TELEGRAM = os.environ.get("HONEY_ENABLE_TELEGRAM", "0") not in ("0", "false", "False")
-TELEGRAM_TOKEN = os.environ.get("HONEY_TELEGRAM_TOKEN", "7600223112:AAEAZlTAepT9u-cGw6gTdGzhTUjQ1yApcwY")
-TELEGRAM_CHAT_ID = os.environ.get("HONEY_TELEGRAM_CHAT_ID", "7494990730")
+TELEGRAM_TOKEN = os.environ.get("HONEY_TELEGRAM_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("HONEY_TELEGRAM_CHAT_ID", "")
 
 EMAIL_RETRY_COUNT = int(os.environ.get("HONEY_EMAIL_RETRY_COUNT", "1"))
 EMAIL_RETRY_DELAY = float(os.environ.get("HONEY_EMAIL_RETRY_DELAY", "0.5"))
@@ -95,7 +96,8 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 def load_alert_config():
-    global _alert_cfg, ALERT_MIN_INTERVAL, AUTO_BAN_THRESHOLD, BAN_TIME_SECONDS, MAX_CONCURRENT, ENABLE_TELEGRAM, TELEGRAM_TOKEN, TELEGRAM_CHAT_ID
+    global _alert_cfg, ALERT_MIN_INTERVAL, AUTO_BAN_THRESHOLD, BAN_TIME_SECONDS, MAX_CONCURRENT
+    global ENABLE_TELEGRAM, TELEGRAM_TOKEN, TELEGRAM_CHAT_ID, MY_GMAIL, MY_APP_PASSWORD, NOTIFY_TO
     if ALERT_CONFIG.exists():
         try:
             cfg = json.loads(ALERT_CONFIG.read_text())
@@ -109,6 +111,13 @@ def load_alert_config():
                 ENABLE_TELEGRAM = True
             if _alert_cfg.get("telegram_chat_id"):
                 TELEGRAM_CHAT_ID = _alert_cfg.get("telegram_chat_id")
+            # allow config to override SMTP credentials
+            if _alert_cfg.get("smtp_user"):
+                MY_GMAIL = _alert_cfg.get("smtp_user")
+            if _alert_cfg.get("app_password"):
+                MY_APP_PASSWORD = _alert_cfg.get("app_password")
+            if _alert_cfg.get("notify_to"):
+                NOTIFY_TO = _alert_cfg.get("notify_to")
             return True
         except Exception:
             _alert_cfg = {}
@@ -836,6 +845,101 @@ def show_active():
             age = int(time.time() - meta["start"]); port = meta.get("port")
             print(f"- {ip}:{port} (started {age}s ago)")
 
+# ---------------- SMTP prompt + validator ----------------
+def _validate_smtp_credentials(email: str, app_password: str, timeout: int = 10) -> bool:
+    """Try to login to Gmail SMTP (SSL) and return True on success."""
+    try:
+        import smtplib
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=timeout) as s:
+            s.login(email, app_password)
+        print(f"{GREEN}[+] SMTP credentials validated{RESET}")
+        return True
+    except Exception as e:
+        # Distinguish auth error if possible
+        try:
+            import smtplib as _s
+            if isinstance(e, _s.SMTPAuthenticationError):
+                print(f"{RED}[-] SMTP authentication failed: wrong email or app password{RESET}")
+                return False
+        except Exception:
+            pass
+        print(f"{YELLOW}[-] SMTP validation error: {e}{RESET}")
+        return False
+
+def _prompt_smtp_credentials():
+    """
+    Prompt user for SMTP email and app password, validate immediately,
+    and optionally save into ALERT_CONFIG using keys expected by load_alert_config().
+    """
+    import getpass
+    global MY_GMAIL, MY_APP_PASSWORD, NOTIFY_TO, _alert_cfg
+
+    ans = input("Configure alert email now? (y/N): ").strip().lower()
+    if ans != "y":
+        return False
+
+    # show current values (if any) from runtime variables or alert config
+    current_email = MY_GMAIL or (_alert_cfg.get("smtp_user", "") if isinstance(_alert_cfg, dict) else "")
+    current_notify = NOTIFY_TO or (_alert_cfg.get("notify_to", "") if isinstance(_alert_cfg, dict) else "")
+
+    smtp = input(f"SMTP email (current: {current_email}): ").strip() or current_email
+    pwd = getpass.getpass("App password (input hidden): ").strip()
+
+    if not smtp or not pwd:
+        print(f"{YELLOW}[!] Email and app-password are required to validate.{RESET}")
+        return False
+
+    valid = _validate_smtp_credentials(smtp, pwd)
+
+    if not valid:
+        retry = input("Credentials invalid. Try again? (Y/n): ").strip().lower()
+        if retry in ("", "y", "yes"):
+            return _prompt_smtp_credentials()   # retry once (tail recursion)
+        print(f"{YELLOW}[!] SMTP setup aborted.{RESET}")
+        return False
+
+    # optional: set notify_to (recipient) now; default to smtp address if empty
+    notify = input(f"Notify-to address (current: {current_notify}): ").strip() or current_notify or smtp
+
+    # prepare config dict (preserve other keys if file exists)
+    cfg = {}
+    if ALERT_CONFIG.exists():
+        try:
+            cfg = json.loads(ALERT_CONFIG.read_text()) or {}
+        except Exception:
+            cfg = {}
+
+    cfg.update({
+        "smtp_user": smtp,
+        "app_password": pwd,
+        "notify_to": notify
+    })
+
+    save = input("Save to config file (~/.rajasploit_honey_conf.json)? (Y/n): ").strip().lower()
+    if save in ("", "y", "yes"):
+        try:
+            ALERT_CONFIG.write_text(json.dumps(cfg, indent=2))
+            try:
+                os.chmod(ALERT_CONFIG, 0o600)
+            except Exception:
+                pass
+            print(f"{GREEN}[+] Credentials saved to {ALERT_CONFIG}{RESET}")
+        except Exception as e:
+            print(f"{YELLOW}[!] Failed to save config: {e}{RESET}")
+
+    # update runtime variables immediately for current session
+    MY_GMAIL = smtp
+    MY_APP_PASSWORD = pwd
+    NOTIFY_TO = notify
+
+    # reload alert config into _alert_cfg so rest of code can see it
+    try:
+        load_alert_config()
+    except Exception:
+        pass
+
+    return True
+
 # ---------------- interactive CLI ----------------
 def banner():
     try:
@@ -860,8 +964,7 @@ def interactive_cli():
             print(f"{GREEN}8) {RESET}Show banned IPs")
             print(f"{GREEN}9) {RESET}Deploy honeypot on remote device(s)")
             print(f"{GREEN}10){RESET} Export logs")
-            print(f"{GREEN}11){RESET} Generate report")
-            print(f"{GREEN}12) {RESET}Reload config")
+            print(f"{GREEN}11) {RESET}Reload config")
             print(f"{GREEN}0) {RESET}Exit")
             choice = input(f"{CYAN}Honeypot>{RESET} ").strip()
 
@@ -872,6 +975,13 @@ def interactive_cli():
                 except Exception:
                     port = DEFAULT_PORT
                 bind = input("Bind address (default 0.0.0.0): ").strip() or "0.0.0.0"
+
+                # NEW: ask user whether to set SMTP creds now
+                try:
+                    _prompt_smtp_credentials()
+                except Exception as e:
+                    print(f"{YELLOW}[!] SMTP prompt failed: {e}{RESET}")
+
                 start_honeypot(port=port, bind_address=bind)
                 input("Press Enter to continue...")
 
@@ -986,7 +1096,6 @@ def summary_report():
 
 # ---------------- main guard ----------------
 if __name__ == "__main__":
-    # Show menu and allow starting server manually (matches your requested UX)
     try:
         interactive_cli()
     except KeyboardInterrupt:

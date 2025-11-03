@@ -1,8 +1,0 @@
-IDS check. Files:
-results/defensive_monitoring/run6/ids_notice.txt
-
-Contents:
-== ids_notice.txt ==
-No snort or suricata detected on PATH.
-
-

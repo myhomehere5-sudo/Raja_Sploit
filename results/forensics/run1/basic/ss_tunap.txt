@@ -1,5 +1,24 @@
-Netid State  Recv-Q Send-Q       Local Address:Port    Peer Address:PortProcess
-udp   ESTAB  0      0      10.239.252.221%eth0:68    10.239.252.119:67         
-tcp   LISTEN 0      4096             127.0.0.1:33489        0.0.0.0:*          
-tcp   LISTEN 0      80               127.0.0.1:3306         0.0.0.0:*          
-tcp   LISTEN 0      511                      *:80                 *:*          
+Netid State      Recv-Q Send-Q       Local Address:Port    Peer Address:PortProcess                                
+udp   ESTAB      0      0      10.163.117.221%eth0:68     10.163.117.68:67                                         
+tcp   LISTEN     0      4096             127.0.0.1:40749        0.0.0.0:*                                          
+tcp   LISTEN     0      80               127.0.0.1:3306         0.0.0.0:*                                          
+tcp   CLOSE-WAIT 63     0           10.163.117.221:51092 10.163.117.202:21   users:(("ftp",pid=14061,fd=3))        
+tcp   TIME-WAIT  0      0           10.163.117.221:39104 10.163.117.202:445                                        
+tcp   ESTAB      0      0           10.163.117.221:51160  34.107.243.93:443  users:(("firefox-esr",pid=1869,fd=56))
+tcp   CLOSE-WAIT 68     0           10.163.117.221:55760 10.163.117.202:21   users:(("ftp",pid=14069,fd=3))        
+tcp   TIME-WAIT  0      0           10.163.117.221:51004 10.163.117.202:53                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:39106 10.163.117.202:445                                        
+tcp   TIME-WAIT  0      0           10.163.117.221:52256 10.163.117.202:139                                        
+tcp   TIME-WAIT  0      0           10.163.117.221:37232 10.163.117.202:25                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:50642 10.163.117.202:22                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:40922 10.163.117.202:21                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:37570 10.163.117.202:80                                         
+tcp   CLOSE-WAIT 63     0           10.163.117.221:44966 10.163.117.202:21   users:(("ftp",pid=14048,fd=3))        
+tcp   TIME-WAIT  0      0           10.163.117.221:57230 10.163.117.202:53                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:37600 10.163.117.202:80                                         
+tcp   ESTAB      0      0           10.163.117.221:38896  140.82.112.25:443  users:(("firefox-esr",pid=1869,fd=9)) 
+tcp   TIME-WAIT  0      0           10.163.117.221:55162 10.163.117.202:139                                        
+tcp   TIME-WAIT  0      0           10.163.117.221:47106 10.163.117.202:80                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:40914 10.163.117.202:23                                         
+tcp   TIME-WAIT  0      0           10.163.117.221:46668 10.163.117.202:139                                        
+tcp   LISTEN     0      511                      *:80                 *:*                                          

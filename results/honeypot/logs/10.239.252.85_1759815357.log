@@ -1,8 +1,0 @@
-connection_from: 10.239.252.85:45278
-start: 2025-10-07T05:35:57.266909Z
-mac: 18:56:80:d5:81:8a
-reverse_dns: N/A
-
-[2025-10-07T05:35:57.561317Z] ACTION: simulated_shell
-[2025-10-07T05:36:00.486001Z] CMD: ls
-[2025-10-07T05:36:09.502176Z] CMD: cd

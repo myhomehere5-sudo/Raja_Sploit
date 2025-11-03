@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-recon.py - Recon module for Rajasploit (fixed entrypoint & improved scanners/report)
+recon.py - Recon module for Rajasploit (fixed entrypoint & report bugs)
 
 All file outputs are written under: results/recon/
 """
@@ -83,7 +83,6 @@ def menu():
     print(f"{GREEN}6){RESET} Mobile Info Lookup")
     print(f"{GREEN}7){RESET} Domain and TLD Enumeration (recon-ng)")
     print(f"{GREEN}8){RESET} Automatic Vulnerability Scan (6K+ ports)")
-    print(f"{GREEN}9){RESET} Generate Professional Report")
     print(f"{GREEN}0){RESET} Exit")
     choice = input(f"\n{CYAN}Recon > {RESET}")
     return choice.strip()
@@ -503,13 +502,13 @@ def domain_tld_enum():
         SESSION_LOGS['domain_enum'].append({'error': str(e), 'time': timestamp})
     input("Press Enter to return to menu.")
 
-# ---------------- Option 8 (auto_vuln_scan with robust progress + improved scanner handling) ----------------
+# ---------------- Option 8 (auto_vuln_scan with robust progress + optional report generation) ----------------
 def auto_vuln_scan():
     """
     Full auto vulnerability scan (standalone):
       - Port scan (1-6000) with live percentage progress and network issue reporting
       - Nmap vulnerability scan (with progress parsing) -> saved to RESULTS_DIR/
-      - Nikto, WPScan, SSLScan with smarter retries/timeouts and basic parsing to include in report
+      - Nikto, WPScan, SSLScan with smarter retries/timeouts to avoid spurious timeouts
     Note: This function will NOT auto-call generate_report(). Use option 9 to build the final report.
     """
     import itertools
@@ -653,101 +652,6 @@ def auto_vuln_scan():
                 return None
         return None
 
-    def parse_nmap_summary(nmap_path):
-        """Basic nmap parsing: get open ports and service/version lines and any 'VULNERABLE' mentions."""
-        summary = {'open_ports': [], 'services': [], 'raw_snippet': None}
-        try:
-            with open(nmap_path, 'r', encoding='utf-8', errors='ignore') as fh:
-                data = fh.read()
-            summary['raw_snippet'] = data[:3000]
-            # Find the PORT table block
-            lines = data.splitlines()
-            in_port_section = False
-            for line in lines:
-                if re.match(r'^PORT\s+STATE\s+SERVICE', line):
-                    in_port_section = True
-                    continue
-                if in_port_section:
-                    if not line.strip():
-                        in_port_section = False
-                        continue
-                    parts = line.split()
-                    # typical: "80/tcp open  http  Apache httpd 2.4"
-                    if len(parts) >= 3:
-                        port_part = parts[0]
-                        state = parts[1]
-                        service = parts[2]
-                        if 'open' in state.lower():
-                            summary['open_ports'].append(port_part)
-                            svc_line = ' '.join(parts[2:])
-                            summary['services'].append(svc_line)
-            # also capture heuristics for vulnerabilities (CVE, VULNERABLE, etc.)
-            vulns = re.findall(r'(CVE-\d{4}-\d+)', data, flags=re.IGNORECASE)
-            if vulns:
-                summary['vulns'] = sorted(set(vulns))
-            else:
-                summary['vulns'] = []
-        except Exception as e:
-            summary['error'] = str(e)
-        return summary
-
-    def parse_nikto_summary(nikto_path):
-        summary = {'issues': [], 'raw_snippet': None}
-        try:
-            with open(nikto_path, 'r', encoding='utf-8', errors='ignore') as fh:
-                data = fh.read()
-            summary['raw_snippet'] = data[:3000]
-            # Nikto issues often reference "OSVDB-" or "id:" or "OSVDB"
-            for match in re.findall(r'(OSVDB-\d+)', data, flags=re.IGNORECASE):
-                summary['issues'].append(match)
-            # Also extract lines that look like issues (heuristic)
-            for line in data.splitlines():
-                if ('OSVDB' in line) or ('Nikto' in line and ':' in line) or re.search(r'\b(SERVER:|Server:|X-Powered-By:)\b', line, flags=re.IGNORECASE):
-                    summary['issues'].append(line.strip())
-            # dedupe
-            summary['issues'] = list(dict.fromkeys(summary['issues']))[:40]
-        except Exception as e:
-            summary['error'] = str(e)
-        return summary
-
-    def parse_wpscan_summary(wp_path):
-        summary = {'interesting': [], 'raw_snippet': None}
-        try:
-            with open(wp_path, 'r', encoding='utf-8', errors='ignore') as fh:
-                data = fh.read()
-            summary['raw_snippet'] = data[:3000]
-            # WPScan outputs "Vulnerable", "Version", "Listing found", etc.
-            for line in data.splitlines():
-                if any(k in line for k in ['Vulnerable', 'vulnerable', 'Outdated', 'Interesting', 'Found', 'WordPress version']):
-                    summary['interesting'].append(line.strip())
-            # Extract CVE references
-            cves = re.findall(r'(CVE-\d{4}-\d+)', data)
-            if cves:
-                summary['cves'] = sorted(set(cves))
-        except Exception as e:
-            summary['error'] = str(e)
-        return summary
-
-    def parse_sslscan_summary(ssl_path):
-        summary = {'protocols': [], 'cert_info': None, 'raw_snippet': None}
-        try:
-            with open(ssl_path, 'r', encoding='utf-8', errors='ignore') as fh:
-                data = fh.read()
-            summary['raw_snippet'] = data[:3000]
-            # Extract lines like "Accepted  TLS1.2  ECDHE-RSA-AES256-GCM-SHA384 ..."
-            for line in data.splitlines():
-                if line.strip().startswith('Accepted') or 'Server certificate' in line or 'Subject:' in line or 'Issuer:' in line:
-                    summary['protocols'].append(line.strip())
-            # try to capture certificate subject/issuer block if present
-            subj = re.search(r'Subject:\s*(.+)', data)
-            iss = re.search(r'Issuer:\s*(.+)', data)
-            if subj:
-                summary['cert_info'] = {'subject': subj.group(1).strip(), 'issuer': iss.group(1).strip() if iss else None}
-        except Exception as e:
-            summary['error'] = str(e)
-        return summary
-
-    # --- Begin scan flow (user input) ---
     target = input(f"{YELLOW}Enter target domain/IP: {RESET}").strip()
     if not target:
         print(f"{RED}[!] No target provided.{RESET}")
@@ -864,21 +768,9 @@ def auto_vuln_scan():
         ok = run_command_with_progress(nmap_cmd, "Nmap Vulnerability Scan", outfile=nmap_file, parse_progress=parse_nmap_progress, max_duration=nmap_max, retries=1)
         if not ok:
             print(f"{YELLOW}[!] Nmap returned non-zero, timed out, or failed. Check {nmap_file}{RESET}")
-            # Save at least a note file to indicate failure
-            try:
-                safe_write(nmap_file, "nmap scan failed or timed out. Check system nmap or rerun manually.")
-            except Exception:
-                pass
-            SESSION_LOGS['auto_vuln'][-1].update({'nmap_file': nmap_file, 'nmap_ok': False})
         else:
             print(f"{GREEN}[+] Nmap vulnerability scan finished. Output: {nmap_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'nmap_file': nmap_file, 'nmap_ok': True})
-            # parse nmap for summary
-            try:
-                nmap_summary = parse_nmap_summary(nmap_file)
-                SESSION_LOGS['auto_vuln'][-1].update({'nmap_summary': nmap_summary})
-            except Exception as e:
-                SESSION_LOGS['auto_vuln'][-1].update({'nmap_parse_error': str(e)})
+            SESSION_LOGS['auto_vuln'][-1].update({'nmap_file': nmap_file})
     else:
         print(f"{YELLOW}[!] nmap not found; skipping Nmap vulnerability scan.{RESET}")
 
@@ -887,86 +779,48 @@ def auto_vuln_scan():
     if not nikto_bin:
         print(f"{YELLOW}[!] Nikto not found on PATH. Skipping Nikto scan. Install 'nikto' to enable this scan.{RESET}")
     else:
-        # Correct format flag to 'txt' and add -Tuning to reduce false positives if desired
-        nikto_cmd = [nikto_bin, '-h', target, '-o', nikto_file, '-Format', 'txt']
-        # allow longer timeout & 2 retries to avoid flaky failure
-        nikto_max = 60 * 60  # 1 hour
+        nikto_cmd = [nikto_bin, '-h', target, '-o', nikto_file, '-Format', 'text']
+        nikto_max = 60 * 30  # 30 minutes
         ok = run_command_with_progress(nikto_cmd, "Nikto Web Scan", outfile=nikto_file, max_duration=nikto_max, retries=2)
         if not ok:
             print(f"{YELLOW}[!] Nikto returned non-zero, timed out, or failed. Check {nikto_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'nikto_file': nikto_file, 'nikto_ok': False})
-            try:
-                # save note if file missing
-                if not os.path.exists(nikto_file):
-                    safe_write(nikto_file, "Nikto scan failed or timed out.")
-            except Exception:
-                pass
         else:
             print(f"{GREEN}[+] Nikto finished. Output: {nikto_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'nikto_file': nikto_file, 'nikto_ok': True})
-            try:
-                nikto_summary = parse_nikto_summary(nikto_file)
-                SESSION_LOGS['auto_vuln'][-1].update({'nikto_summary': nikto_summary})
-            except Exception as e:
-                SESSION_LOGS['auto_vuln'][-1].update({'nikto_parse_error': str(e)})
+            SESSION_LOGS['auto_vuln'][-1].update({'nikto_file': nikto_file})
 
     # ------------------ WPScan ------------------
     wpscan_bin = shutil_which('wpscan')
     if not wpscan_bin:
         print(f"{YELLOW}[!] WPScan not found on PATH. Skipping WPScan. Install 'wpscan' (Ruby gem) to enable this scan.{RESET}")
     else:
-        # ensure correct URL format; WPScan tends to hang if site blocks requests - add --disable-tls-checks to help some cases
         url_try = target if re.match(r'^https?://', target) else f"http://{target}"
-        wpscan_cmd = [wpscan_bin, '--url', url_try, '--no-update', '--output', wpscan_file, '--disable-tls-checks']
-        wpscan_max = 60 * 45  # 45 minutes
-        ok = run_command_with_progress(wpscan_cmd, "WPScan (HTTP/HTTPS)", outfile=wpscan_file, max_duration=wpscan_max, retries=1)
+        wpscan_cmd = [wpscan_bin, '--url', url_try, '--no-update', '--output', wpscan_file]
+        wpscan_max = 60 * 30  # 30 minutes
+        ok = run_command_with_progress(wpscan_cmd, "WPScan (HTTP)", outfile=wpscan_file, max_duration=wpscan_max, retries=1)
         if not ok and not re.match(r'^https?://', target):
             url_https = f"https://{target}"
             print(f"{CYAN}[+] Retrying WPScan with HTTPS...{RESET}")
-            wpscan_cmd = [wpscan_bin, '--url', url_https, '--no-update', '--output', wpscan_file, '--disable-tls-checks']
+            wpscan_cmd = [wpscan_bin, '--url', url_https, '--no-update', '--output', wpscan_file]
             ok = run_command_with_progress(wpscan_cmd, "WPScan (HTTPS)", outfile=wpscan_file, max_duration=wpscan_max, retries=1)
         if not ok:
             print(f"{YELLOW}[!] WPScan returned non-zero, timed out, or failed. Check {wpscan_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'wpscan_file': wpscan_file, 'wpscan_ok': False})
-            try:
-                if not os.path.exists(wpscan_file):
-                    safe_write(wpscan_file, "WPScan failed or timed out.")
-            except Exception:
-                pass
         else:
             print(f"{GREEN}[+] WPScan finished. Output: {wpscan_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'wpscan_file': wpscan_file, 'wpscan_ok': True})
-            try:
-                wpsummary = parse_wpscan_summary(wpscan_file)
-                SESSION_LOGS['auto_vuln'][-1].update({'wpscan_summary': wpsummary})
-            except Exception as e:
-                SESSION_LOGS['auto_vuln'][-1].update({'wpscan_parse_error': str(e)})
+            SESSION_LOGS['auto_vuln'][-1].update({'wpscan_file': wpscan_file})
 
     # ------------------ SSLScan ------------------
     sslscan_bin = shutil_which('sslscan')
     if not sslscan_bin:
         print(f"{YELLOW}[!] sslscan not found on PATH. Skipping SSLScan. Install 'sslscan' to enable this scan.{RESET}")
     else:
-        # sslscan prints to stdout; run and save output via run_command_with_progress
         sslscan_cmd = [sslscan_bin, target]
-        sslscan_max = 60 * 10  # 10 minutes (increase to be safe)
+        sslscan_max = 60 * 5  # 5 minutes
         ok = run_command_with_progress(sslscan_cmd, "SSLScan", outfile=ssl_file, max_duration=sslscan_max, retries=1)
         if not ok:
             print(f"{YELLOW}[!] SSLScan returned non-zero, timed out, or failed. Check {ssl_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'ssl_file': ssl_file, 'ssl_ok': False})
-            try:
-                if not os.path.exists(ssl_file):
-                    safe_write(ssl_file, "SSLScan failed or timed out.")
-            except Exception:
-                pass
         else:
             print(f"{GREEN}[+] SSLScan finished. Output: {ssl_file}{RESET}")
-            SESSION_LOGS['auto_vuln'][-1].update({'ssl_file': ssl_file, 'ssl_ok': True})
-            try:
-                ssum = parse_sslscan_summary(ssl_file)
-                SESSION_LOGS['auto_vuln'][-1].update({'ssl_summary': ssum})
-            except Exception as e:
-                SESSION_LOGS['auto_vuln'][-1].update({'ssl_parse_error': str(e)})
+            SESSION_LOGS['auto_vuln'][-1].update({'ssl_file': ssl_file})
 
     print(f"\n{CYAN}[+] All scans finished for run {run_id}. Results saved to {RESULTS_DIR}/{RESET}\n")
 
@@ -985,7 +839,6 @@ def generate_report():
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     report_file = os.path.join(RESULTS_DIR, f"recon_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.html")
 
-    # Build HTML header
     html_parts = [f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -994,161 +847,36 @@ def generate_report():
     <title>{title}</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: #1e1e1e; color: #f0f0f0; }}
-        .container {{ max-width: 1100px; margin: auto; padding: 20px; }}
         h1 {{ color: #00ffff; }}
         h2 {{ color: #00ff00; border-bottom: 1px solid #555; }}
-        pre {{ background: #111; padding: 10px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }}
-        table {{ border-collapse: collapse; width: 100%; margin-bottom: 15px; }}
-        th, td {{ border: 1px solid #555; padding: 8px; text-align: left; }}
-        th {{ background: #222; }}
-        .summary {{ background: #0f1720; padding: 10px; margin-bottom: 12px; border-radius: 6px; }}
-        .ok {{ color: #6ee7b7; }}
-        .warn {{ color: #facc15; }}
-        .err {{ color: #fb7185; }}
+        pre {{ background: #222; padding: 10px; overflow-x: auto; }}
+        table {{ border-collapse: collapse; width: 100%; }}
+        th, td {{ border: 1px solid #555; padding: 5px; text-align: left; }}
+        th {{ background: #333; }}
     </style>
     </head>
     <body>
-    <div class="container">
     <h1>{title}</h1>
     <p>Generated at: {timestamp}</p>
     """]
 
-    # If SESSION_LOGS has data, include parsed summaries
-    # Include a readable summary for auto_vuln entries first (they are the heavy results)
-    auto_vuln_entries = SESSION_LOGS.get('auto_vuln', [])
-    if auto_vuln_entries:
-        html_parts.append("<h2>Automatic Vulnerability Scans (Summary)</h2>")
-        for ent in auto_vuln_entries:
-            run_id = ent.get('run_id', 'unknown')
-            target = ent.get('target', 'unknown')
-            html_parts.append(f"<div class='summary'><strong>Run:</strong> {run_id} &nbsp; <strong>Target:</strong> {target}</div>")
-            # open ports
-            open_ports = ent.get('open_ports', [])
-            if open_ports:
-                html_parts.append("<h3>Open Ports</h3>")
-                html_parts.append("<pre>" + ", ".join(str(p) for p in open_ports[:200]) + (" (truncated)" if len(open_ports) > 200 else "") + "</pre>")
-            else:
-                html_parts.append("<p>No open ports detected.</p>")
-
-            # Nmap summary
-            nmap_ok = ent.get('nmap_ok', None)
-            if 'nmap_file' in ent:
-                html_parts.append("<h3>Nmap</h3>")
-                html_parts.append(f"<p>Raw output file: <code>{ent['nmap_file']}</code></p>")
-                if nmap_ok:
-                    nm = ent.get('nmap_summary', {})
-                    if nm:
-                        html_parts.append("<ul>")
-                        if nm.get('open_ports'):
-                            html_parts.append(f"<li><strong>Open ports:</strong> {', '.join(nm.get('open_ports')[:50])}</li>")
-                        if nm.get('vulns'):
-                            html_parts.append(f"<li class='warn'><strong>Potential CVEs:</strong> {', '.join(nm.get('vulns')[:20])}</li>")
-                        html_parts.append("</ul>")
-                        if nm.get('raw_snippet'):
-                            html_parts.append("<details><summary>Show Nmap snippet</summary><pre>{}</pre></details>".format(html_escape(nm.get('raw_snippet'))))
-                else:
-                    html_parts.append("<p class='warn'>Nmap did not finish successfully or timed out. Raw output file may have partial results.</p>")
-
-            # Nikto
-            if 'nikto_file' in ent:
-                html_parts.append("<h3>Nikto</h3>")
-                html_parts.append(f"<p>Raw output file: <code>{ent['nikto_file']}</code></p>")
-                if ent.get('nikto_ok'):
-                    nik = ent.get('nikto_summary', {})
-                    if nik and nik.get('issues'):
-                        html_parts.append("<ul>")
-                        for i in nik.get('issues')[:40]:
-                            html_parts.append(f"<li>{html_escape(i)}</li>")
-                        html_parts.append("</ul>")
-                        if nik.get('raw_snippet'):
-                            html_parts.append("<details><summary>Show Nikto snippet</summary><pre>{}</pre></details>".format(html_escape(nik.get('raw_snippet'))))
-                    else:
-                        html_parts.append("<p>No clear issues parsed from Nikto output.</p>")
-                else:
-                    html_parts.append("<p class='warn'>Nikto did not finish successfully or timed out. Raw output file may have partial results.</p>")
-
-            # WPScan
-            if 'wpscan_file' in ent:
-                html_parts.append("<h3>WPScan</h3>")
-                html_parts.append(f"<p>Raw output file: <code>{ent['wpscan_file']}</code></p>")
-                if ent.get('wpscan_ok'):
-                    wp = ent.get('wpscan_summary', {})
-                    if wp:
-                        if wp.get('interesting'):
-                            html_parts.append("<ul>")
-                            for it in wp.get('interesting')[:40]:
-                                html_parts.append(f"<li>{html_escape(it)}</li>")
-                            html_parts.append("</ul>")
-                        if wp.get('cves'):
-                            html_parts.append(f"<p class='warn'><strong>Found CVEs:</strong> {', '.join(wp.get('cves')[:20])}</p>")
-                        if wp.get('raw_snippet'):
-                            html_parts.append("<details><summary>Show WPScan snippet</summary><pre>{}</pre></details>".format(html_escape(wp.get('raw_snippet'))))
-                    else:
-                        html_parts.append("<p>No clear issues parsed from WPScan output.</p>")
-                else:
-                    html_parts.append("<p class='warn'>WPScan did not finish successfully or timed out. Raw output file may have partial results.</p>")
-
-            # SSLScan
-            if 'ssl_file' in ent:
-                html_parts.append("<h3>SSLScan</h3>")
-                html_parts.append(f"<p>Raw output file: <code>{ent['ssl_file']}</code></p>")
-                if ent.get('ssl_ok'):
-                    ss = ent.get('ssl_summary', {})
-                    if ss:
-                        if ss.get('protocols'):
-                            html_parts.append("<ul>")
-                            for pr in ss.get('protocols')[:50]:
-                                html_parts.append(f"<li>{html_escape(pr)}</li>")
-                            html_parts.append("</ul>")
-                        if ss.get('cert_info'):
-                            html_parts.append("<p><strong>Certificate subject:</strong> {}</p>".format(html_escape(str(ss.get('cert_info')))))
-                        if ss.get('raw_snippet'):
-                            html_parts.append("<details><summary>Show SSLScan snippet</summary><pre>{}</pre></details>".format(html_escape(ss.get('raw_snippet'))))
-                    else:
-                        html_parts.append("<p>No clear data parsed from SSLScan output.</p>")
-                else:
-                    html_parts.append("<p class='warn'>SSLScan did not finish successfully or timed out. Raw output file may have partial results.</p>")
-
-    # If no auto_vuln entries found, provide a note
-    if not auto_vuln_entries:
-        html_parts.append("<h2>Automatic Vulnerability Scans</h2>")
-        html_parts.append("<p>No automatic vulnerability scans were run in this session (SESSION_LOGS empty for auto_vuln).</p>")
-
-    # Generic sections: include other SESSION_LOGS entries and snippets for convenience
     for section, entries in SESSION_LOGS.items():
-        if section == 'auto_vuln':
-            continue  # already included
         html_parts.append(f"<h2>{section.replace('_', ' ').title()}</h2>")
         if not entries:
             html_parts.append("<p>No data collected.</p>")
             continue
         for entry in entries:
-            html_parts.append("<div class='summary'>")
-            # show some fields neatly
-            keys_shown = []
+            html_parts.append("<pre>")
             for k, v in entry.items():
-                if k in ('file', 'ip', 'target', 'domain', 'number', 'time', 'action'):
-                    html_parts.append(f"<p><strong>{html_escape(str(k))}:</strong> {html_escape(str(v))}</p>")
-                    keys_shown.append(k)
-            html_parts.append("</div>")
-            # include small raw snippet if file present
-            if 'file' in entry and os.path.exists(entry['file']):
-                try:
-                    with open(entry['file'], 'r', encoding='utf-8', errors='ignore') as fh:
-                        txt = fh.read(2000)
-                    html_parts.append("<details><summary>Show raw file snippet</summary><pre>{}</pre></details>".format(html_escape(txt)))
-                except Exception:
-                    pass
+                html_parts.append(f"{k}: {v}")
+            html_parts.append("</pre>")
 
-    html_parts.append("</div></body></html>")
+    html_parts.append("</body></html>")
 
     html_content = "\n".join(html_parts)
-
-    # Save report
     safe_write(report_file, html_content)
     print(f"{GREEN}[+] HTML report generated: {report_file}{RESET}")
 
-    # Optionally convert to PDF if pdfkit available
     if PDFKIT_AVAILABLE:
         pdf_file = Path(report_file).with_suffix('.pdf')
         try:
@@ -1160,13 +888,6 @@ def generate_report():
         print(f"{YELLOW}[!] pdfkit not installed. Install with 'pip install pdfkit' to generate PDF.{RESET}")
 
     input("Press Enter to return to menu.")
-
-# Helper for HTML escaping
-def html_escape(s):
-    if s is None:
-        return ''
-    return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-            .replace('"', "&quot;").replace("'", "&#39;"))
 
 # ---------------- Main Loop ----------------
 def main():
@@ -1196,8 +917,6 @@ def main():
             domain_tld_enum()
         elif choice == "8":
             auto_vuln_scan()
-        elif choice == "9":
-            generate_report()
         elif choice == "0":
             print(f"{CYAN}Exiting...{RESET}")
             sys.exit(0)

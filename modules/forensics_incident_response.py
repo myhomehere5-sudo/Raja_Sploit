@@ -10,6 +10,10 @@ Requires:
  - Python 3
  - sudo/root for memory dump or disk imaging
  - tcpdump, dd, tar, fls/mactime (sleuthkit), yara, clamscan, matplotlib, reportlab
+
+This revised version includes better detection/usage of installed tools
+(volatility3 and ClamAV). It will try to use appropriate acquisition tools
+if available, and will update ClamAV database before scanning when possible.
 """
 
 import os
@@ -63,14 +67,13 @@ RUN_FOLDER.mkdir(parents=True, exist_ok=True)
 def menu():
     banner()
     print(f"{GREEN}1){RESET} Collect system & volatile evidence (basic)")
-    print(f"{GREEN}2){RESET} Memory dump (volatility3 fallback)")
+    print(f"{GREEN}2){RESET} Memory dump (try acquisition tools if available)")
     print(f"{GREEN}3){RESET} Disk image (dd)")
     print(f"{GREEN}4){RESET} Build filesystem timeline (fls + mactime)")
     print(f"{GREEN}5){RESET} Aggregate logs (/var/log) into tar.gz")
     print(f"{GREEN}6){RESET} Capture network traffic to pcap (tcpdump)")
     print(f"{GREEN}7){RESET} YARA scan")
     print(f"{GREEN}8){RESET} Malware scan with ClamAV")
-    print(f"{GREEN}9){RESET} Generate detailed incident report (PDF+HTML)")
     print(f"{GREEN}0){RESET} Return to Rajasploit menu")
     return input(f"\n{CYAN}Forensics > {RESET}").strip()
 
@@ -110,15 +113,63 @@ def collect_basic():
     print(f"{GREEN}[+] Basic evidence saved to {prefix}{RESET}")
     input("Press Enter to return to Forensics menu.")
 
-# 2. Memory dump (volatility3 fallback)
+# Helper: detect available memory acquisition tools
+def find_memory_acquisition_tool():
+    # common acquisition tools
+    candidates = ["avml","winpmem","winpmem64","memdump","pmem","ftkimager" , "LiME"]
+    found = []
+    for c in candidates:
+        p = shutil.which(c)
+        if p:
+            found.append((c,p))
+    # detect volatility3 CLI (analysis-only, not an acquisition tool)
+    vol = shutil.which("vol") or shutil.which("vol.py") or shutil.which("volatility3")
+    return found, vol
+
+# 2. Memory dump (attempts to use a real acquisition tool if present)
 def memory_dump():
-    print(f"{MAGENTA}[+] Memory dump using volatility3 (if available){RESET}")
-    vol3 = shutil.which("vol")
+    print(f"{MAGENTA}[+] Memory dump (attempting acquisition tools){RESET}")
+    tools, vol = find_memory_acquisition_tool()
     out_mem = RUN_FOLDER/f"run{RUN_ID}_memory.raw"
-    if vol3:
-        print(f"{YELLOW}[!] Please follow volatility3 docs for memory acquisition{RESET}")
+
+    if tools:
+        # prefer avml or winpmem if present
+        preferred = None
+        for name,path in tools:
+            if name=="avml": preferred=(name,path); break
+        if not preferred:
+            for name,path in tools:
+                if name.startswith("winpmem") or name=="memdump": preferred=(name,path); break
+        if not preferred:
+            preferred = tools[0]
+
+        name,path = preferred
+        print(f"{YELLOW}[!] Using acquisition tool: {name} -> {path}{RESET}")
+        # construct commonly used command lines for a few tools
+        try:
+            if name=="avml":
+                # avml writes to a file path given
+                cmd = [path, str(out_mem)]
+            elif name.startswith("winpmem") or name=="memdump" or name=="pmem":
+                cmd = [path, "--output", str(out_mem)] if name.startswith("winpmem") else [path, str(out_mem)]
+            else:
+                cmd = [path, str(out_mem)]
+
+            print(f"{MAGENTA}[+] Running: {' '.join(cmd)}{RESET}")
+            subprocess.run(cmd, check=False)
+            if out_mem.exists():
+                print(f"{GREEN}[+] Memory image saved: {out_mem}{RESET}")
+            else:
+                print(f"{RED}[!] Acquisition tool finished but memory file not found: {out_mem}{RESET}")
+        except Exception as e:
+            print(f"{RED}[!] Error running acquisition tool: {e}{RESET}")
     else:
-        print(f"{RED}[!] No memory acquisition tool found.{RESET}")
+        if vol:
+            print(f"{YELLOW}[!] volatility3 (analysis) is present at: {vol}{RESET}")
+            print(f"{YELLOW}However, volatility3 does not perform memory acquisition by itself.\nPlease acquire memory with a tool such as 'avml' (for Linux) or 'winpmem' (for Windows) and place the raw dump at: {out_mem}{RESET}")
+        else:
+            print(f"{RED}[!] No memory acquisition tool detected. Install 'avml' or 'winpmem' and re-run this option.{RESET}")
+
     input("Press Enter to return to Forensics menu.")
 
 # 3. Disk image
@@ -181,16 +232,33 @@ def yara_scan():
     print(f"{GREEN}[+] YARA results saved: {out_file}{RESET}")
     input("Enter to return.")
 
-# 8. ClamAV scan
+# 8. ClamAV scan (detect and update before scanning)
 def clamav_scan():
+    clamscan = shutil.which("clamscan")
+    freshclam = shutil.which("freshclam")
     out_file = RUN_FOLDER/f"run{RUN_ID}_clamav.txt"
-    subprocess.run(["clamscan","-r",str(RUN_FOLDER)],stdout=open(out_file,"w"),stderr=subprocess.STDOUT,check=False)
+
+    if not clamscan:
+        print(f"{RED}[!] clamscan not found. Install ClamAV (package name: clamav) and try again.{RESET}")
+        input("Enter to return."); return
+
+    # attempt to update DB first if freshclam exists
+    if freshclam:
+        print(f"{MAGENTA}[+] Updating ClamAV database (freshclam)...{RESET}")
+        try:
+            subprocess.run([freshclam],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,check=False)
+        except Exception as e:
+            print(f"{YELLOW}[!] freshclam update failed or requires network: {e}{RESET}")
+
+    print(f"{MAGENTA}[+] Running clamscan recursively on {RUN_FOLDER}{RESET}")
+    subprocess.run([clamscan,"-r",str(RUN_FOLDER)],stdout=open(out_file,"w"),stderr=subprocess.STDOUT,check=False)
     print(f"{GREEN}[+] ClamAV results saved: {out_file}{RESET}")
     input("Enter to return.")
 
 # 9. Generate detailed incident report (PDF+HTML)
 def generate_report():
     print(f"{MAGENTA}[+] Generating report...{RESET}")
+    # keep metadata collection but be mindful of automated contexts
     client_name = input("Client Name: ").strip()
     creator_name = input("Report Creator: ").strip()
     system_owner = input("System Owner: ").strip()
@@ -207,7 +275,7 @@ def generate_report():
 
     # Sections 1-8
     sections = [
-        ("Basic Evidence", list((RUN_FOLDER/"basic").glob("*"))),
+        ("Basic Evidence", list((RUN_FOLDER/"basic").glob("*")) if (RUN_FOLDER/"basic").exists() else []),
         ("Memory Dump", list(RUN_FOLDER.glob("*memory*"))),
         ("Disk Image", list(RUN_FOLDER.glob("*_image*"))),
         ("Timeline", list(RUN_FOLDER.glob("*timeline*"))),
@@ -282,7 +350,6 @@ def main():
         elif choice=="6": capture_pcap()
         elif choice=="7": yara_scan()
         elif choice=="8": clamav_scan()
-        elif choice=="9": generate_report()
         elif choice=="0": break
         else:
             print(f"{RED}[!] Invalid option{RESET}"); time.sleep(1)

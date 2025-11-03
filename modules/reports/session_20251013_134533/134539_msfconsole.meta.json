@@ -1,0 +1,8 @@
+{
+  "label": "msfconsole",
+  "command": "msfconsole",
+  "start": "2025-10-13T13:45:39.568990",
+  "end": "2025-10-13T13:45:49.801752",
+  "returncode": 0,
+  "logfile": "134539_msfconsole.log"
+}

@@ -68,7 +68,7 @@ def menu():
     print(f"{GREEN}2){RESET} Base64 Encode / Decode")
     print(f"{GREEN}3){RESET} Encrypt / Decrypt (Fernet recommended)")
     print(f"{GREEN}4){RESET} QR Code generator (text/link -> image)")
-    print(f"{GREEN}5){RESET} Link masker (create local redirect HTML)")
+    print(f"{GREEN}5){RESET} Link masker (comming-soon)")
     print(f"{GREEN}6){RESET} SHA256 Hash generator")
     print(f"{GREEN}7){RESET} Password Strength Checker")
     print(f"{GREEN}0){RESET} Return to Rajasploit menu")

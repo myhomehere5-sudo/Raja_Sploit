@@ -1,1 +1,0 @@
-No snort or suricata detected on PATH.

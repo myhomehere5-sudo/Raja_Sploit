@@ -1,9 +1,0 @@
-connection_from: 10.239.252.1:36480
-start: 2025-10-13T05:29:27.129953Z
-mac: e4:60:17:d4:01:d0
-reverse_dns: N/A
-
-[2025-10-13T05:29:27.248069Z] ACTION: simulated_shell
-
-end: 2025-10-13T05:29:27.248126Z
-[2025-10-13T05:29:31.415633Z] ALERT_LOG: ALERT_SENT: method=SSL to=myhomehere5@gmail.com
